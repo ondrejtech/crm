@@ -31,11 +31,11 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('projects', function ($table) {
-            $table->dropConstrainedForeignId('company_id');
-            $table->dropConstrainedForeignId('contact_id');
-            $table->dropConstrainedForeignId('type_project');
-        });
+//        Schema::table('projects', function ($table) {
+//            $table->dropConstrainedForeignId('company_id');
+//            $table->dropConstrainedForeignId('contact_id');
+//            $table->dropConstrainedForeignId('type_project');
+//        });
 
         Schema::dropIfExists('projects');
     }

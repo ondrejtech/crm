@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cba7f2912305c4494a4d5183f96aca96",
+    "content-hash": "8da80fb24394840ae528386362e688e2",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -3385,6 +3385,49 @@
                 "source": "https://github.com/Masterminds/html5-php/tree/2.8.1"
             },
             "time": "2023-05-10T11:58:31+00:00"
+        },
+        {
+            "name": "miguilim/filament-auto-panel",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/miguilimzero/filament-auto-panel.git",
+                "reference": "1102a88bd73243bb12b73bade4e38a07461a9911"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/miguilimzero/filament-auto-panel/zipball/1102a88bd73243bb12b73bade4e38a07461a9911",
+                "reference": "1102a88bd73243bb12b73bade4e38a07461a9911",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^3.6",
+                "filament/filament": "^3.0",
+                "php": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Miguilim\\FilamentAutoPanel\\FilamentAutoPanelProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Miguilim\\FilamentAutoPanel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Construct your Filament panel Resources and Relation Managers at execution time like magic.",
+            "support": {
+                "issues": "https://github.com/miguilimzero/filament-auto-panel/issues",
+                "source": "https://github.com/miguilimzero/filament-auto-panel/tree/1.4.2"
+            },
+            "time": "2024-01-02T15:04:52+00:00"
         },
         {
             "name": "monolog/monolog",

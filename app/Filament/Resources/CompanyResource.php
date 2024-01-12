@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\ComapanyResource\RelationManagers\ContactsRelationManager;
 use App\Filament\Resources\CompanyResource\Pages;
 use App\Filament\Resources\CompanyResource\RelationManagers;
 use App\Models\Company;
@@ -43,6 +44,9 @@ class CompanyResource extends Resource
                             ->email()
                             ->required()
                             ->maxLength(255),
+                        Forms\Components\Select::make('contact_id')
+                            ->label('Contact Name')
+                            ->relationship('contact','full_name')
                     ])->columns(3),
                 Forms\Components\Section::make()
                     ->schema([
@@ -212,7 +216,7 @@ class CompanyResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            ContactsRelationManager::class
         ];
     }
 
@@ -221,7 +225,7 @@ class CompanyResource extends Resource
         return [
             'index' => Pages\ListCompanies::route('/'),
 //            'create' => Pages\CreateCompany::route('/create'),
-//            'edit' => Pages\EditCompany::route('/{record}/edit'),
+            'edit' => Pages\EditCompany::route('/{record}/edit'),
         ];
     }
 }
