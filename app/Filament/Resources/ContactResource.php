@@ -38,7 +38,58 @@ class ContactResource extends Resource
                     ->schema([
                         Forms\Components\Select::make('company_id')
                             ->label('Company')
-                            ->relationship('company', 'name'),
+                            ->relationship('company', 'name')
+                            ->createOptionForm([
+                                Forms\Components\Section::make('Founding information ')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('name')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('phone')
+                                            ->required()
+                                            ->prefix('420'),
+                                        Forms\Components\TextInput::make('email')
+                                            ->email()
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('www')
+                                            ->label('www')
+                                            ->prefix('https://www.')
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('IC')
+                                            ->required()
+                                            ->numeric(),
+                                        Forms\Components\TextInput::make('DIC')
+                                            ->maxLength(255),
+                                    ])->columns(3),
+                                Forms\Components\Section::make('Address')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('address')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('city')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('zip_code')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('state')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\Select::make('country')
+                                            ->required()
+                                            ->options([
+                                                'Czech Republic' => 'Czech republic',
+                                                'Slovakia' => 'Slovakia'
+                                            ])->columnSpan(2),
+                                    ])->columns(3),
+                                Forms\Components\Section::make('User note')
+                                    ->schema([
+                                        Forms\Components\Textarea::make('note')
+                                            ->maxLength(16777215)
+                                    ])
+                                    ->columnSpanFull(),
+                            ]),
                         Forms\Components\Select::make('department_id')
                             ->label('Department')
                             ->relationship('department','name'),
