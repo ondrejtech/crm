@@ -28,7 +28,7 @@ class CompanyResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Section::make()
+                Forms\Components\Section::make('Founding information ')
                     ->schema([
                         Forms\Components\TextInput::make('name')
                             ->required()
@@ -36,10 +36,6 @@ class CompanyResource extends Resource
                         Forms\Components\TextInput::make('phone')
                             ->required()
                             ->prefix('420'),
-//                            ->prefixActions([
-//                                Action::make('...'),
-//                                Action::make('...'),
-//                            ]),
                         Forms\Components\TextInput::make('email')
                             ->email()
                             ->required()
@@ -47,9 +43,7 @@ class CompanyResource extends Resource
                         Forms\Components\Select::make('contact_id')
                             ->label('Contact Name')
                             ->relationship('contact','full_name')
-                    ])->columns(3),
-                Forms\Components\Section::make()
-                    ->schema([
+                            ->columnSpanFull(),
                         Forms\Components\TextInput::make('www')
                             ->label('www')
                             ->prefix('https://www.')
@@ -60,16 +54,7 @@ class CompanyResource extends Resource
                         Forms\Components\TextInput::make('DIC')
                             ->maxLength(255),
                     ])->columns(3),
-                Forms\Components\Section::make()
-                    ->schema([
-                        Forms\Components\Toggle::make('subscriber')
-                            ->required(),
-                        Forms\Components\Toggle::make('supplier')
-                            ->required(),
-                        Forms\Components\Toggle::make('competition')
-                            ->required(),
-                    ])->columns(3),
-                Forms\Components\Section::make()
+                Forms\Components\Section::make('Address')
                     ->schema([
                         Forms\Components\TextInput::make('address')
                             ->required()
@@ -80,9 +65,6 @@ class CompanyResource extends Resource
                         Forms\Components\TextInput::make('zip_code')
                             ->required()
                             ->maxLength(255),
-                    ])->columns(3),
-                Forms\Components\Section::make()
-                    ->schema([
                         Forms\Components\TextInput::make('state')
                             ->required()
                             ->maxLength(255),
@@ -91,9 +73,9 @@ class CompanyResource extends Resource
                             ->options([
                                 'Czech Republic' => 'Czech republic',
                                 'Slovakia' => 'Slovakia'
-                            ]),
-                    ])->columns(2),
-                Forms\Components\Section::make()
+                            ])->columnSpan(2),
+                    ])->columns(3),
+                Forms\Components\Section::make('User note')
                     ->schema([
                         Forms\Components\Textarea::make('note')
                             ->maxLength(16777215)

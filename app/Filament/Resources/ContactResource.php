@@ -59,7 +59,7 @@ class ContactResource extends Resource
                             ->tel()
                             ->numeric(),
                     ])->columns(3),
-                Forms\Components\Section::make('')
+                Forms\Components\Section::make('Contact address')
                     ->schema([
                         Forms\Components\TextInput::make('address')
                             ->required()
@@ -81,9 +81,12 @@ class ContactResource extends Resource
                             ->required()
                             ->columnSpan(2),
                     ])->columns(3),
-                Forms\Components\Textarea::make('note')
-                    ->maxLength(16777215)
-                    ->columnSpanFull(),
+                Forms\Components\Section::make('User note')
+                    ->schema([
+                        Forms\Components\Textarea::make('note')
+                            ->maxLength(16777215)
+                            ->columnSpanFull(),
+                    ])
             ]);
     }
 
