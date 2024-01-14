@@ -43,6 +43,62 @@ class CompanyResource extends Resource
                         Forms\Components\Select::make('contact_id')
                             ->label('Contact Name')
                             ->relationship('contact','full_name')
+                            ->createOptionForm([
+                                Forms\Components\Section::make('Founding information')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('full_name')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('email')
+                                            ->email()
+                                            ->required()
+                                            ->maxLength(255),
+                                    ])->columns(2),
+                                Forms\Components\Section::make('Newsletter')
+                                    ->schema([
+                                        Forms\Components\Toggle::make('newsletter')
+                                            ->required(),
+                                    ])->columnSpanFull(),
+                                Forms\Components\Section::make('Contact info')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('landline')
+                                            ->numeric(),
+                                        Forms\Components\TextInput::make('mobile')
+                                            ->required()
+                                            ->numeric(),
+                                        Forms\Components\TextInput::make('next_phone')
+                                            ->tel()
+                                            ->numeric(),
+                                    ])->columns(3),
+                                Forms\Components\Section::make('Contact address')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('address')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('city')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('zip_code')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('state')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\Select::make('country')
+                                            ->options([
+                                                'Czech republic' => 'Czech republic',
+                                                'Slovakia' => 'Slovakia'
+                                            ])
+                                            ->required()
+                                            ->columnSpan(2),
+                                    ])->columns(3),
+                                Forms\Components\Section::make('User note')
+                                    ->schema([
+                                        Forms\Components\Textarea::make('note')
+                                            ->maxLength(16777215)
+                                            ->columnSpanFull(),
+                                    ])
+                            ])
                             ->columnSpanFull(),
                         Forms\Components\TextInput::make('www')
                             ->label('www')
