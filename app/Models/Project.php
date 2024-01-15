@@ -29,9 +29,9 @@ class Project extends Model
         return $this->belongsToMany(Company::class, 'project_companies');
     }
 
-    public function contact(): BelongsTo
+    public function contact(): BelongsToMany
     {
-        return $this->belongsTo(Contact::class);
+        return $this->belongsToMany(Contact::class, 'project_contacts');
     }
 
     public function project_types(): BelongsTo

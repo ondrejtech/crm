@@ -42,4 +42,9 @@ class Contact extends Model
     {
         return $this->belongsToMany(Company::class,'contact_companies');
     }
+
+    public function project(): BelongsToMany
+    {
+        return $this->belongsToMany(Project::class,'project_contacts');
+    }
 }
