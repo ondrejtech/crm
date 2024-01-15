@@ -23,32 +23,98 @@ class ProjectResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('company_id')
-                    ->relationship('company', 'name')
-                    ->required(),
-                Forms\Components\Select::make('contact_id')
-                    ->relationship('contact', 'full_name')
-                    ->required(),
-                Forms\Components\Select::make('project_types_id')
-                    ->required()
-                    ->relationship('project_type','name')
-                    ->createOptionForm([
+                Forms\Components\Section::make('Founding information')
+                    ->schema([
                         Forms\Components\TextInput::make('name')
                             ->required()
+                            ->maxLength(255)
+                            ->columnSpanFull(),
+                        Forms\Components\Select::make('company_id')
+                            ->relationship('company', 'name')
+                            ->required()
+                            ->createOptionForm([
+                                Forms\Components\Section::make('Founding information ')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('name')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('phone')
+                                            ->required()
+                                            ->prefix('420'),
+                                        Forms\Components\TextInput::make('email')
+                                            ->email()
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('www')
+                                            ->label('www')
+                                            ->prefix('https://www.')
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('IC')
+                                            ->required()
+                                            ->numeric(),
+                                        Forms\Components\TextInput::make('DIC')
+                                            ->maxLength(255),
+                                    ])->columns(3),
+                                Forms\Components\Section::make('Address')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('address')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('city')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('zip_code')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\TextInput::make('state')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Forms\Components\Select::make('country')
+                                            ->required()
+                                            ->options([
+                                                'Czech Republic' => 'Czech republic',
+                                                'Slovakia' => 'Slovakia'
+                                            ])->columnSpan(2),
+                                    ])->columns(3),
+                                Forms\Components\Section::make('User note')
+                                    ->schema([
+                                        Forms\Components\Textarea::make('note')
+                                            ->maxLength(16777215)
+                                    ])
+                                    ->columnSpanFull(),
+                            ]),
+                        Forms\Components\Select::make('contact_id')
+                            ->relationship('contact', 'full_name')
+                            ->required(),
+                        Forms\Components\Select::make('project_types_id')
+                            ->required()
+                            ->relationship('project_type','name')
+                            ->createOptionForm([
+                                Forms\Components\Section::make('Department information')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('name')
+                                            ->maxLength(255)
+                                            ->required()
+                                            ->columnSpanFull(),
+                                    ])
+                            ]),
+                    ])->columns(3),
+                Forms\Components\Section::make('Project information')
+                    ->schema([
+                        Forms\Components\DatePicker::make('start_project')
+                            ->required(),
+                        Forms\Components\DatePicker::make('planned_project_end')
+                            ->required(),
+                        Forms\Components\DatePicker::make('end_project'),
+                        Forms\Components\TextInput::make('finish_price')
+                            ->maxLength(255)
+                            ->columnSpanFull(),
+                    ])->columns(3),
+                Forms\Components\Section::make('User note')
+                    ->schema([
+                        Forms\Components\TextInput::make('note')
                             ->maxLength(255),
-                    ]),
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\DatePicker::make('start_project')
-                    ->required(),
-                Forms\Components\DatePicker::make('planned_project_end')
-                    ->required(),
-                Forms\Components\DatePicker::make('end_project'),
-                Forms\Components\TextInput::make('finish_price')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('note')
-                    ->maxLength(255),
+                    ])->columnSpanFull()
             ]);
     }
 
@@ -59,10 +125,10 @@ class ProjectResource extends Resource
                 Tables\Columns\TextColumn::make('company.name')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('contact.id')
+                Tables\Columns\TextColumn::make('contact.full_name')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('project_types_id')
+                Tables\Columns\TextColumn::make('project_types.name')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('name')
