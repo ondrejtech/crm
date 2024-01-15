@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\ProjectResource\RelationManagers;
+namespace App\Filament\Resources\CompanyResource\RelationManagers;
 
 use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
@@ -12,9 +12,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class CompanyRelationManager extends RelationManager
+class ProjectRelationManager extends RelationManager
 {
-    protected static string $relationship = 'company';
+    protected static string $relationship = 'project';
 
     public function form(Form $form): Form
     {
@@ -32,10 +32,6 @@ class CompanyRelationManager extends RelationManager
                             ->email()
                             ->required()
                             ->maxLength(255),
-                        Forms\Components\Select::make('projects_id')
-                            ->label('project')
-                            ->relationship('project', 'name')
-                            ->preload(),
                         Forms\Components\Select::make('contact_id')
                             ->label('Contact Name')
                             ->relationship('contact','full_name')
@@ -147,77 +143,55 @@ class CompanyRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('id'),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
-                    ->toggleable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('phone')
+                    ->sortable()
+                    ->toggleable(),
+                Tables\Columns\TextColumn::make('company.name')
+                    ->numeric()
+                    ->sortable()
                     ->searchable()
-                    ->toggleable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('email')
+                    ->toggleable(),
+                Tables\Columns\TextColumn::make('contact.full_name')
+                    ->numeric()
+                    ->sortable()
                     ->searchable()
-                    ->toggleable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('www')
+                    ->toggleable(),
+                Tables\Columns\TextColumn::make('project_types.name')
+                    ->numeric()
+                    ->sortable()
                     ->searchable()
-                    ->prefix('www.')
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('IC')
+                    ->toggleable(),
+                Tables\Columns\TextColumn::make('start_project')
+                    ->date()
+                    ->sortable()
                     ->searchable()
-                    ->toggleable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('DIC')
+                    ->toggleable(),
+                Tables\Columns\TextColumn::make('planned_project_end')
+                    ->date()
+                    ->sortable()
                     ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->sortable(),
-                Tables\Columns\IconColumn::make('subscriber')
-                    ->boolean()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('end_project')
+                    ->date()
+                    ->sortable()
                     ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->sortable(),
-                Tables\Columns\IconColumn::make('supplier')
-                    ->boolean()
-                    ->toggleable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('finish_price')
                     ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->sortable(),
-                Tables\Columns\IconColumn::make('competition')
-                    ->boolean()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('note')
                     ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('address')
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('city')
-                    ->searchable()
-                    ->toggleable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('zip_code')
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('state')
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('country')
-                    ->searchable()
-                    ->toggleable()
-                    ->sortable(),
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
-                    ->searchable()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->sortable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
-                    ->searchable()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true)
-                    ->sortable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 Filter::make('created_at')
@@ -239,6 +213,7 @@ class CompanyRelationManager extends RelationManager
             ])
             ->actions([
                 Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
                     Tables\Actions\EditAction::make(),
                     Tables\Actions\DeleteAction::make(),
                 ])

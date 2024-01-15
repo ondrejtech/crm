@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ComapanyResource\RelationManagers\ContactsRelationManager;
 use App\Filament\Resources\CompanyResource\Pages;
 use App\Filament\Resources\CompanyResource\RelationManagers;
+use App\Filament\Resources\CompanyResource\RelationManagers\ProjectRelationManager;
 use App\Filament\Resources\CompanyResource\RelationManagers\ProjectsRelationManager;
 use App\Models\Company;
 use Filament\Forms;
@@ -263,8 +264,8 @@ class CompanyResource extends Resource
     public static function getRelations(): array
     {
         return [
-            RelationManagers\ContactRelationManager::class
-//            ProjectsRelationManager::class
+            RelationManagers\ContactRelationManager::class,
+            ProjectRelationManager::class
         ];
     }
 

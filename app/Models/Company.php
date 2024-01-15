@@ -36,9 +36,9 @@ class Company extends Model
         return $this->belongsTo(Company::class);
     }
 
-    public function project(): BelongsTo
+    public function project(): BelongsToMany
     {
-        return $this->BelongsTo(Project::class);
+        return $this->BelongsToMany(Project::class, 'project_companies');
     }
 
     public function contact(): BelongsToMany
@@ -49,10 +49,5 @@ class Company extends Model
     public function contacts(): HasMany
     {
         return $this->hasMany(Contact::class);
-    }
-
-    public function projects(): HasMany
-    {
-        return $this->HasMany(Project::class);
     }
 }
