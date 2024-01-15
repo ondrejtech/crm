@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 class Contact extends Model
 {
@@ -31,19 +33,13 @@ class Contact extends Model
         'note',
     ];
 
-
-    public function company(): BelongsTo
-    {
-        return $this->belongsTo(Company::class);
-    }
-
     public function department(): BelongsTo
     {
         return $this->belongsTo(Department::class);
     }
 
-    public function companies(): HasMany
+    public function companies(): BelongsToMany
     {
-        return $this->hasMany(Company::class);
+        return $this->belongsToMany(Company::class,'contact_companies');
     }
 }

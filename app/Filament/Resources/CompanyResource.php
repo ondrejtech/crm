@@ -18,6 +18,7 @@ use Filament\Tables\Table;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use function Laravel\Prompts\search;
 
 class CompanyResource extends Resource
 {
@@ -104,7 +105,10 @@ class CompanyResource extends Resource
                                             ->columnSpanFull(),
                                     ])
                             ])
-                            ->columnSpan(2),
+                            ->columnSpan(2)
+                            ->multiple()
+                            ->preload()
+                            ->searchable(),
                         Forms\Components\TextInput::make('www')
                             ->label('www')
                             ->prefix('https://www.')
@@ -259,8 +263,8 @@ class CompanyResource extends Resource
     public static function getRelations(): array
     {
         return [
-            ContactsRelationManager::class,
-            ProjectsRelationManager::class
+            RelationManagers\ContactRelationManager::class
+//            ProjectsRelationManager::class
         ];
     }
 

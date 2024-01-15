@@ -36,9 +36,9 @@ class ContactResource extends Resource
                     ])->columns(2),
                 Forms\Components\Section::make('Company info')
                     ->schema([
-                        Forms\Components\Select::make('company_id')
+                        Forms\Components\Select::make('contact_companies.id')
                             ->label('Company')
-                            ->relationship('company', 'name')
+                            ->relationship('companies', 'name')
                             ->createOptionForm([
                                 Forms\Components\Section::make('Founding information ')
                                     ->schema([
@@ -159,10 +159,10 @@ class ContactResource extends Resource
                 Tables\Columns\TextColumn::make('full_name')
                     ->searchable()
                 ->sortable(),
-                Tables\Columns\TextColumn::make('company.name')
-                    ->numeric()
-                    ->searchable()
-                    ->sortable(),
+//                Tables\Columns\TextColumn::make('contact_companies.id')
+//                    ->numeric()
+//                    ->searchable()
+//                    ->sortable(),
                 Tables\Columns\TextColumn::make('department.name')
                     ->numeric()
                     ->searchable()
