@@ -49,7 +49,7 @@ CREATE TABLE `companies` (
   KEY `companies_project_id_foreign` (`project_id`),
   CONSTRAINT `companies_contact_id_foreign` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`id`) ON DELETE CASCADE,
   CONSTRAINT `companies_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -59,9 +59,42 @@ CREATE TABLE `companies` (
 LOCK TABLES `companies` WRITE;
 /*!40000 ALTER TABLE `companies` DISABLE KEYS */;
 INSERT INTO `companies` VALUES
-(1,'Millenium International s.r.o','732127410','ondrej.web@gmail.com',NULL,'02239221',NULL,0,0,0,'Kosicka 63/30','Praha','10100','Hlavni mesto Praha','Czech Republic',NULL,'2024-01-15 15:07:24','2024-01-15 17:26:36',1,NULL),
-(3,'Ondrej Zelina spol','732127410','ondrej.web@gmail.com',NULL,'02453681',NULL,0,0,0,'Horni namesti 3','Vsetin','75501','Zlinsky kraj','Czech Republic',NULL,'2024-01-15 15:17:54','2024-01-15 15:42:39',NULL,NULL);
+(1,'Ondrej Zelina','732127410','ondrej.web@gmail.com',NULL,'02453681',NULL,0,0,0,'GHalenkov 655','Halenkov','75603','Zlinsky kraj','Czech Republic',NULL,'2024-01-15 18:53:37','2024-01-15 18:53:37',NULL,NULL),
+(2,'Nabah Solutions s.r.o.','730256751','info@nabah.cz',NULL,'02153684',NULL,0,0,0,'Olomouc','Olomouc','75001','Olomoucky kraj','Czech Republic',NULL,'2024-01-15 20:02:25','2024-01-15 20:02:25',NULL,NULL);
 /*!40000 ALTER TABLE `companies` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contact_companies`
+--
+
+DROP TABLE IF EXISTS `contact_companies`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact_companies` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `company_id` bigint(20) unsigned NOT NULL,
+  `contact_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `contact_companies_company_id_foreign` (`company_id`),
+  KEY `contact_companies_contact_id_foreign` (`contact_id`),
+  CONSTRAINT `contact_companies_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `contact_companies_contact_id_foreign` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contact_companies`
+--
+
+LOCK TABLES `contact_companies` WRITE;
+/*!40000 ALTER TABLE `contact_companies` DISABLE KEYS */;
+INSERT INTO `contact_companies` VALUES
+(1,1,1),
+(2,1,2),
+(3,2,3),
+(4,2,4);
+/*!40000 ALTER TABLE `contact_companies` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -73,7 +106,6 @@ DROP TABLE IF EXISTS `contacts`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `contacts` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `company_id` bigint(20) unsigned DEFAULT NULL,
   `department_id` bigint(20) unsigned DEFAULT NULL,
   `full_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -91,11 +123,9 @@ CREATE TABLE `contacts` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `contacts_email_unique` (`email`),
-  KEY `contacts_company_id_foreign` (`company_id`),
   KEY `contacts_department_id_foreign` (`department_id`),
-  CONSTRAINT `contacts_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE,
   CONSTRAINT `contacts_department_id_foreign` FOREIGN KEY (`department_id`) REFERENCES `departments` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,8 +135,10 @@ CREATE TABLE `contacts` (
 LOCK TABLES `contacts` WRITE;
 /*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
 INSERT INTO `contacts` VALUES
-(1,1,1,'Ondrej Zelina','ondrej.web@gmail.com',0,NULL,732127410,NULL,'Halenkov 655','Halenkov','75603','Zlinsky kraj','Czech republic',NULL,'2024-01-15 15:06:45','2024-01-15 16:52:16'),
-(2,NULL,NULL,'Jana Jochcova','bejajo@seznam.cz',0,NULL,571457585,NULL,'Halenkov ','Halenkov','75603','Zlinsky kraj','Czech republic',NULL,'2024-01-15 16:09:31','2024-01-15 16:09:31');
+(1,NULL,'Ondrej Zelina','ondrej.web@gmail.com',0,NULL,732127410,NULL,'Halenkov 655','Halenkov','75603','Zlinsky kraj','Czech republic',NULL,'2024-01-15 18:52:58','2024-01-15 18:52:58'),
+(2,NULL,'Vlasta Jochoq`','gjwigjwieo@jdsgjsp.com',0,NULL,456896521,NULL,'dfvbfbes','fvwevw','75603','dvwvdwscv','Czech republic',NULL,'2024-01-15 19:11:17','2024-01-15 19:49:21'),
+(3,NULL,'Luas Haban','info@nabah.cz',0,NULL,730256751,NULL,'Olomouc','Olomouc','75001','Olomoucky kraj','Czech republic',NULL,'2024-01-15 20:00:50','2024-01-15 20:00:50'),
+(4,NULL,'Aneta Kabelikova','kablikova@nabah.cz',0,NULL,730256749,NULL,'Olomouc','Olomouc','75001','Olomoucky kraj','Czech republic',NULL,'2024-01-15 20:01:47','2024-01-15 20:01:47');
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +155,7 @@ CREATE TABLE `departments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -133,7 +165,9 @@ CREATE TABLE `departments` (
 LOCK TABLES `departments` WRITE;
 /*!40000 ALTER TABLE `departments` DISABLE KEYS */;
 INSERT INTO `departments` VALUES
-(1,'PHP Developer','2024-01-15 16:51:56','2024-01-15 16:51:56');
+(1,'PHP Developer','2024-01-15 19:42:24','2024-01-15 19:42:24'),
+(2,'Company management','2024-01-15 19:59:12','2024-01-15 19:59:12'),
+(3,'Security management','2024-01-15 19:59:25','2024-01-15 19:59:25');
 /*!40000 ALTER TABLE `departments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -230,7 +264,7 @@ CREATE TABLE `employees` (
   UNIQUE KEY `employees_email_unique` (`email`),
   KEY `employees_department_id_foreign` (`department_id`),
   CONSTRAINT `employees_department_id_foreign` FOREIGN KEY (`department_id`) REFERENCES `departments` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -239,8 +273,6 @@ CREATE TABLE `employees` (
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES
-(1,1,'Ondrej Zelina','ondrej.web@gmail.com',0,NULL,732127410,NULL,'Halenkov 655','Halenkov','75603','Zlinsky kraj','Czech republic',NULL,'2024-01-15 16:53:28','2024-01-15 16:53:28');
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -285,7 +317,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -295,23 +327,24 @@ CREATE TABLE `migrations` (
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 INSERT INTO `migrations` VALUES
-(1,'2014_10_12_000000_create_users_table',1),
-(2,'2014_10_12_100000_create_password_reset_tokens_table',1),
-(3,'2019_08_19_000000_create_failed_jobs_table',1),
-(4,'2019_12_14_000001_create_personal_access_tokens_table',1),
-(5,'2024_01_12_154833_create_companies_table',1),
-(6,'2024_01_12_155527_create_document_types_table',1),
-(7,'2024_01_12_160048_create_departments_table',1),
-(8,'2024_01_12_160249_create_project_types_table',1),
-(9,'2024_01_12_161129_create_contacts_table',1),
-(10,'2024_01_12_161402_create_projects_table',1),
-(11,'2024_01_12_161542_create_documents_table',1),
-(12,'2024_01_12_162800_create_tasks_table',1),
-(13,'2024_01_12_202959_create_tests_table',1),
-(14,'2024_01_12_212222_add_contact_id_to_companies',1),
-(15,'2024_01_14_180039_create_employees_table',1),
-(16,'2024_01_15_150607_add_column_project_id',1),
-(17,'2024_01_15_154032_add_employee_id',2);
+(18,'2014_10_12_000000_create_users_table',1),
+(19,'2014_10_12_100000_create_password_reset_tokens_table',1),
+(20,'2019_08_19_000000_create_failed_jobs_table',1),
+(21,'2019_12_14_000001_create_personal_access_tokens_table',1),
+(22,'2024_01_12_154833_create_companies_table',1),
+(23,'2024_01_12_155527_create_document_types_table',1),
+(24,'2024_01_12_160048_create_departments_table',1),
+(25,'2024_01_12_160249_create_project_types_table',1),
+(26,'2024_01_12_161129_create_contacts_table',1),
+(27,'2024_01_12_161402_create_projects_table',1),
+(28,'2024_01_12_161542_create_documents_table',1),
+(29,'2024_01_12_162800_create_tasks_table',1),
+(30,'2024_01_12_202959_create_tests_table',1),
+(31,'2024_01_12_212222_add_contact_id_to_companies',1),
+(32,'2024_01_14_180039_create_employees_table',1),
+(33,'2024_01_15_150607_add_column_project_id',1),
+(34,'2024_01_15_154032_add_employee_id',1),
+(35,'2024_01_15_193753_create_contact_companies_table',1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -385,7 +418,7 @@ CREATE TABLE `project_types` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -394,8 +427,6 @@ CREATE TABLE `project_types` (
 
 LOCK TABLES `project_types` WRITE;
 /*!40000 ALTER TABLE `project_types` DISABLE KEYS */;
-INSERT INTO `project_types` VALUES
-(1,'PHP Contract','2024-01-15 16:54:12','2024-01-15 16:54:12');
 /*!40000 ALTER TABLE `project_types` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -429,7 +460,7 @@ CREATE TABLE `projects` (
   CONSTRAINT `projects_contact_id_foreign` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`id`) ON DELETE CASCADE,
   CONSTRAINT `projects_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE,
   CONSTRAINT `projects_project_types_id_foreign` FOREIGN KEY (`project_types_id`) REFERENCES `project_types` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -438,8 +469,6 @@ CREATE TABLE `projects` (
 
 LOCK TABLES `projects` WRITE;
 /*!40000 ALTER TABLE `projects` DISABLE KEYS */;
-INSERT INTO `projects` VALUES
-(1,'Tvorba testovaciho projektu',1,1,1,'2024-01-15','2024-01-26',NULL,NULL,NULL,'2024-01-15 17:02:28','2024-01-15 17:02:28',1);
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -519,7 +548,7 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES
-(1,'Onddrej Zelina','ondrej.web@gmail.com',NULL,'$2y$12$eh2jWsMIcaxh.3p2EDW6M.As5gAwuaEvGguzr9RgOT/.hoF9dnU46',NULL,'2024-01-15 14:42:34','2024-01-15 14:42:34');
+(1,'Ondrej Zelina','ondrej.web@gmail.com',NULL,'$2y$12$La/q9YBmVOEjyaEWFA05Zuook..oWmzz/DWo7LJ7odbepD3VfEwJi',NULL,'2024-01-15 18:47:30','2024-01-15 18:47:30');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -532,4 +561,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-15 20:42:58
+-- Dump completed on 2024-01-15 22:03:38
