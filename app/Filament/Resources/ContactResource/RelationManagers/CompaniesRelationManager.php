@@ -179,7 +179,6 @@ class CompaniesRelationManager extends RelationManager
             ->actions([
                 Tables\Actions\ActionGroup::make([
                     Tables\Actions\EditAction::make(),
-//                Tables\Actions\DeleteAction::make(),
                     Tables\Actions\ViewAction::make(),
                 ])
             ])
