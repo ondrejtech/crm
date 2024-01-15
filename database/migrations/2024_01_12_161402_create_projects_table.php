@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('company_id')->constrained()->cascadeOnDelete();
             $table->foreignId('contact_id')->constrained()->cascadeOnDelete();
             $table->foreignId('project_types_id')->constrained()->cascadeOnDelete();
+//            $table->foreignId('employee_id')->constrained()->cascadeOnDelete();
             $table->date('start_project');
             $table->date('planned_project_end');
             $table->date('end_project')->nullable();
@@ -31,10 +32,11 @@ return new class extends Migration
      */
     public function down(): void
     {
-//        Schema::table('projects', function ($table) {
+//        Schema::table('projects', function (Blueprint $table) {
 //            $table->dropConstrainedForeignId('company_id');
 //            $table->dropConstrainedForeignId('contact_id');
 //            $table->dropConstrainedForeignId('type_project');
+//            $table->dropConstrainedForeignId('employee_id');
 //        });
 
         Schema::dropIfExists('projects');

@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ComapanyResource\RelationManagers\ContactsRelationManager;
 use App\Filament\Resources\CompanyResource\Pages;
 use App\Filament\Resources\CompanyResource\RelationManagers;
+use App\Filament\Resources\CompanyResource\RelationManagers\ProjectsRelationManager;
 use App\Models\Company;
 use Filament\Forms;
 use Filament\Forms\Components\Actions\Action;
@@ -40,6 +41,10 @@ class CompanyResource extends Resource
                             ->email()
                             ->required()
                             ->maxLength(255),
+                        Forms\Components\Select::make('projects_id')
+                            ->label('project')
+                            ->relationship('project', 'name')
+                            ->preload(),
                         Forms\Components\Select::make('contact_id')
                             ->label('Contact Name')
                             ->relationship('contact','full_name')
@@ -99,7 +104,7 @@ class CompanyResource extends Resource
                                             ->columnSpanFull(),
                                     ])
                             ])
-                            ->columnSpanFull(),
+                            ->columnSpan(2),
                         Forms\Components\TextInput::make('www')
                             ->label('www')
                             ->prefix('https://www.')
@@ -254,7 +259,8 @@ class CompanyResource extends Resource
     public static function getRelations(): array
     {
         return [
-            ContactsRelationManager::class
+            ContactsRelationManager::class,
+            ProjectsRelationManager::class
         ];
     }
 

@@ -19,7 +19,8 @@ class Project extends Model
         'planned_project_end',
         'end_project',
         'finish_price',
-        'note'
+        'note',
+        'employee_id'
     ];
 
     public function company(): BelongsTo
@@ -32,8 +33,13 @@ class Project extends Model
         return $this->belongsTo(Contact::class);
     }
 
-    public function project_type(): BelongsTo
+    public function project_types(): BelongsTo
     {
         return $this->belongsTo(ProjectType::class);
+    }
+
+    public function employee(): BelongsTo
+    {
+        return $this->belongsTo(Employee::class);
     }
 }

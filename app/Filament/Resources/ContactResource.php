@@ -90,9 +90,20 @@ class ContactResource extends Resource
                                     ])
                                     ->columnSpanFull(),
                             ]),
+//                            ->multiple()
+//                            ->searchable()
+//                            ->preload(),
                         Forms\Components\Select::make('department_id')
                             ->label('Department')
-                            ->relationship('department','name'),
+                            ->relationship('department','name')
+                            ->createOptionForm([
+                                Forms\Components\Section::make('Department information')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('name')
+                                            ->required()
+                                            ->maxLength(255)
+                                    ])
+                            ]),
                     ])->columns(2),
                 Forms\Components\Section::make('Newsletter')
                     ->schema([

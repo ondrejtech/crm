@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\CompanyResource\RelationManagers\ProjectsRelationManager;
 use App\Filament\Resources\ProjectResource\Pages;
 use App\Filament\Resources\ProjectResource\RelationManagers;
 use App\Models\Project;
@@ -86,9 +87,20 @@ class ProjectResource extends Resource
                         Forms\Components\Select::make('contact_id')
                             ->relationship('contact', 'full_name')
                             ->required(),
+                        Forms\Components\Select::make('employee_id')
+                            ->relationship('employee', 'full_name')
+                            ->required(),
+                    ])->columns(3),
+                Forms\Components\Section::make('Project information')
+                    ->schema([
+                        Forms\Components\DatePicker::make('start_project')
+                            ->required(),
+                        Forms\Components\DatePicker::make('planned_project_end')
+                            ->required(),
+                        Forms\Components\DatePicker::make('end_project'),
                         Forms\Components\Select::make('project_types_id')
                             ->required()
-                            ->relationship('project_type','name')
+                            ->relationship('project_types','name')
                             ->createOptionForm([
                                 Forms\Components\Section::make('Department information')
                                     ->schema([
@@ -98,17 +110,9 @@ class ProjectResource extends Resource
                                             ->columnSpanFull(),
                                     ])
                             ]),
-                    ])->columns(3),
-                Forms\Components\Section::make('Project information')
-                    ->schema([
-                        Forms\Components\DatePicker::make('start_project')
-                            ->required(),
-                        Forms\Components\DatePicker::make('planned_project_end')
-                            ->required(),
-                        Forms\Components\DatePicker::make('end_project'),
                         Forms\Components\TextInput::make('finish_price')
                             ->maxLength(255)
-                            ->columnSpanFull(),
+                            ->columnSpan(2),
                     ])->columns(3),
                 Forms\Components\Section::make('User note')
                     ->schema([
@@ -122,44 +126,68 @@ class ProjectResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(),
                 Tables\Columns\TextColumn::make('company.name')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(),
                 Tables\Columns\TextColumn::make('contact.full_name')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(),
                 Tables\Columns\TextColumn::make('project_types.name')
                     ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(),
                 Tables\Columns\TextColumn::make('start_project')
                     ->date()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(),
                 Tables\Columns\TextColumn::make('planned_project_end')
                     ->date()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('end_project')
                     ->date()
-                    ->sortable(),
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('finish_price')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('note')
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+//                Tables\Actions\EditAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
+                    Tables\Actions\EditAction::make(),
+                    Tables\Actions\DeleteAction::make(),
+                ])
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -171,7 +199,7 @@ class ProjectResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\CompanyRelationManager::class
         ];
     }
 
@@ -180,7 +208,7 @@ class ProjectResource extends Resource
         return [
             'index' => Pages\ListProjects::route('/'),
             'create' => Pages\CreateProject::route('/create'),
-            'edit' => Pages\EditProject::route('/{record}/edit'),
+            'edit' => Pages\EditProject::route('/{record}/edit')    ,
         ];
     }
 }
