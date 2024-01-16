@@ -50,4 +50,9 @@ class Company extends Model
     {
         return $this->hasMany(Contact::class);
     }
+
+    public function tasks(): BelongsToMany
+    {
+        return $this->belongsToMany(Task::class,'task_companies');
+    }
 }

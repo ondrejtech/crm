@@ -265,7 +265,8 @@ class CompanyResource extends Resource
     {
         return [
             RelationManagers\ContactRelationManager::class,
-            ProjectRelationManager::class
+            ProjectRelationManager::class,
+            RelationManagers\TasksRelationManager::class
         ];
     }
 
