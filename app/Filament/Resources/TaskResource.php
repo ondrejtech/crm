@@ -5,6 +5,8 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\TaskResource\Pages;
 use App\Filament\Resources\TaskResource\RelationManagers;
 use App\Models\Task;
+use Filament\Actions\ActionGroup;
+use Filament\Actions\ViewAction;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -26,8 +28,11 @@ class TaskResource extends Resource
                 Forms\Components\TextInput::make('subject')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('solver')
-                    ->maxLength(255),
+                Forms\Components\Select::make('solver')
+                    ->label('Solver')
+                    ->required()
+                    ->relationship('employees','full_name')
+                    ->required(),
                 Forms\Components\DatePicker::make('start_task')
                     ->required(),
                 Forms\Components\DatePicker::make('end_task')
@@ -46,6 +51,7 @@ class TaskResource extends Resource
                     ->relationship('contacts','full_name')
                     ->searchable()
                     ->preload()
+                    ->required()
             ]);
     }
 
@@ -54,29 +60,50 @@ class TaskResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('subject')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('solver')
-                    ->searchable(),
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(),
+                Tables\Columns\TextColumn::make('employees.full_name')
+                    ->label('Solver')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(),
+                Tables\Columns\TextColumn::make('projects.name')
+                    ->label('Parent project')
+                    ->searchable()
+                    ->sortable()
+                    ->limit(20)
+                    ->toggleable(),
                 Tables\Columns\TextColumn::make('start_task')
                     ->date()
-                    ->sortable(),
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(),
                 Tables\Columns\TextColumn::make('end_task')
                     ->date()
-                    ->sortable(),
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
+                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+//                Tables\Actions\EditAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\ViewAction::make(),
+                    Tables\Actions\EditAction::make(),
+                ])
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -90,7 +117,8 @@ class TaskResource extends Resource
         return [
             RelationManagers\ProjectsRelationManager::class,
             RelationManagers\CompaniesRelationManager::class,
-            RelationManagers\ContactsRelationManager::class
+            RelationManagers\ContactsRelationManager::class,
+            RelationManagers\EmployeesRelationManager::class,
         ];
     }
 

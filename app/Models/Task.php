@@ -31,4 +31,9 @@ class Task extends Model
     {
         return $this->belongsToMany(Contact::class,'task_contacts');
     }
+
+    public function employees(): BelongsToMany
+    {
+        return $this->belongsToMany(Employee::class,'employee_tasks');
+    }
 }
