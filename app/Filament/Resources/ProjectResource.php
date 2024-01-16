@@ -201,7 +201,8 @@ class ProjectResource extends Resource
     {
         return [
             CompanyRelationManager::class,
-            RelationManagers\ContactRelationManager::class
+            RelationManagers\ContactRelationManager::class,
+            RelationManagers\TasksRelationManager::class
         ];
     }
 

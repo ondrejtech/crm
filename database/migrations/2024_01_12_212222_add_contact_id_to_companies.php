@@ -21,8 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('companies', function (Blueprint $table) {
-            $table->dropConstrainedForeignId('contact_id');
-        });
+        Schema::disableForeignKeyConstraints();
+        Schema::dropIfExists('companies');
     }
 };

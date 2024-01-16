@@ -32,13 +32,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-//        Schema::table('projects', function (Blueprint $table) {
-//            $table->dropConstrainedForeignId('company_id');
-//            $table->dropConstrainedForeignId('contact_id');
-//            $table->dropConstrainedForeignId('type_project');
-//            $table->dropConstrainedForeignId('employee_id');
-//        });
-
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('projects');
     }
 };

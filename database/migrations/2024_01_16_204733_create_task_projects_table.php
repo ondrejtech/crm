@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::create('task_projects', function (Blueprint $table) {
             $table->id();
-            $table->string('subject');
-            $table->string('solver');
-            $table->date('start_task');
-            $table->date('end_task');
+            $table->foreignId('task_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('project_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('tasks');
+        Schema::dropIfExists('task_projects');
     }
 };

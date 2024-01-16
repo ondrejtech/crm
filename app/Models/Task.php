@@ -21,4 +21,9 @@ class Task extends Model
     {
         return $this->belongsToMany(Company::class,'task_companies');
     }
+
+    public function projects(): BelongsToMany
+    {
+        return $this->belongsToMany(Project::class,'task_projects');
+    }
 }

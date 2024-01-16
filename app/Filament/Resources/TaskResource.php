@@ -32,6 +32,11 @@ class TaskResource extends Resource
                     ->required(),
                 Forms\Components\DatePicker::make('end_task')
                     ->required(),
+                Forms\Components\Select::make('project.id')
+                    ->label('Parent project')
+                    ->relationship('projects','name')
+                    ->searchable()
+                    ->preload(),
                 Forms\Components\Select::make('company.id')
                     ->label('Company')
                     ->relationship('companies','name')
