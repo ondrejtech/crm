@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ContactResource\Pages;
 use App\Filament\Resources\ContactResource\RelationManagers;
 use App\Filament\Resources\ContactResource\RelationManagers\ProjectRelationManager;
+use App\Filament\Resources\ContactsResource\RelationManagers\TasksRelationManager;
 use App\Models\Contact;
 use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
@@ -256,7 +257,8 @@ class ContactResource extends Resource
     {
         return [
             RelationManagers\CompaniesRelationManager::class,
-            RelationManagers\ProjectRelationManager::class
+            RelationManagers\ProjectRelationManager::class,
+            TasksRelationManager::class
         ];
     }
 

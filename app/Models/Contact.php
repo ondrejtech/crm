@@ -47,4 +47,9 @@ class Contact extends Model
     {
         return $this->belongsToMany(Project::class,'project_contacts');
     }
+
+    public function tasks(): BelongsToMany
+    {
+        return $this->belongsToMany(Task::class,'task_contacts');
+    }
 }

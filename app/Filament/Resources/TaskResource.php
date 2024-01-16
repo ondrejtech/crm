@@ -41,6 +41,10 @@ class TaskResource extends Resource
                     ->label('Company')
                     ->relationship('companies','name')
                     ->searchable()
+                    ->preload(),Forms\Components\Select::make('contact.id')
+                    ->label('Contact')
+                    ->relationship('contacts','full_name')
+                    ->searchable()
                     ->preload()
             ]);
     }
@@ -84,7 +88,9 @@ class TaskResource extends Resource
     public static function getRelations(): array
     {
         return [
-            RelationManagers\CompaniesRelationManager::class
+            RelationManagers\ProjectsRelationManager::class,
+            RelationManagers\CompaniesRelationManager::class,
+            RelationManagers\ContactsRelationManager::class
         ];
     }
 
