@@ -38,49 +38,15 @@ CREATE TABLE `attendance_types` (
 LOCK TABLES `attendance_types` WRITE;
 /*!40000 ALTER TABLE `attendance_types` DISABLE KEYS */;
 INSERT INTO `attendance_types` VALUES
-(1,'Work on the project','2024-01-16 23:34:04','2024-01-16 23:34:04'),
-(2,'Communication','2024-01-16 23:34:22','2024-01-16 23:34:22'),
-(3,'Management','2024-01-16 23:34:36','2024-01-16 23:34:36'),
-(4,'Marketing','2024-01-16 23:34:48','2024-01-16 23:34:48'),
-(5,'Schop','2024-01-16 23:34:58','2024-01-16 23:34:58'),
-(6,'meeting','2024-01-16 23:36:33','2024-01-16 23:36:33'),
-(7,'Others','2024-01-16 23:36:59','2024-01-16 23:36:59');
+(1,'Work on the project','2024-01-16 22:34:04','2024-01-16 22:34:04'),
+(2,'Communication','2024-01-16 22:34:22','2024-01-16 22:34:22'),
+(3,'Management','2024-01-16 22:34:36','2024-01-16 22:34:36'),
+(4,'Marketing','2024-01-16 22:34:48','2024-01-16 22:34:48'),
+(5,'Schop','2024-01-16 22:34:58','2024-01-16 22:34:58'),
+(6,'meeting','2024-01-16 22:36:33','2024-01-16 22:36:33'),
+(7,'Others','2024-01-16 22:36:59','2024-01-16 22:36:59');
 /*!40000 ALTER TABLE `attendance_types` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `attendances`
---
-
-DROP TABLE IF EXISTS `attendances`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `attendances` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `subject` varchar(255) NOT NULL,
-  `types_id` bigint(20) unsigned NOT NULL,
-  `task` varchar(255) DEFAULT NULL,
-  `date` date NOT NULL,
-  `from` time NOT NULL,
-  `to` time NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `attendances`
---
-
-LOCK TABLES `attendances` WRITE;
-/*!40000 ALTER TABLE `attendances` DISABLE KEYS */;
-/*!40000 ALTER TABLE `attendances` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `companies`
---
 
 DROP TABLE IF EXISTS `companies`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -426,6 +392,15 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `migrations`
+--
+
+LOCK TABLES `migrations` WRITE;
+/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 INSERT INTO `migrations` VALUES
 (1,'2014_10_12_000000_create_users_table',1),
 (2,'2014_10_12_100000_create_password_reset_tokens_table',1),
@@ -449,9 +424,11 @@ INSERT INTO `migrations` VALUES
 (20,'2024_01_15_230717_create_project_contacts_table',1),
 (21,'2024_01_16_195340_create_task_companies_table',1),
 (22,'2024_01_16_204733_create_task_projects_table',1),
-(23,'2024_01_16_212750_create_task_contacts_table',2),
-(24,'2024_01_16_214900_create_employee_tasks_table',3),
-(25,'2024_01_16_232356_create_attendance_types_table',4);
+(23,'2024_01_16_212750_create_task_contacts_table',1),
+(24,'2024_01_16_214900_create_employee_tasks_table',1),
+(25,'2024_01_17_002804_create_attendance_types_table',1),
+(26,'2024_01_18_210849_create_coming_works_table',1),
+(27,'2024_01_18_210956_create_coming_wor_projects_table',1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -599,7 +576,7 @@ CREATE TABLE `project_types` (
 LOCK TABLES `project_types` WRITE;
 /*!40000 ALTER TABLE `project_types` DISABLE KEYS */;
 INSERT INTO `project_types` VALUES
-(1,'PHP Contract','2024-01-16 20:12:48','2024-01-16 20:12:48');
+(1,'PHP Contract','2024-01-16 19:12:48','2024-01-16 19:12:48');
 /*!40000 ALTER TABLE `project_types` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -643,9 +620,9 @@ CREATE TABLE `projects` (
 LOCK TABLES `projects` WRITE;
 /*!40000 ALTER TABLE `projects` DISABLE KEYS */;
 INSERT INTO `projects` VALUES
-(1,'Tvorba crm na zakazku Nabah Solutions',1,2,1,'2024-01-01','2024-01-31',NULL,NULL,NULL,'2024-01-16 20:12:51','2024-01-16 20:23:58',1),
-(2,'Tvorba eshopu',1,2,1,'2024-01-01','2024-01-31',NULL,NULL,NULL,'2024-01-16 20:13:13','2024-01-16 20:13:13',1),
-(3,'Tvorba crm na zakazku Millenium International s.r.o.',2,3,1,'2024-01-01','2024-01-31',NULL,NULL,NULL,'2024-01-16 20:13:35','2024-01-16 20:24:22',1);
+(1,'Tvorba crm na zakazku Nabah Solutions',1,2,1,'2024-01-01','2024-01-31',NULL,NULL,NULL,'2024-01-16 19:12:51','2024-01-16 19:23:58',1),
+(2,'Tvorba eshopu',1,2,1,'2024-01-01','2024-01-31',NULL,NULL,NULL,'2024-01-16 19:13:13','2024-01-16 19:13:13',1),
+(3,'Tvorba crm na zakazku Millenium International s.r.o.',2,3,1,'2024-01-01','2024-01-31',NULL,NULL,NULL,'2024-01-16 19:13:35','2024-01-16 19:24:22',1);
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -754,7 +731,7 @@ DROP TABLE IF EXISTS `tasks`;
 CREATE TABLE `tasks` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `subject` varchar(255) NOT NULL,
-  `solver` varchar(255) DEFAULT NULL,
+  `solver` varchar(255) NOT NULL,
   `start_task` date NOT NULL,
   `end_task` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -770,8 +747,8 @@ CREATE TABLE `tasks` (
 LOCK TABLES `tasks` WRITE;
 /*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
 INSERT INTO `tasks` VALUES
-(1,'Naceneni projektu - tvorba crm na zakazku','1','2024-01-16','2024-01-16','2024-01-16 20:16:10','2024-01-16 20:57:33'),
-(2,'Test task','2','2024-01-16','2024-01-16','2024-01-16 20:42:53','2024-01-16 21:07:50');
+(1,'Naceneni projektu - tvorba crm na zakazku','1','2024-01-16','2024-01-16','2024-01-16 19:16:10','2024-01-16 19:57:33'),
+(2,'Test task','2','2024-01-16','2024-01-16','2024-01-16 19:42:53','2024-01-16 20:07:50');
 /*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -827,7 +804,7 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES
-(1,'Ondrej Zelina','ondrej.web@gmail.com',NULL,'$2y$12$fRuPypEUdXGFaDuvYNDQRuIc18HOb.ZaUExyj.p1.IRJuUikbhgJ2',NULL,'2024-01-16 20:03:26','2024-01-16 20:03:26');
+(1,'Ondrej Zelina','ondrej.web@gmail.com',NULL,'$2y$12$EBqzlVTqezjy.bBo8myV6ukP23WAVLYc6aXlhaIRV22AKfDBhN/zu',NULL,'2024-01-17 00:23:28','2024-01-17 00:23:28');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -840,4 +817,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-17  1:39:04
+-- Dump completed on 2024-01-17  2:42:34
