@@ -36,4 +36,9 @@ class Task extends Model
     {
         return $this->belongsToMany(Employee::class,'employee_tasks');
     }
+
+    public function coming_works(): BelongsToMany
+    {
+        return $this->belongsToMany(ComingWork::class, 'coming_work_tasks');
+    }
 }

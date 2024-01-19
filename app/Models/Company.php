@@ -55,9 +55,4 @@ class Company extends Model
     {
         return $this->belongsToMany(Task::class,'task_companies');
     }
-
-    public function works(): BelongsToMany
-    {
-        return $this->belongsToMany(ComingWork::class, 'coming_work_companies');
-    }
 }

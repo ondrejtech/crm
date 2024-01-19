@@ -48,4 +48,9 @@ class Project extends Model
     {
         return $this->belongsToMany(Task::class,'task_projects');
     }
+
+    public function coming_works(): BelongsToMany
+    {
+        return $this->belongsToMany(ComingWork::class,'coming_work_projects');
+    }
 }
