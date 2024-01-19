@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('attendance_types', function (Blueprint $table) {
+        Schema::create('coming_wor_projects', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->foreignId('coming_work_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('project_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -23,7 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('attendance_types');
+        Schema::dropIfExists('coming_wor_projects');
     }
 };

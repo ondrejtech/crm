@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('attendance_types', function (Blueprint $table) {
+        Schema::create('coming_works', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('subject');
+            $table->string('type');
+            $table->date('date');
+            $table->time('from');
+            $table->time('to');
             $table->timestamps();
         });
     }
@@ -24,6 +28,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('attendance_types');
+        Schema::dropIfExists('coming_works');
     }
 };
