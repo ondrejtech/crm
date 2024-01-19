@@ -17,7 +17,7 @@ class ComingWork extends Model
         'to'
     ];
 
-    public function companies(): BelongsToMany
+    public function projects(): BelongsToMany
     {
         return $this->belongsToMany(Project::class, 'coming_work_projects');
     }
@@ -25,5 +25,10 @@ class ComingWork extends Model
     public function tasks(): BelongsToMany
     {
         return $this->belongsToMany(Task::class,'coming_work_tasks');
+    }
+
+    public function employees(): BelongsToMany
+    {
+        return $this->belongsToMany(Employee::class,'coming_work_employees');
     }
 }

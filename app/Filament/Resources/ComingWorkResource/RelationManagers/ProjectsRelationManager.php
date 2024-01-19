@@ -1,27 +1,20 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\ComingWorkResource\RelationManagers;
 
-use App\Filament\Resources\CompanyResource\RelationManagers\ProjectsRelationManager;
-use App\Filament\Resources\ProjectResource\Pages;
-use App\Filament\Resources\ProjectResource\RelationManagers;
-use App\Filament\Resources\ProjectResource\RelationManagers\CompanyRelationManager;
-use App\Models\Project;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
+use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ProjectResource extends Resource
+class ProjectsRelationManager extends RelationManager
 {
-    protected static ?string $model = Project::class;
+    protected static string $relationship = 'projects';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    public static function form(Form $form): Form
+    public function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -123,16 +116,21 @@ class ProjectResource extends Resource
             ]);
     }
 
-    public static function table(Table $table): Table
+    public function table(Table $table): Table
     {
         return $table
+            ->recordTitleAttribute('name')
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
+                    ->limit(20)
                     ->sortable()
                     ->toggleable(),
                 Tables\Columns\TextColumn::make('company.name')
                     ->numeric()
+                    ->limit(20)
                     ->sortable()
                     ->searchable()
                     ->toggleable(),
@@ -182,12 +180,13 @@ class ProjectResource extends Resource
             ->filters([
                 //
             ])
+            ->headerActions([
+                Tables\Actions\CreateAction::make(),
+            ])
             ->actions([
-//                Tables\Actions\EditAction::make(),
                 Tables\Actions\ActionGroup::make([
                     Tables\Actions\ViewAction::make(),
                     Tables\Actions\EditAction::make(),
-                    Tables\Actions\DeleteAction::make(),
                 ])
             ])
             ->bulkActions([
@@ -195,24 +194,5 @@ class ProjectResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            CompanyRelationManager::class,
-            RelationManagers\ContactRelationManager::class,
-            RelationManagers\TasksRelationManager::class,
-            RelationManagers\ComingWorksRelationManager::class
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListProjects::route('/'),
-            'create' => Pages\CreateProject::route('/create'),
-            'edit' => Pages\EditProject::route('/{record}/edit')    ,
-        ];
     }
 }

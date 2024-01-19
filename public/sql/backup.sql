@@ -16,37 +16,168 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `attendance_types`
+-- Table structure for table `coming_work_employees`
 --
 
-DROP TABLE IF EXISTS `attendance_types`;
+DROP TABLE IF EXISTS `coming_work_employees`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `attendance_types` (
+CREATE TABLE `coming_work_employees` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `coming_work_id` bigint(20) unsigned NOT NULL,
+  `employee_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `coming_work_employees_coming_work_id_foreign` (`coming_work_id`),
+  KEY `coming_work_employees_employee_id_foreign` (`employee_id`),
+  CONSTRAINT `coming_work_employees_coming_work_id_foreign` FOREIGN KEY (`coming_work_id`) REFERENCES `coming_works` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `coming_work_employees_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `coming_work_employees`
+--
+
+LOCK TABLES `coming_work_employees` WRITE;
+/*!40000 ALTER TABLE `coming_work_employees` DISABLE KEYS */;
+INSERT INTO `coming_work_employees` VALUES
+(1,1,1,NULL,NULL);
+/*!40000 ALTER TABLE `coming_work_employees` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `coming_work_projects`
+--
+
+DROP TABLE IF EXISTS `coming_work_projects`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `coming_work_projects` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `coming_work_id` bigint(20) unsigned NOT NULL,
+  `project_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `coming_work_projects_coming_work_id_foreign` (`coming_work_id`),
+  KEY `coming_work_projects_project_id_foreign` (`project_id`),
+  CONSTRAINT `coming_work_projects_coming_work_id_foreign` FOREIGN KEY (`coming_work_id`) REFERENCES `coming_works` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `coming_work_projects_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `coming_work_projects`
+--
+
+LOCK TABLES `coming_work_projects` WRITE;
+/*!40000 ALTER TABLE `coming_work_projects` DISABLE KEYS */;
+INSERT INTO `coming_work_projects` VALUES
+(1,1,3,NULL,NULL);
+/*!40000 ALTER TABLE `coming_work_projects` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `coming_work_tasks`
+--
+
+DROP TABLE IF EXISTS `coming_work_tasks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `coming_work_tasks` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `coming_work_id` bigint(20) unsigned NOT NULL,
+  `task_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `coming_work_tasks_coming_work_id_foreign` (`coming_work_id`),
+  KEY `coming_work_tasks_task_id_foreign` (`task_id`),
+  CONSTRAINT `coming_work_tasks_coming_work_id_foreign` FOREIGN KEY (`coming_work_id`) REFERENCES `coming_works` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `coming_work_tasks_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `coming_work_tasks`
+--
+
+LOCK TABLES `coming_work_tasks` WRITE;
+/*!40000 ALTER TABLE `coming_work_tasks` DISABLE KEYS */;
+INSERT INTO `coming_work_tasks` VALUES
+(1,1,1,NULL,NULL);
+/*!40000 ALTER TABLE `coming_work_tasks` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `coming_work_types`
+--
+
+DROP TABLE IF EXISTS `coming_work_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `coming_work_types` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `attendance_types`
+-- Dumping data for table `coming_work_types`
 --
 
-LOCK TABLES `attendance_types` WRITE;
-/*!40000 ALTER TABLE `attendance_types` DISABLE KEYS */;
-INSERT INTO `attendance_types` VALUES
-(1,'Work on the project','2024-01-16 22:34:04','2024-01-16 22:34:04'),
-(2,'Communication','2024-01-16 22:34:22','2024-01-16 22:34:22'),
-(3,'Management','2024-01-16 22:34:36','2024-01-16 22:34:36'),
-(4,'Marketing','2024-01-16 22:34:48','2024-01-16 22:34:48'),
-(5,'Schop','2024-01-16 22:34:58','2024-01-16 22:34:58'),
-(6,'meeting','2024-01-16 22:36:33','2024-01-16 22:36:33'),
-(7,'Others','2024-01-16 22:36:59','2024-01-16 22:36:59');
-/*!40000 ALTER TABLE `attendance_types` ENABLE KEYS */;
+LOCK TABLES `coming_work_types` WRITE;
+/*!40000 ALTER TABLE `coming_work_types` DISABLE KEYS */;
+INSERT INTO `coming_work_types` VALUES
+(1,'Work on the project','2024-01-16 21:34:04','2024-01-16 21:34:04'),
+(2,'Communication','2024-01-16 21:34:22','2024-01-16 21:34:22'),
+(3,'Management','2024-01-16 21:34:36','2024-01-16 21:34:36'),
+(4,'Marketing','2024-01-16 21:34:48','2024-01-16 21:34:48'),
+(5,'Schop','2024-01-16 21:34:58','2024-01-16 21:34:58'),
+(6,'meeting','2024-01-16 21:36:33','2024-01-16 21:36:33'),
+(7,'Others','2024-01-16 21:36:59','2024-01-16 21:36:59');
+/*!40000 ALTER TABLE `coming_work_types` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `coming_works`
+--
+
+DROP TABLE IF EXISTS `coming_works`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `coming_works` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `subject` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `from` time NOT NULL,
+  `to` time NOT NULL,
+  `note` mediumtext DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `coming_works`
+--
+
+LOCK TABLES `coming_works` WRITE;
+/*!40000 ALTER TABLE `coming_works` DISABLE KEYS */;
+INSERT INTO `coming_works` VALUES
+(1,'Komunikace - naceneni projektu','2024-01-19','08:00:00','11:00:00',NULL,'2024-01-19 13:00:14','2024-01-19 13:00:14');
+/*!40000 ALTER TABLE `coming_works` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `companies`
+--
 
 DROP TABLE IF EXISTS `companies`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -383,17 +514,8 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `migrations`
---
-
-LOCK TABLES `migrations` WRITE;
-/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Dumping data for table `migrations`
@@ -428,7 +550,13 @@ INSERT INTO `migrations` VALUES
 (24,'2024_01_16_214900_create_employee_tasks_table',1),
 (25,'2024_01_17_002804_create_attendance_types_table',1),
 (26,'2024_01_18_210849_create_coming_works_table',1),
-(27,'2024_01_18_210956_create_coming_wor_projects_table',1);
+(27,'2024_01_18_210956_create_coming_wor_projects_table',1),
+(28,'2024_01_18_214534_create_coming_attendance_types_table',2),
+(29,'2024_01_19_115724_create_coming_work_types_table',3),
+(30,'2024_01_19_134930_create_coming_works_table',4),
+(31,'2024_01_19_135239_create_coming_work_projects_table',4),
+(32,'2024_01_19_140253_create_coming_work_tasks_table',5),
+(33,'2024_01_19_153119_create_coming_work_employees_table',6);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -627,6 +755,32 @@ INSERT INTO `projects` VALUES
 UNLOCK TABLES;
 
 --
+-- Table structure for table `task_coming_works`
+--
+
+DROP TABLE IF EXISTS `task_coming_works`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `task_coming_works` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `coming_work_id` bigint(20) unsigned NOT NULL,
+  `task_id` bigint(20) unsigned DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `task_coming_works`
+--
+
+LOCK TABLES `task_coming_works` WRITE;
+/*!40000 ALTER TABLE `task_coming_works` DISABLE KEYS */;
+/*!40000 ALTER TABLE `task_coming_works` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `task_companies`
 --
 
@@ -817,4 +971,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-17  2:42:34
+-- Dump completed on 2024-01-19 18:16:05
