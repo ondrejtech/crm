@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('task_coming_works', function (Blueprint $table) {
+        Schema::create('coming_work_types', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('coming_work_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('task_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('task_coming_works');
+        Schema::dropIfExists('coming_work_types');
     }
 };

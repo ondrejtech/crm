@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AttendanceTypeResource\Pages;
-use App\Filament\Resources\AttendanceTypeResource\RelationManagers;
-use App\Models\AttendanceType;
+use App\Filament\Resources\ComingWorkTypeResource\Pages;
+use App\Filament\Resources\ComingWorkTypeResource\RelationManagers;
+use App\Models\ComingWorkType;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,23 +13,19 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class AttendanceTypeResource extends Resource
+class ComingWorkTypeResource extends Resource
 {
-    protected static ?string $model = AttendanceType::class;
+    protected static ?string $model = ComingWorkType::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'Employees management';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\Section::make('Founding information')
-                    ->schema([
-                        Forms\Components\TextInput::make('name')
-                            ->required()
-                            ->maxLength(255),
-                    ])
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 
@@ -37,22 +33,15 @@ class AttendanceTypeResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('id')
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(),
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable()
-                    ->sortable(),
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
-                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
-                    ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
@@ -78,9 +67,9 @@ class AttendanceTypeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAttendanceTypes::route('/'),
-            'create' => Pages\CreateAttendanceType::route('/create'),
-            'edit' => Pages\EditAttendanceType::route('/{record}/edit'),
+            'index' => Pages\ListComingWorkTypes::route('/'),
+            'create' => Pages\CreateComingWorkType::route('/create'),
+            'edit' => Pages\EditComingWorkType::route('/{record}/edit'),
         ];
     }
 }
