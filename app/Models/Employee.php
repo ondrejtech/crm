@@ -41,4 +41,9 @@ class Employee extends Model
     {
         return $this->belongsToMany(ComingWork::class, 'coming_work_employees');
     }
+
+    public function absences(): BelongsToMany
+    {
+        return $this->belongsToMany(Absence::class, 'absence_employees');
+    }
 }
