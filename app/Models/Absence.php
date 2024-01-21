@@ -26,8 +26,9 @@ class Absence extends Model
         return $this->belongsToMany(Employee::class,'absence_employees');
     }
 
-    public function absence_type():BelongsTo
+
+    public function absence_types():BelongsToMany
     {
-        return $this->belongsTo(AbsenceType::class);
+        return $this->belongsToMany(AbsenceType::class, 'absence_relation_types');
     }
 }

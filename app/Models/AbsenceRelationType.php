@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AbsenceAbsenceType extends Model
+class AbsenceRelationType extends Model
 {
     use HasFactory;
 }
