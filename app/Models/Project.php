@@ -53,4 +53,9 @@ class Project extends Model
     {
         return $this->belongsToMany(ComingWork::class,'coming_work_projects');
     }
+
+    public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'project_users');
+    }
 }
