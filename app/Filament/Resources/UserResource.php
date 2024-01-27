@@ -45,6 +45,11 @@ class UserResource extends Resource
                             ->dehydrated(fn ($state) => filled($state))
                             ->required(fn (Page $livewire) => ($livewire instanceof CreateUser))
                             ->maxLength(255),
+                        Forms\Components\Select::make('roles')
+                            ->relationship('roles', 'name')
+                            ->multiple()
+                            ->preload()
+                            ->searchable()
                     ])->columns(2)
             ]);
     }
@@ -58,6 +63,10 @@ class UserResource extends Resource
                     ->sortable()
                     ->toggleable(),
                 Tables\Columns\TextColumn::make('email')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(),
+                Tables\Columns\TextColumn::make('roles.name')
                     ->searchable()
                     ->sortable()
                     ->toggleable(),

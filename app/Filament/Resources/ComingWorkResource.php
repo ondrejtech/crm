@@ -40,9 +40,11 @@ class ComingWorkResource extends Resource
                             ->relationship('tasks', 'subject'),
                         Forms\Components\DatePicker::make('date')
                             ->required(),
-                        Forms\Components\TextInput::make('from')
+                        Forms\Components\TimePicker::make('from')
+                            ->seconds(false)
                             ->required(),
-                        Forms\Components\TextInput::make('to')
+                        Forms\Components\TimePicker::make('to')
+                            ->seconds(false)
                             ->required(),
                     ])->columns(3),
                 Forms\Components\Section::make('Solver')
