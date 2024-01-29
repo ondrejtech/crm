@@ -1,39 +1,38 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\FileResource\RelationManagers;
 
-use App\Filament\Resources\CompanyResource\RelationManagers\ProjectsRelationManager;
-use App\Filament\Resources\ProjectResource\Pages;
-use App\Filament\Resources\ProjectResource\RelationManagers;
-use App\Filament\Resources\ProjectResource\RelationManagers\CompanyRelationManager;
-use App\Models\Project;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
+use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ProjectResource extends Resource
+class ContactsRelationManager extends RelationManager
 {
-    protected static ?string $model = Project::class;
+    protected static string $relationship = 'contacts';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    public static function form(Form $form): Form
+    public function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\Section::make('Founding information')
                     ->schema([
-                        Forms\Components\TextInput::make('name')
+                        Forms\Components\TextInput::make('full_name')
                             ->required()
-                            ->maxLength(255)
-                            ->columnSpanFull(),
-                        Forms\Components\Select::make('company_id')
-                            ->relationship('company', 'name')
+                            ->maxLength(255),
+                        Forms\Components\TextInput::make('email')
+                            ->email()
                             ->required()
+                            ->maxLength(255),
+                    ])->columns(2),
+                Forms\Components\Section::make('Company info')
+                    ->schema([
+                        Forms\Components\Select::make('contact_companies.id')
+                            ->label('Company')
+                            ->relationship('companies', 'name')
                             ->createOptionForm([
                                 Forms\Components\Section::make('Founding information ')
                                     ->schema([
@@ -85,94 +84,128 @@ class ProjectResource extends Resource
                                     ])
                                     ->columnSpanFull(),
                             ]),
-                        Forms\Components\Select::make('contact_id')
-                            ->relationship('contact', 'full_name')
-                            ->required(),
-                        Forms\Components\Select::make('employee_id')
-                            ->relationship('employee', 'full_name')
-                            ->required(),
-                    ])->columns(3),
-                Forms\Components\Section::make('Project information')
-                    ->schema([
-                        Forms\Components\DatePicker::make('start_project')
-                            ->required(),
-                        Forms\Components\DatePicker::make('planned_project_end')
-                            ->required(),
-                        Forms\Components\DatePicker::make('end_project'),
-                        Forms\Components\Select::make('project_types_id')
-                            ->required()
-                            ->relationship('project_types','name')
+//                            ->multiple()
+//                            ->searchable()
+//                            ->preload(),
+                        Forms\Components\Select::make('department_id')
+                            ->label('Department')
+                            ->relationship('department','name')
                             ->createOptionForm([
                                 Forms\Components\Section::make('Department information')
                                     ->schema([
                                         Forms\Components\TextInput::make('name')
-                                            ->maxLength(255)
                                             ->required()
-                                            ->columnSpanFull(),
+                                            ->maxLength(255)
                                     ])
                             ]),
-                        Forms\Components\TextInput::make('finish_price')
+                    ])->columns(2),
+                Forms\Components\Section::make('Newsletter')
+                    ->schema([
+                        Forms\Components\Toggle::make('newsletter')
+                            ->required(),
+                    ])->columnSpanFull(),
+                Forms\Components\Section::make('Contact info')
+                    ->schema([
+                        Forms\Components\TextInput::make('landline')
+                            ->numeric(),
+                        Forms\Components\TextInput::make('mobile')
+                            ->required()
+                            ->numeric(),
+                        Forms\Components\TextInput::make('next_phone')
+                            ->tel()
+                            ->numeric(),
+                    ])->columns(3),
+                Forms\Components\Section::make('Contact address')
+                    ->schema([
+                        Forms\Components\TextInput::make('address')
+                            ->required()
                             ->maxLength(255),
-                        Forms\Components\Select::make('user.id')
-                            ->label('User name')
-                            ->searchable()
-                            ->preload()
-                            ->multiple()
-                            ->relationship('users','name')
+                        Forms\Components\TextInput::make('city')
+                            ->required()
+                            ->maxLength(255),
+                        Forms\Components\TextInput::make('zip_code')
+                            ->required()
+                            ->maxLength(255),
+                        Forms\Components\TextInput::make('state')
+                            ->required()
+                            ->maxLength(255),
+                        Forms\Components\Select::make('country')
+                            ->options([
+                                'Czech republic' => 'Czech republic',
+                                'Slovakia' => 'Slovakia'
+                            ])
+                            ->required()
+                            ->columnSpan(2),
                     ])->columns(3),
                 Forms\Components\Section::make('User note')
                     ->schema([
-                        Forms\Components\TextInput::make('note')
-                            ->maxLength(255),
-                    ])->columnSpanFull()
+                        Forms\Components\Textarea::make('note')
+                            ->maxLength(16777215)
+                            ->columnSpanFull(),
+                    ])
             ]);
     }
 
-    public static function table(Table $table): Table
+    public function table(Table $table): Table
     {
         return $table
+            ->recordTitleAttribute('name')
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->limit(20)
-                    ->searchable()
-                    ->sortable()
-                    ->toggleable(),
-                Tables\Columns\TextColumn::make('company.name')
-                    ->numeric()
-                    ->sortable()
-                    ->searchable()
-                    ->toggleable(),
-                Tables\Columns\TextColumn::make('contact.full_name')
-                    ->numeric()
-                    ->sortable()
-                    ->searchable()
-                    ->toggleable(),
-                Tables\Columns\TextColumn::make('project_types.name')
-                    ->numeric()
-                    ->sortable()
-                    ->searchable()
-                    ->toggleable(),
-                Tables\Columns\TextColumn::make('start_project')
-                    ->date()
-                    ->sortable()
-                    ->searchable()
-                    ->toggleable(),
-                Tables\Columns\TextColumn::make('planned_project_end')
-                    ->date()
+                Tables\Columns\TextColumn::make('id')
                     ->sortable()
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('end_project')
-                    ->date()
+                Tables\Columns\TextColumn::make('full_name')
+                    ->searchable()
+                    ->sortable(),
+//                Tables\Columns\TextColumn::make('contact_companies.id')
+//                    ->numeric()
+//                    ->searchable()
+//                    ->sortable(),
+                Tables\Columns\TextColumn::make('department.name')
+                    ->numeric()
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('mobile')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('email')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\IconColumn::make('newsletter')
+                    ->boolean()
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('landline')
+                    ->numeric()
                     ->sortable()
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('finish_price')
+                Tables\Columns\TextColumn::make('next_phone')
+                    ->numeric()
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('address')
                     ->searchable()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('note')
+                Tables\Columns\TextColumn::make('city')
                     ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('zip_code')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('state')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('country')
+                    ->searchable()
+                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -188,39 +221,20 @@ class ProjectResource extends Resource
             ->filters([
                 //
             ])
+            ->headerActions([
+                Tables\Actions\CreateAction::make(),
+            ])
             ->actions([
-//                Tables\Actions\EditAction::make(),
                 Tables\Actions\ActionGroup::make([
                     Tables\Actions\ViewAction::make(),
                     Tables\Actions\EditAction::make(),
                     Tables\Actions\DeleteAction::make(),
-                ])
+                ]),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            CompanyRelationManager::class,
-            RelationManagers\ContactRelationManager::class,
-            RelationManagers\TasksRelationManager::class,
-            RelationManagers\ComingWorksRelationManager::class,
-            RelationManagers\UsersRelationManager::class,
-            RelationManagers\FilesRelationManager::class,
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListProjects::route('/'),
-            'create' => Pages\CreateProject::route('/create'),
-            'edit' => Pages\EditProject::route('/{record}/edit')    ,
-        ];
     }
 }

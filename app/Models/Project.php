@@ -58,4 +58,9 @@ class Project extends Model
     {
         return $this->belongsToMany(User::class, 'project_users');
     }
+
+    public function files(): BelongsToMany
+    {
+        return $this->belongsToMany(File::class,'file_projects');
+    }
 }

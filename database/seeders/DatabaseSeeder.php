@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             ProjectTypeSeeder::class,
             EmployeeSeeders::class,
             AttendanceSeeder::class,
+            FileTypeSeeder::class,
         ]);
     }
 }
