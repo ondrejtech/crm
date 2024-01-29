@@ -160,7 +160,7 @@ class ContactResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('full_name')
                     ->searchable()
-                ->sortable(),
+                    ->sortable(),
 //                Tables\Columns\TextColumn::make('contact_companies.id')
 //                    ->numeric()
 //                    ->searchable()
@@ -258,7 +258,8 @@ class ContactResource extends Resource
         return [
             RelationManagers\CompaniesRelationManager::class,
             RelationManagers\ProjectRelationManager::class,
-            TasksRelationManager::class
+            TasksRelationManager::class,
+            RelationManagers\FilesRelationManager::class,
         ];
     }
 

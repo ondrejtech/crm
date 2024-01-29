@@ -1,27 +1,20 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\CompanyResource\RelationManagers;
 
-use App\Filament\Resources\FileResource\Pages;
-use App\Filament\Resources\FileResource\RelationManagers;
-use App\Models\File;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
+use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
-class FileResource extends Resource
+class FilesRelationManager extends RelationManager
 {
-    protected static ?string $model = File::class;
+    protected static string $relationship = 'files';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?int $navigationSort = 7;
-
-    public static function form(Form $form): Form
+    public function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -64,10 +57,15 @@ class FileResource extends Resource
             ]);
     }
 
-    public static function table(Table $table): Table
+    public function table(Table $table): Table
     {
         return $table
+            ->recordTitleAttribute('name')
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('projects.name')
                     ->limit(20)
                     ->sortable()
@@ -83,10 +81,7 @@ class FileResource extends Resource
                     ->searchable()
                     ->toggleable(),
                 Tables\Columns\TextColumn::make('name')
-
-
                     ->limit(10)
-
                     ->sortable()
                     ->searchable()
                     ->toggleable(),
@@ -94,13 +89,10 @@ class FileResource extends Resource
                     ->sortable()
                     ->searchable()
                     ->toggleable(),
-
-
                 Tables\Columns\TextColumn::make('document')
                     ->searchable()
                     ->sortable()
                     ->toggleable(),
-
                 Tables\Columns\TextColumn::make('created_at')
                     ->searchable()
                     ->sortable()
@@ -113,42 +105,19 @@ class FileResource extends Resource
             ->filters([
                 //
             ])
+            ->headerActions([
+                Tables\Actions\CreateAction::make(),
+            ])
             ->actions([
-
-                Tables\Actions\EditAction::make(),
-
                 Tables\Actions\ActionGroup::make([
                     Tables\Actions\EditAction::make(),
                     Tables\Actions\DeleteAction::make(),
                 ])
-
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-
-            //
-
-            RelationManagers\ProjectsRelationManager::class,
-            RelationManagers\CompaniesRelationManager::class,
-            RelationManagers\ContactsRelationManager::class,
-
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListFiles::route('/'),
-            'create' => Pages\CreateFile::route('/create'),
-            'edit' => Pages\EditFile::route('/{record}/edit'),
-        ];
     }
 }

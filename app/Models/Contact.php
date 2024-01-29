@@ -52,4 +52,9 @@ class Contact extends Model
     {
         return $this->belongsToMany(Task::class,'task_contacts');
     }
+
+    public function files(): BelongsToMany
+    {
+        return $this->belongsToMany(File::class,'file_contacts');
+    }
 }
