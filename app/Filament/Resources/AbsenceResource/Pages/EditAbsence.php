@@ -16,4 +16,12 @@ class EditAbsence extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+    protected function getRedirectUrl(): ?string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+    protected function getSavedNotificationTitle(): ?string
+    {
+        return 'Absence has been updated';
+    }
 }

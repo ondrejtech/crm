@@ -18,7 +18,7 @@ class AbsenceTypeResource extends Resource
     protected static ?string $model = AbsenceType::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'Settings';
+    protected static ?string $navigationGroup = 'Administration settings';
 
     public static function form(Form $form): Form
     {

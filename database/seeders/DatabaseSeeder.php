@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\ComingWorkType;
+use App\Models\Department;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,6 +23,12 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             AbsenceSeeder::class,
+            CompanySeeder::class,
+            ContactSeeder::class,
+            DepartmentSeeder::class,
+            ProjectTypeSeeder::class,
+            EmployeeSeeders::class,
+            AttendanceSeeder::class,
         ]);
     }
 }

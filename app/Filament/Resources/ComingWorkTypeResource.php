@@ -20,7 +20,7 @@ class ComingWorkTypeResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'Attendance type';
     protected static ?string $modelLabel = 'Attendance type';
-    protected static ?string $navigationGroup = 'Settings';
+    protected static ?string $navigationGroup = 'Administration settings';
 
     public static function form(Form $form): Form
     {
