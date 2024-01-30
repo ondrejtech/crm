@@ -119,6 +119,7 @@ class TaskResource extends Resource
             RelationManagers\CompaniesRelationManager::class,
             RelationManagers\ContactsRelationManager::class,
             RelationManagers\EmployeesRelationManager::class,
+            RelationManagers\FilesRelationManager::class,
         ];
     }
 
@@ -126,7 +127,7 @@ class TaskResource extends Resource
     {
         return [
             'index' => Pages\ListTasks::route('/'),
-            'create' => Pages\CreateTask::route('/create'),
+//            'create' => Pages\CreateTask::route('/create'),
             'edit' => Pages\EditTask::route('/{record}/edit'),
         ];
     }

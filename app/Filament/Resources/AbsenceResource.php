@@ -141,7 +141,7 @@ class AbsenceResource extends Resource
     {
         return [
             'index' => Pages\ListAbsences::route('/'),
-            'create' => Pages\CreateAbsence::route('/create'),
+//            'create' => Pages\CreateAbsence::route('/create'),
             'edit' => Pages\EditAbsence::route('/{record}/edit'),
         ];
     }

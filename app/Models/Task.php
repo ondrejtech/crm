@@ -41,4 +41,9 @@ class Task extends Model
     {
         return $this->belongsToMany(ComingWork::class, 'coming_work_tasks');
     }
+
+    public function files(): BelongsToMany
+    {
+        return $this->belongsToMany(File::class,'file_tasks');
+    }
 }

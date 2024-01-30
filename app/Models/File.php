@@ -34,4 +34,9 @@ class File extends Model
     {
         return $this->belongsToMany(Contact::class,'file_contacts');
     }
+
+    public function tasks(): BelongsToMany
+    {
+        return $this->belongsToMany(Task::class, 'file_tasks');
+    }
 }
