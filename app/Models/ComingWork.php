@@ -31,4 +31,9 @@ class ComingWork extends Model
     {
         return $this->belongsToMany(Employee::class,'coming_work_employees');
     }
+
+    public function files(): BelongsToMany
+    {
+        return $this->belongsToMany(File::class,'file_attendances');
+    }
 }

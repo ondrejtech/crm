@@ -31,4 +31,9 @@ class Absence extends Model
     {
         return $this->belongsToMany(AbsenceType::class, 'absence_relation_types');
     }
+
+    public function files(): BelongsToMany
+    {
+        return $this->belongsToMany(File::class,'file_absences');
+    }
 }

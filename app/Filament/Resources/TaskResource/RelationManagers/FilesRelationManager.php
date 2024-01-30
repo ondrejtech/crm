@@ -48,6 +48,7 @@ class FilesRelationManager extends RelationManager
                             ->required(),
                         Forms\Components\FileUpload::make('document')
                             ->disk('public')
+                            ->directory('Documents')
                             ->preserveFilenames()
                             ->storeFileNamesIn('attachment_file_names')
                             ->downloadable()
@@ -109,8 +110,10 @@ class FilesRelationManager extends RelationManager
                 Tables\Actions\CreateAction::make(),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\EditAction::make(),
+                    Tables\Actions\DeleteAction::make(),
+                ])
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

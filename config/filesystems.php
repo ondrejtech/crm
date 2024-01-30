@@ -38,8 +38,8 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => public_path('Documents'),
-            'url' => env('APP_URL').'/public/Documents',
+            'root' => public_path(''),
+            'url' => env('APP_URL').'/public/',
             'visibility' => 'public',
             'throw' => false,
         ],

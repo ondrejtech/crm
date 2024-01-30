@@ -39,4 +39,14 @@ class File extends Model
     {
         return $this->belongsToMany(Task::class, 'file_tasks');
     }
+
+    public function attendances(): BelongsToMany
+    {
+        return $this->belongsToMany(ComingWork::class,'file_attendances');
+    }
+
+    public function absences(): BelongsToMany
+    {
+        return $this->belongsToMany(Absence::class,'file_absences');
+    }
 }
