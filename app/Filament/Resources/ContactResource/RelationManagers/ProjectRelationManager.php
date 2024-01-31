@@ -127,10 +127,12 @@ class ProjectRelationManager extends RelationManager
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('name')
+                    ->limit(20)
                     ->searchable()
                     ->sortable()
                     ->toggleable(),
                 Tables\Columns\TextColumn::make('company.name')
+                    ->limit(20)
                     ->numeric()
                     ->sortable()
                     ->searchable()

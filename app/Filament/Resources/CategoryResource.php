@@ -75,7 +75,13 @@ class CategoryResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+//            RelationManagers\CompaniesRelationManager::class,
+//            RelationManagers\ContactsRelationManager::class,
+//            RelationManagers\ProjectsRelationManager::class,
+//            RelationManagers\TasksRelationManager::class,
+//            RelationManagers\ComingWorksRelationManager::class,
+//            RelationManagers\AbsencesRelationManager::class,
+//            RelationManagers\FilesRelationManager::class,
         ];
     }
 
