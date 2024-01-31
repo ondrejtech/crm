@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
             EmployeeSeeders::class,
             AttendanceSeeder::class,
             FileTypeSeeder::class,
+            CategorySeeder::class,
         ]);
     }
 }

@@ -33,7 +33,7 @@ CREATE TABLE `absence_employees` (
   KEY `absence_employees_employee_id_foreign` (`employee_id`),
   CONSTRAINT `absence_employees_absence_id_foreign` FOREIGN KEY (`absence_id`) REFERENCES `absences` (`id`) ON DELETE CASCADE,
   CONSTRAINT `absence_employees_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +42,8 @@ CREATE TABLE `absence_employees` (
 
 LOCK TABLES `absence_employees` WRITE;
 /*!40000 ALTER TABLE `absence_employees` DISABLE KEYS */;
+INSERT INTO `absence_employees` VALUES
+(1,1,1,NULL,NULL);
 /*!40000 ALTER TABLE `absence_employees` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -63,7 +65,7 @@ CREATE TABLE `absence_relation_types` (
   KEY `absence_relation_types_absence_type_id_foreign` (`absence_type_id`),
   CONSTRAINT `absence_relation_types_absence_id_foreign` FOREIGN KEY (`absence_id`) REFERENCES `absences` (`id`) ON DELETE CASCADE,
   CONSTRAINT `absence_relation_types_absence_type_id_foreign` FOREIGN KEY (`absence_type_id`) REFERENCES `absence_types` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,6 +74,8 @@ CREATE TABLE `absence_relation_types` (
 
 LOCK TABLES `absence_relation_types` WRITE;
 /*!40000 ALTER TABLE `absence_relation_types` DISABLE KEYS */;
+INSERT INTO `absence_relation_types` VALUES
+(1,1,1,NULL,NULL);
 /*!40000 ALTER TABLE `absence_relation_types` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,7 +92,7 @@ CREATE TABLE `absence_types` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,7 +101,50 @@ CREATE TABLE `absence_types` (
 
 LOCK TABLES `absence_types` WRITE;
 /*!40000 ALTER TABLE `absence_types` DISABLE KEYS */;
+INSERT INTO `absence_types` VALUES
+(1,'Paid Vacation','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(2,'Compensatory Time Off','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(3,'Sickness','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(4,'Doctor\'s Visit','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(5,'Home Office','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(6,'Sick Day','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(7,'Maternity / Paternity Leave','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(8,'Approved Absence','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(9,'Disapproved Absence','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(10,'Treatment of a Family Member','2024-01-28 23:58:58','2024-01-28 23:58:58');
 /*!40000 ALTER TABLE `absence_types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `absence_users`
+--
+
+DROP TABLE IF EXISTS `absence_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `absence_users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `absence_id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `absence_users_absence_id_foreign` (`absence_id`),
+  KEY `absence_users_user_id_foreign` (`user_id`),
+  CONSTRAINT `absence_users_absence_id_foreign` FOREIGN KEY (`absence_id`) REFERENCES `absences` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `absence_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `absence_users`
+--
+
+LOCK TABLES `absence_users` WRITE;
+/*!40000 ALTER TABLE `absence_users` DISABLE KEYS */;
+INSERT INTO `absence_users` VALUES
+(1,1,1,NULL,NULL);
+/*!40000 ALTER TABLE `absence_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -119,7 +166,7 @@ CREATE TABLE `absences` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,7 +175,73 @@ CREATE TABLE `absences` (
 
 LOCK TABLES `absences` WRITE;
 /*!40000 ALTER TABLE `absences` DISABLE KEYS */;
+INSERT INTO `absences` VALUES
+(1,'2024-01-30','08:00:00','2024-01-30','15:00:00',0,NULL,NULL,'2024-01-30 10:28:32','2024-01-30 10:28:32');
 /*!40000 ALTER TABLE `absences` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `attendance_attendance_types`
+--
+
+DROP TABLE IF EXISTS `attendance_attendance_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `attendance_attendance_types` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `coming_work_id` bigint(20) unsigned NOT NULL,
+  `coming_work_type_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `attendance_attendance_types_coming_work_id_foreign` (`coming_work_id`),
+  KEY `attendance_attendance_types_coming_work_type_id_foreign` (`coming_work_type_id`),
+  CONSTRAINT `attendance_attendance_types_coming_work_id_foreign` FOREIGN KEY (`coming_work_id`) REFERENCES `coming_works` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `attendance_attendance_types_coming_work_type_id_foreign` FOREIGN KEY (`coming_work_type_id`) REFERENCES `coming_work_types` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `attendance_attendance_types`
+--
+
+LOCK TABLES `attendance_attendance_types` WRITE;
+/*!40000 ALTER TABLE `attendance_attendance_types` DISABLE KEYS */;
+INSERT INTO `attendance_attendance_types` VALUES
+(1,1,1,NULL,NULL);
+/*!40000 ALTER TABLE `attendance_attendance_types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `attendance_users`
+--
+
+DROP TABLE IF EXISTS `attendance_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `attendance_users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `coming_work_id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `attendance_users_coming_work_id_foreign` (`coming_work_id`),
+  KEY `attendance_users_user_id_foreign` (`user_id`),
+  CONSTRAINT `attendance_users_coming_work_id_foreign` FOREIGN KEY (`coming_work_id`) REFERENCES `coming_works` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `attendance_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `attendance_users`
+--
+
+LOCK TABLES `attendance_users` WRITE;
+/*!40000 ALTER TABLE `attendance_users` DISABLE KEYS */;
+INSERT INTO `attendance_users` VALUES
+(1,1,1,NULL,NULL);
+/*!40000 ALTER TABLE `attendance_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -149,7 +262,7 @@ CREATE TABLE `coming_work_employees` (
   KEY `coming_work_employees_employee_id_foreign` (`employee_id`),
   CONSTRAINT `coming_work_employees_coming_work_id_foreign` FOREIGN KEY (`coming_work_id`) REFERENCES `coming_works` (`id`) ON DELETE CASCADE,
   CONSTRAINT `coming_work_employees_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,6 +271,8 @@ CREATE TABLE `coming_work_employees` (
 
 LOCK TABLES `coming_work_employees` WRITE;
 /*!40000 ALTER TABLE `coming_work_employees` DISABLE KEYS */;
+INSERT INTO `coming_work_employees` VALUES
+(3,1,1,NULL,NULL);
 /*!40000 ALTER TABLE `coming_work_employees` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,7 +294,7 @@ CREATE TABLE `coming_work_projects` (
   KEY `coming_work_projects_project_id_foreign` (`project_id`),
   CONSTRAINT `coming_work_projects_coming_work_id_foreign` FOREIGN KEY (`coming_work_id`) REFERENCES `coming_works` (`id`) ON DELETE CASCADE,
   CONSTRAINT `coming_work_projects_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -188,6 +303,8 @@ CREATE TABLE `coming_work_projects` (
 
 LOCK TABLES `coming_work_projects` WRITE;
 /*!40000 ALTER TABLE `coming_work_projects` DISABLE KEYS */;
+INSERT INTO `coming_work_projects` VALUES
+(1,1,1,NULL,NULL);
 /*!40000 ALTER TABLE `coming_work_projects` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -209,7 +326,7 @@ CREATE TABLE `coming_work_tasks` (
   KEY `coming_work_tasks_task_id_foreign` (`task_id`),
   CONSTRAINT `coming_work_tasks_coming_work_id_foreign` FOREIGN KEY (`coming_work_id`) REFERENCES `coming_works` (`id`) ON DELETE CASCADE,
   CONSTRAINT `coming_work_tasks_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -218,6 +335,8 @@ CREATE TABLE `coming_work_tasks` (
 
 LOCK TABLES `coming_work_tasks` WRITE;
 /*!40000 ALTER TABLE `coming_work_tasks` DISABLE KEYS */;
+INSERT INTO `coming_work_tasks` VALUES
+(1,1,2,NULL,NULL);
 /*!40000 ALTER TABLE `coming_work_tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -234,7 +353,7 @@ CREATE TABLE `coming_work_types` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -243,6 +362,14 @@ CREATE TABLE `coming_work_types` (
 
 LOCK TABLES `coming_work_types` WRITE;
 /*!40000 ALTER TABLE `coming_work_types` DISABLE KEYS */;
+INSERT INTO `coming_work_types` VALUES
+(1,'Work on Project','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(2,'Communication','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(3,'Management','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(4,'Marketing','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(5,'Business','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(6,'Meeting','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(7,'Others','2024-01-28 23:58:58','2024-01-28 23:58:58');
 /*!40000 ALTER TABLE `coming_work_types` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -259,11 +386,14 @@ CREATE TABLE `coming_works` (
   `date` date NOT NULL,
   `from` time NOT NULL,
   `to` time NOT NULL,
+  `user_id` bigint(20) unsigned DEFAULT NULL,
   `note` mediumtext DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  PRIMARY KEY (`id`),
+  KEY `coming_works_user_id_foreign` (`user_id`),
+  CONSTRAINT `coming_works_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -272,6 +402,8 @@ CREATE TABLE `coming_works` (
 
 LOCK TABLES `coming_works` WRITE;
 /*!40000 ALTER TABLE `coming_works` DISABLE KEYS */;
+INSERT INTO `coming_works` VALUES
+(1,'Tvorba relaci','2024-01-31','08:00:00','21:00:00',NULL,NULL,'2024-01-30 23:52:23','2024-01-30 23:52:23');
 /*!40000 ALTER TABLE `coming_works` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -309,7 +441,7 @@ CREATE TABLE `companies` (
   KEY `companies_project_id_foreign` (`project_id`),
   CONSTRAINT `companies_contact_id_foreign` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`id`) ON DELETE CASCADE,
   CONSTRAINT `companies_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -318,7 +450,75 @@ CREATE TABLE `companies` (
 
 LOCK TABLES `companies` WRITE;
 /*!40000 ALTER TABLE `companies` DISABLE KEYS */;
+INSERT INTO `companies` VALUES
+(1,'Ondrej Zelina','732127410','ondrej.web@gmail.com','binapi.tech','02453681',NULL,0,0,0,'Horni namesti 3','Vsetin','75603','Zlinsky kraj','Czech Republic',NULL,'2024-01-28 23:58:58','2024-01-28 23:59:57',NULL,NULL),
+(2,'Millenium international s.r.o.','732127410','ondrej.web@gmail.com','binapi.tech','02239221','CZ02239221',0,0,0,'Kosicka 63/30','Praha','10100','Hlavni mesto Praha','Czech Republic',NULL,'2024-01-28 23:58:58','2024-01-29 00:00:11',NULL,NULL),
+(3,'Nabah Solutions s.r.o.',' 605776170','ondrej.web@gmail.com','binapi.tech','05832144','CZ05832144',0,0,0,'Horova 1298/5A','Olomouc','77900','Olomoucky kraj','Czech Republic',NULL,'2024-01-28 23:58:58','2024-01-29 00:00:27',NULL,NULL);
 /*!40000 ALTER TABLE `companies` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `company_attendances`
+--
+
+DROP TABLE IF EXISTS `company_attendances`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company_attendances` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `company_id` bigint(20) unsigned NOT NULL,
+  `coming_work_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `company_attendances_company_id_foreign` (`company_id`),
+  KEY `company_attendances_coming_work_id_foreign` (`coming_work_id`),
+  CONSTRAINT `company_attendances_coming_work_id_foreign` FOREIGN KEY (`coming_work_id`) REFERENCES `coming_works` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `company_attendances_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company_attendances`
+--
+
+LOCK TABLES `company_attendances` WRITE;
+/*!40000 ALTER TABLE `company_attendances` DISABLE KEYS */;
+INSERT INTO `company_attendances` VALUES
+(1,3,1,NULL,NULL);
+/*!40000 ALTER TABLE `company_attendances` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `company_users`
+--
+
+DROP TABLE IF EXISTS `company_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company_users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `company_id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `company_users_company_id_foreign` (`company_id`),
+  KEY `company_users_user_id_foreign` (`user_id`),
+  CONSTRAINT `company_users_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `company_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company_users`
+--
+
+LOCK TABLES `company_users` WRITE;
+/*!40000 ALTER TABLE `company_users` DISABLE KEYS */;
+INSERT INTO `company_users` VALUES
+(3,1,1,NULL,NULL);
+/*!40000 ALTER TABLE `company_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -337,7 +537,7 @@ CREATE TABLE `contact_companies` (
   KEY `contact_companies_contact_id_foreign` (`contact_id`),
   CONSTRAINT `contact_companies_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE,
   CONSTRAINT `contact_companies_contact_id_foreign` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -346,7 +546,46 @@ CREATE TABLE `contact_companies` (
 
 LOCK TABLES `contact_companies` WRITE;
 /*!40000 ALTER TABLE `contact_companies` DISABLE KEYS */;
+INSERT INTO `contact_companies` VALUES
+(1,1,1),
+(2,2,1),
+(3,3,3),
+(4,3,2);
 /*!40000 ALTER TABLE `contact_companies` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contact_users`
+--
+
+DROP TABLE IF EXISTS `contact_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact_users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `contact_id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `contact_users_contact_id_foreign` (`contact_id`),
+  KEY `contact_users_user_id_foreign` (`user_id`),
+  CONSTRAINT `contact_users_contact_id_foreign` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `contact_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contact_users`
+--
+
+LOCK TABLES `contact_users` WRITE;
+/*!40000 ALTER TABLE `contact_users` DISABLE KEYS */;
+INSERT INTO `contact_users` VALUES
+(1,1,1,NULL,NULL),
+(3,3,1,NULL,NULL),
+(4,3,3,NULL,NULL);
+/*!40000 ALTER TABLE `contact_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -380,7 +619,7 @@ CREATE TABLE `contacts` (
   KEY `contacts_company_id_foreign` (`company_id`),
   CONSTRAINT `contacts_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE,
   CONSTRAINT `contacts_department_id_foreign` FOREIGN KEY (`department_id`) REFERENCES `departments` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -389,6 +628,10 @@ CREATE TABLE `contacts` (
 
 LOCK TABLES `contacts` WRITE;
 /*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
+INSERT INTO `contacts` VALUES
+(1,1,NULL,'Ondrej Zelina','ondrej.web@gmail.com',0,NULL,732127410,NULL,'Halenkov 655','Halenkov','75603','Zlinsky kraj','Czech republic',NULL,'2024-01-28 23:58:58','2024-01-31 10:45:58'),
+(2,1,NULL,'Lukas Haban','info@nabah.cz',0,NULL,605776170,NULL,'Schweitzerova 798/99a','Olomouc','77900','Olomocky kraj','Czech republic',NULL,'2024-01-28 23:58:58','2024-01-28 23:59:29'),
+(3,2,NULL,'Aneta Kabelikova','kabelikova@nabah.cz',0,NULL,605776170,NULL,'Schweitzerova 798/99a','Olomouc','77900','Olomocky kraj','Czech republic',NULL,'2024-01-28 23:58:58','2024-01-28 23:59:40');
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -405,7 +648,7 @@ CREATE TABLE `departments` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -415,7 +658,18 @@ CREATE TABLE `departments` (
 LOCK TABLES `departments` WRITE;
 /*!40000 ALTER TABLE `departments` DISABLE KEYS */;
 INSERT INTO `departments` VALUES
-(1,'PHP Developer','2024-01-16 19:11:26','2024-01-16 19:11:26');
+(1,'Management of the company','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(2,'Project Office','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(3,'Quality and audit','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(4,'Management staff','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(5,'Store','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(6,'IT operation and development','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(7,'IT Security','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(8,'Administration','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(9,'HR','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(10,'Legal Department','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(11,'Finance','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(12,'Accounting','2024-01-28 23:58:58','2024-01-28 23:58:58');
 /*!40000 ALTER TABLE `departments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -502,7 +756,7 @@ CREATE TABLE `employee_tasks` (
   KEY `employee_tasks_employee_id_foreign` (`employee_id`),
   CONSTRAINT `employee_tasks_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE,
   CONSTRAINT `employee_tasks_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -511,6 +765,9 @@ CREATE TABLE `employee_tasks` (
 
 LOCK TABLES `employee_tasks` WRITE;
 /*!40000 ALTER TABLE `employee_tasks` DISABLE KEYS */;
+INSERT INTO `employee_tasks` VALUES
+(1,1,1,NULL,NULL),
+(2,2,1,NULL,NULL);
 /*!40000 ALTER TABLE `employee_tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -552,9 +809,9 @@ CREATE TABLE `employees` (
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
 INSERT INTO `employees` VALUES
-(1,1,'Pavel Burda','paul@gmail.com',0,NULL,602543698,NULL,'Halenkov','Halenkov','75603','Zlinsky kraj','Czech republic',NULL,'2024-01-16 19:11:55','2024-01-16 19:11:55'),
-(2,1,'Ondrej Zelina','ondrej.web@gmail.com',0,NULL,732127410,NULL,'Halenkov 655','Halenkov','75603','Zlinsky kraj','Czech republic',NULL,'2024-01-16 20:07:41','2024-01-16 20:07:41'),
-(3,1,'Josef Tkadlec','joseftkadlec@volny.cz',0,571457585,603891025,NULL,'Halenkov 457','Halenkov','75603','Zlinsky kraj','Czech republic',NULL,'2024-01-25 17:23:45','2024-01-25 17:23:45');
+(1,NULL,'Ondrej Zelina','ondrej.web@gmail.com',0,NULL,732127410,NULL,'Halenkov 655','Halenkov','75603','Zlinsky kraj','Czech republic',NULL,'2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(2,NULL,'Pavel Burda','paul@example.com',0,NULL,605776170,NULL,'Schweitzerova 798/99a','Olomouc','77900','Olomocky kraj','Czech republic',NULL,'2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(3,NULL,'Aneta Kabelikova','kabelikova@example.com',0,NULL,605776170,NULL,'Schweitzerova 798/99a','Olomouc','77900','Olomocky kraj','Czech republic',NULL,'2024-01-28 23:58:58','2024-01-28 23:58:58');
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -617,6 +874,316 @@ LOCK TABLES `failed_jobs` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `file_absences`
+--
+
+DROP TABLE IF EXISTS `file_absences`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `file_absences` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `file_id` bigint(20) unsigned NOT NULL,
+  `absence_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `file_absences_file_id_foreign` (`file_id`),
+  KEY `file_absences_absence_id_foreign` (`absence_id`),
+  CONSTRAINT `file_absences_absence_id_foreign` FOREIGN KEY (`absence_id`) REFERENCES `absences` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `file_absences_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `file_absences`
+--
+
+LOCK TABLES `file_absences` WRITE;
+/*!40000 ALTER TABLE `file_absences` DISABLE KEYS */;
+INSERT INTO `file_absences` VALUES
+(1,6,1,NULL,NULL);
+/*!40000 ALTER TABLE `file_absences` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `file_attendances`
+--
+
+DROP TABLE IF EXISTS `file_attendances`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `file_attendances` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `coming_work_id` bigint(20) unsigned NOT NULL,
+  `file_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `file_attendances_coming_work_id_foreign` (`coming_work_id`),
+  KEY `file_attendances_file_id_foreign` (`file_id`),
+  CONSTRAINT `file_attendances_coming_work_id_foreign` FOREIGN KEY (`coming_work_id`) REFERENCES `coming_works` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `file_attendances_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `file_attendances`
+--
+
+LOCK TABLES `file_attendances` WRITE;
+/*!40000 ALTER TABLE `file_attendances` DISABLE KEYS */;
+INSERT INTO `file_attendances` VALUES
+(1,1,5,NULL,NULL);
+/*!40000 ALTER TABLE `file_attendances` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `file_companies`
+--
+
+DROP TABLE IF EXISTS `file_companies`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `file_companies` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `file_id` bigint(20) unsigned NOT NULL,
+  `company_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `file_companies_file_id_foreign` (`file_id`),
+  KEY `file_companies_company_id_foreign` (`company_id`),
+  CONSTRAINT `file_companies_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `file_companies_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `file_companies`
+--
+
+LOCK TABLES `file_companies` WRITE;
+/*!40000 ALTER TABLE `file_companies` DISABLE KEYS */;
+INSERT INTO `file_companies` VALUES
+(1,1,3,NULL,NULL),
+(3,2,3,NULL,NULL),
+(4,3,2,NULL,NULL),
+(5,4,3,NULL,NULL),
+(7,5,3,NULL,NULL),
+(8,6,3,NULL,NULL);
+/*!40000 ALTER TABLE `file_companies` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `file_contacts`
+--
+
+DROP TABLE IF EXISTS `file_contacts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `file_contacts` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `file_id` bigint(20) unsigned NOT NULL,
+  `contact_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `file_contacts_file_id_foreign` (`file_id`),
+  KEY `file_contacts_contact_id_foreign` (`contact_id`),
+  CONSTRAINT `file_contacts_contact_id_foreign` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `file_contacts_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `file_contacts`
+--
+
+LOCK TABLES `file_contacts` WRITE;
+/*!40000 ALTER TABLE `file_contacts` DISABLE KEYS */;
+INSERT INTO `file_contacts` VALUES
+(1,1,3,NULL,NULL),
+(2,2,3,NULL,NULL),
+(3,3,3,NULL,NULL),
+(4,4,3,NULL,NULL),
+(5,5,1,NULL,NULL),
+(6,6,1,NULL,NULL);
+/*!40000 ALTER TABLE `file_contacts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `file_projects`
+--
+
+DROP TABLE IF EXISTS `file_projects`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `file_projects` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `file_id` bigint(20) unsigned NOT NULL,
+  `project_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `file_projects_file_id_foreign` (`file_id`),
+  KEY `file_projects_project_id_foreign` (`project_id`),
+  CONSTRAINT `file_projects_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `file_projects_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `file_projects`
+--
+
+LOCK TABLES `file_projects` WRITE;
+/*!40000 ALTER TABLE `file_projects` DISABLE KEYS */;
+INSERT INTO `file_projects` VALUES
+(1,1,1,NULL,NULL),
+(2,2,1,NULL,NULL),
+(3,3,1,NULL,NULL),
+(4,4,1,NULL,NULL),
+(5,5,1,NULL,NULL),
+(6,6,1,NULL,NULL);
+/*!40000 ALTER TABLE `file_projects` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `file_tasks`
+--
+
+DROP TABLE IF EXISTS `file_tasks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `file_tasks` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `task_id` bigint(20) unsigned NOT NULL,
+  `file_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `file_tasks_task_id_foreign` (`task_id`),
+  KEY `file_tasks_file_id_foreign` (`file_id`),
+  CONSTRAINT `file_tasks_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `file_tasks_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `file_tasks`
+--
+
+LOCK TABLES `file_tasks` WRITE;
+/*!40000 ALTER TABLE `file_tasks` DISABLE KEYS */;
+INSERT INTO `file_tasks` VALUES
+(1,1,3,NULL,NULL),
+(2,2,4,NULL,NULL);
+/*!40000 ALTER TABLE `file_tasks` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `file_types`
+--
+
+DROP TABLE IF EXISTS `file_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `file_types` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `file_types`
+--
+
+LOCK TABLES `file_types` WRITE;
+/*!40000 ALTER TABLE `file_types` DISABLE KEYS */;
+INSERT INTO `file_types` VALUES
+(1,'Proposal','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(2,'RFI','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(3,'Contract','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(4,'Specification','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(5,'Acceptance Protocol','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(6,'Invoice Issued','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(7,'Invoice Received','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(8,'Meeting Minutes','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(9,'Complaint Protocol','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(10,'Others','2024-01-28 23:58:58','2024-01-28 23:58:58');
+/*!40000 ALTER TABLE `file_types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `file_users`
+--
+
+DROP TABLE IF EXISTS `file_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `file_users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `file_id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `file_users_file_id_foreign` (`file_id`),
+  KEY `file_users_user_id_foreign` (`user_id`),
+  CONSTRAINT `file_users_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `file_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `file_users`
+--
+
+LOCK TABLES `file_users` WRITE;
+/*!40000 ALTER TABLE `file_users` DISABLE KEYS */;
+INSERT INTO `file_users` VALUES
+(1,6,1,NULL,NULL);
+/*!40000 ALTER TABLE `file_users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `files`
+--
+
+DROP TABLE IF EXISTS `files`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `files` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `priority` varchar(255) NOT NULL,
+  `document` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `files`
+--
+
+LOCK TABLES `files` WRITE;
+/*!40000 ALTER TABLE `files` DISABLE KEYS */;
+INSERT INTO `files` VALUES
+(1,'Contact','Height','\"Documents\\/CiselnikOkresu.xlsx\"','2024-01-29 00:12:49','2024-01-30 09:19:53'),
+(2,'Tvorba testovaciho projektu','Low','\"Documents\\/tasks.csv\"','2024-01-29 01:11:36','2024-01-30 09:43:45'),
+(3,'Test','Medium','\"Documents\\/contacts.csv\"','2024-01-30 08:58:20','2024-01-30 09:22:15'),
+(4,'testovaci ','Low','\"Documents\\/contacts.csv\"','2024-01-30 09:09:09','2024-01-30 09:28:58'),
+(5,'Attendance','Low','\"Documents\\/contacts.csv\"','2024-01-30 10:11:20','2024-01-30 10:11:20'),
+(6,'Testovaci soubor Absence','Low','\"Documents\\/zvlastni_org-actual-praha-2015.csv\"','2024-01-30 10:29:11','2024-01-30 10:29:11');
+/*!40000 ALTER TABLE `files` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `imports`
 --
 
@@ -662,7 +1229,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -697,7 +1264,6 @@ INSERT INTO `migrations` VALUES
 (23,'2024_01_16_212750_create_task_contacts_table',1),
 (24,'2024_01_16_214900_create_employee_tasks_table',1),
 (25,'2024_01_19_115724_create_coming_work_types_table',1),
-(26,'2024_01_19_134930_create_coming_works_table',1),
 (27,'2024_01_19_135239_create_coming_work_projects_table',1),
 (28,'2024_01_19_140253_create_coming_work_tasks_table',1),
 (29,'2024_01_19_153119_create_coming_work_employees_table',1),
@@ -708,7 +1274,24 @@ INSERT INTO `migrations` VALUES
 (34,'2024_01_21_193445_create_imports_table',1),
 (35,'2024_01_21_193446_create_failed_import_rows_table',1),
 (36,'2024_01_25_184649_create_project_users_table',1),
-(37,'2024_01_26_211144_create_permission_tables',1);
+(38,'2024_01_29_003628_create_file_types_table',1),
+(40,'2024_01_26_232140_create_permission_tables',2),
+(41,'2024_01_29_010155_create_files_table',2),
+(42,'2024_01_29_011710_create_file_projects_table',3),
+(43,'2024_01_29_011824_create_file_companies_table',3),
+(44,'2024_01_29_011930_create_file_contacts_table',3),
+(45,'2024_01_30_094606_create_file_tasks_table',4),
+(47,'2024_01_30_105911_create_file_attendances_table',5),
+(48,'2024_01_30_112135_create_file_absences_table',6),
+(54,'2024_01_31_003444_create_attendance_attendance_types_table',9),
+(55,'2024_01_30_225156_create_company_attendances_table',10),
+(58,'2024_01_19_134930_create_coming_works_table',11),
+(59,'2024_01_31_010329_create_attendance_users_table',12),
+(60,'2024_01_31_112042_create_company_users_table',13),
+(62,'2024_01_31_113912_create_contact_users_table',14),
+(63,'2024_01_31_115007_create_task_users_table',15),
+(64,'2024_01_31_115855_create_absence_users_table',16),
+(66,'2024_01_31_120820_create_file_users_table',17);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -763,7 +1346,7 @@ LOCK TABLES `model_has_roles` WRITE;
 /*!40000 ALTER TABLE `model_has_roles` DISABLE KEYS */;
 INSERT INTO `model_has_roles` VALUES
 (1,'App\\Models\\User',1),
-(4,'App\\Models\\User',2);
+(1,'App\\Models\\User',3);
 /*!40000 ALTER TABLE `model_has_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -806,7 +1389,7 @@ CREATE TABLE `permissions` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `permissions_name_guard_name_unique` (`name`,`guard_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=140 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -816,145 +1399,168 @@ CREATE TABLE `permissions` (
 LOCK TABLES `permissions` WRITE;
 /*!40000 ALTER TABLE `permissions` DISABLE KEYS */;
 INSERT INTO `permissions` VALUES
-(1,'view_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(2,'view_any_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(3,'create_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(4,'update_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(5,'restore_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(6,'restore_any_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(7,'replicate_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(8,'reorder_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(9,'delete_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(10,'delete_any_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(11,'force_delete_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(12,'force_delete_any_absence','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(13,'view_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(14,'view_any_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(15,'create_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(16,'update_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(17,'restore_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(18,'restore_any_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(19,'replicate_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(20,'reorder_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(21,'delete_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(22,'delete_any_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(23,'force_delete_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(24,'force_delete_any_absence::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(25,'view_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(26,'view_any_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(27,'create_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(28,'update_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(29,'restore_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(30,'restore_any_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(31,'replicate_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(32,'reorder_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(33,'delete_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(34,'delete_any_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(35,'force_delete_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(36,'force_delete_any_coming::work','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(37,'view_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(38,'view_any_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(39,'create_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(40,'update_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(41,'restore_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(42,'restore_any_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(43,'replicate_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(44,'reorder_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(45,'delete_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(46,'delete_any_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(47,'force_delete_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(48,'force_delete_any_coming::work::type','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(49,'view_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(50,'view_any_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(51,'create_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(52,'update_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(53,'restore_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(54,'restore_any_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(55,'replicate_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(56,'reorder_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(57,'delete_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(58,'delete_any_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(59,'force_delete_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(60,'force_delete_any_company','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(61,'view_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(62,'view_any_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(63,'create_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(64,'update_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(65,'restore_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(66,'restore_any_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(67,'replicate_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(68,'reorder_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(69,'delete_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(70,'delete_any_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(71,'force_delete_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(72,'force_delete_any_contact','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(73,'view_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(74,'view_any_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(75,'create_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(76,'update_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(77,'restore_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(78,'restore_any_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(79,'replicate_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(80,'reorder_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(81,'delete_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(82,'delete_any_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(83,'force_delete_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(84,'force_delete_any_department','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(85,'view_employee','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(86,'view_any_employee','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(87,'create_employee','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(88,'update_employee','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(89,'restore_employee','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(90,'restore_any_employee','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(91,'replicate_employee','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(92,'reorder_employee','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(93,'delete_employee','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(94,'delete_any_employee','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(95,'force_delete_employee','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(96,'force_delete_any_employee','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(97,'view_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(98,'view_any_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(99,'create_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(100,'update_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(101,'restore_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(102,'restore_any_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(103,'replicate_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(104,'reorder_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(105,'delete_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(106,'delete_any_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(107,'force_delete_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(108,'force_delete_any_project','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(109,'view_role','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(110,'view_any_role','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(111,'create_role','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(112,'update_role','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(113,'delete_role','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(114,'delete_any_role','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(115,'view_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(116,'view_any_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(117,'create_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(118,'update_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(119,'restore_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(120,'restore_any_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(121,'replicate_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(122,'reorder_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(123,'delete_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(124,'delete_any_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(125,'force_delete_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(126,'force_delete_any_task','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(127,'view_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(128,'view_any_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(129,'create_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(130,'update_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(131,'restore_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(132,'restore_any_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(133,'replicate_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(134,'reorder_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(135,'delete_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(136,'delete_any_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(137,'force_delete_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(138,'force_delete_any_user','web','2024-01-26 20:31:45','2024-01-26 20:31:45'),
-(139,'2','web','2024-01-26 20:51:34','2024-01-26 20:51:34');
+(1,'view_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(2,'view_any_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(3,'create_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(4,'update_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(5,'restore_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(6,'restore_any_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(7,'replicate_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(8,'reorder_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(9,'delete_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(10,'delete_any_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(11,'force_delete_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(12,'force_delete_any_absence','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(13,'view_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(14,'view_any_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(15,'create_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(16,'update_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(17,'restore_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(18,'restore_any_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(19,'replicate_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(20,'reorder_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(21,'delete_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(22,'delete_any_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(23,'force_delete_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(24,'force_delete_any_absence::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(25,'view_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(26,'view_any_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(27,'create_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(28,'update_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(29,'restore_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(30,'restore_any_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(31,'replicate_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(32,'reorder_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(33,'delete_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(34,'delete_any_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(35,'force_delete_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(36,'force_delete_any_coming::work','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(37,'view_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(38,'view_any_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(39,'create_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(40,'update_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(41,'restore_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(42,'restore_any_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(43,'replicate_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(44,'reorder_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(45,'delete_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(46,'delete_any_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(47,'force_delete_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(48,'force_delete_any_coming::work::type','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(49,'view_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(50,'view_any_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(51,'create_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(52,'update_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(53,'restore_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(54,'restore_any_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(55,'replicate_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(56,'reorder_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(57,'delete_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(58,'delete_any_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(59,'force_delete_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(60,'force_delete_any_company','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(61,'view_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(62,'view_any_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(63,'create_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(64,'update_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(65,'restore_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(66,'restore_any_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(67,'replicate_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(68,'reorder_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(69,'delete_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(70,'delete_any_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(71,'force_delete_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(72,'force_delete_any_contact','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(73,'view_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(74,'view_any_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(75,'create_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(76,'update_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(77,'restore_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(78,'restore_any_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(79,'replicate_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(80,'reorder_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(81,'delete_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(82,'delete_any_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(83,'force_delete_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(84,'force_delete_any_department','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(85,'view_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(86,'view_any_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(87,'create_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(88,'update_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(89,'restore_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(90,'restore_any_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(91,'replicate_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(92,'reorder_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(93,'delete_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(94,'delete_any_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(95,'force_delete_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(96,'force_delete_any_employee','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(97,'view_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(98,'view_any_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(99,'create_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(100,'update_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(101,'restore_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(102,'restore_any_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(103,'replicate_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(104,'reorder_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(105,'delete_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(106,'delete_any_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(107,'force_delete_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(108,'force_delete_any_file','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(109,'view_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(110,'view_any_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(111,'create_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(112,'update_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(113,'restore_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(114,'restore_any_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(115,'replicate_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(116,'reorder_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(117,'delete_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(118,'delete_any_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(119,'force_delete_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(120,'force_delete_any_file::types','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(121,'view_project','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(122,'view_any_project','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(123,'create_project','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(124,'update_project','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(125,'restore_project','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(126,'restore_any_project','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(127,'replicate_project','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(128,'reorder_project','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(129,'delete_project','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(130,'delete_any_project','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(131,'force_delete_project','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(132,'force_delete_any_project','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(133,'view_role','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(134,'view_any_role','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(135,'create_role','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(136,'update_role','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(137,'delete_role','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(138,'delete_any_role','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(139,'view_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(140,'view_any_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(141,'create_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(142,'update_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(143,'restore_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(144,'restore_any_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(145,'replicate_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(146,'reorder_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(147,'delete_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(148,'delete_any_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(149,'force_delete_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(150,'force_delete_any_task','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(151,'view_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(152,'view_any_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(153,'create_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(154,'update_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(155,'restore_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(156,'restore_any_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(157,'replicate_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(158,'reorder_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(159,'delete_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(160,'delete_any_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(161,'force_delete_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18'),
+(162,'force_delete_any_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18');
 /*!40000 ALTER TABLE `permissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1005,7 +1611,7 @@ CREATE TABLE `project_companies` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1014,6 +1620,8 @@ CREATE TABLE `project_companies` (
 
 LOCK TABLES `project_companies` WRITE;
 /*!40000 ALTER TABLE `project_companies` DISABLE KEYS */;
+INSERT INTO `project_companies` VALUES
+(1,3,1,NULL,NULL);
 /*!40000 ALTER TABLE `project_companies` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1035,7 +1643,7 @@ CREATE TABLE `project_contacts` (
   KEY `project_contacts_contact_id_foreign` (`contact_id`),
   CONSTRAINT `project_contacts_contact_id_foreign` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`id`) ON DELETE CASCADE,
   CONSTRAINT `project_contacts_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1044,6 +1652,8 @@ CREATE TABLE `project_contacts` (
 
 LOCK TABLES `project_contacts` WRITE;
 /*!40000 ALTER TABLE `project_contacts` DISABLE KEYS */;
+INSERT INTO `project_contacts` VALUES
+(1,1,3,NULL,NULL);
 /*!40000 ALTER TABLE `project_contacts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1060,7 +1670,7 @@ CREATE TABLE `project_types` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1069,6 +1679,9 @@ CREATE TABLE `project_types` (
 
 LOCK TABLES `project_types` WRITE;
 /*!40000 ALTER TABLE `project_types` DISABLE KEYS */;
+INSERT INTO `project_types` VALUES
+(1,'PHP Contract','2024-01-28 23:58:58','2024-01-28 23:58:58'),
+(2,'Security Contract','2024-01-28 23:58:58','2024-01-28 23:58:58');
 /*!40000 ALTER TABLE `project_types` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1090,7 +1703,7 @@ CREATE TABLE `project_users` (
   KEY `project_users_user_id_foreign` (`user_id`),
   CONSTRAINT `project_users_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE,
   CONSTRAINT `project_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1099,6 +1712,9 @@ CREATE TABLE `project_users` (
 
 LOCK TABLES `project_users` WRITE;
 /*!40000 ALTER TABLE `project_users` DISABLE KEYS */;
+INSERT INTO `project_users` VALUES
+(1,1,1,NULL,NULL),
+(3,1,3,NULL,NULL);
 /*!40000 ALTER TABLE `project_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1132,7 +1748,7 @@ CREATE TABLE `projects` (
   CONSTRAINT `projects_contact_id_foreign` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`id`) ON DELETE CASCADE,
   CONSTRAINT `projects_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE,
   CONSTRAINT `projects_project_types_id_foreign` FOREIGN KEY (`project_types_id`) REFERENCES `project_types` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1141,6 +1757,8 @@ CREATE TABLE `projects` (
 
 LOCK TABLES `projects` WRITE;
 /*!40000 ALTER TABLE `projects` DISABLE KEYS */;
+INSERT INTO `projects` VALUES
+(1,'Tvorba crm na zakazku Nabah Solutions',3,3,1,'2024-01-01','2024-05-31',NULL,'150000',NULL,'2024-01-29 00:01:22','2024-01-29 00:01:22',1);
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1169,282 +1787,167 @@ LOCK TABLES `role_has_permissions` WRITE;
 /*!40000 ALTER TABLE `role_has_permissions` DISABLE KEYS */;
 INSERT INTO `role_has_permissions` VALUES
 (1,1),
-(1,4),
 (2,1),
-(2,4),
 (3,1),
-(3,4),
 (4,1),
-(4,4),
 (5,1),
-(5,4),
 (6,1),
-(6,4),
 (7,1),
-(7,4),
 (8,1),
-(8,4),
 (9,1),
-(9,4),
 (10,1),
-(10,4),
 (11,1),
-(11,4),
 (12,1),
-(12,4),
 (13,1),
-(13,4),
 (14,1),
-(14,4),
 (15,1),
-(15,4),
 (16,1),
-(16,4),
 (17,1),
-(17,4),
 (18,1),
-(18,4),
 (19,1),
-(19,4),
 (20,1),
-(20,4),
 (21,1),
-(21,4),
 (22,1),
-(22,4),
 (23,1),
-(23,4),
 (24,1),
-(24,4),
 (25,1),
-(25,4),
 (26,1),
-(26,4),
 (27,1),
-(27,4),
 (28,1),
-(28,4),
 (29,1),
-(29,4),
 (30,1),
-(30,4),
 (31,1),
-(31,4),
 (32,1),
-(32,4),
 (33,1),
-(33,4),
 (34,1),
-(34,4),
 (35,1),
-(35,4),
 (36,1),
-(36,4),
 (37,1),
-(37,4),
 (38,1),
-(38,4),
 (39,1),
-(39,4),
 (40,1),
-(40,4),
 (41,1),
-(41,4),
 (42,1),
-(42,4),
 (43,1),
-(43,4),
 (44,1),
-(44,4),
 (45,1),
-(45,4),
 (46,1),
-(46,4),
 (47,1),
-(47,4),
 (48,1),
-(48,4),
 (49,1),
-(49,4),
 (50,1),
-(50,4),
 (51,1),
-(51,4),
 (52,1),
-(52,4),
 (53,1),
-(53,4),
 (54,1),
-(54,4),
 (55,1),
-(55,4),
 (56,1),
-(56,4),
 (57,1),
-(57,4),
 (58,1),
-(58,4),
 (59,1),
-(59,4),
 (60,1),
-(60,4),
 (61,1),
-(61,4),
 (62,1),
-(62,4),
 (63,1),
-(63,4),
 (64,1),
-(64,4),
 (65,1),
-(65,4),
 (66,1),
-(66,4),
 (67,1),
-(67,4),
 (68,1),
-(68,4),
 (69,1),
-(69,4),
 (70,1),
-(70,4),
 (71,1),
-(71,4),
 (72,1),
-(72,4),
 (73,1),
-(73,4),
 (74,1),
-(74,4),
 (75,1),
-(75,4),
 (76,1),
-(76,4),
 (77,1),
-(77,4),
 (78,1),
-(78,4),
 (79,1),
-(79,4),
 (80,1),
-(80,4),
 (81,1),
-(81,4),
 (82,1),
-(82,4),
 (83,1),
-(83,4),
 (84,1),
-(84,4),
 (85,1),
-(85,4),
 (86,1),
-(86,4),
 (87,1),
-(87,4),
 (88,1),
-(88,4),
 (89,1),
-(89,4),
 (90,1),
-(90,4),
 (91,1),
-(91,4),
 (92,1),
-(92,4),
 (93,1),
-(93,4),
 (94,1),
-(94,4),
 (95,1),
-(95,4),
 (96,1),
-(96,4),
 (97,1),
-(97,4),
 (98,1),
-(98,4),
 (99,1),
-(99,4),
 (100,1),
-(100,4),
 (101,1),
-(101,4),
 (102,1),
-(102,4),
 (103,1),
-(103,4),
 (104,1),
-(104,4),
 (105,1),
-(105,4),
 (106,1),
-(106,4),
 (107,1),
-(107,4),
 (108,1),
-(108,4),
 (109,1),
-(109,4),
 (110,1),
-(110,4),
 (111,1),
-(111,4),
 (112,1),
-(112,4),
 (113,1),
-(113,4),
 (114,1),
-(114,4),
 (115,1),
-(115,4),
 (116,1),
-(116,4),
 (117,1),
-(117,4),
 (118,1),
-(118,4),
 (119,1),
-(119,4),
 (120,1),
-(120,4),
 (121,1),
-(121,4),
 (122,1),
-(122,4),
 (123,1),
-(123,4),
 (124,1),
-(124,4),
 (125,1),
-(125,4),
 (126,1),
-(126,4),
 (127,1),
-(127,4),
 (128,1),
-(128,4),
 (129,1),
-(129,4),
 (130,1),
-(130,4),
 (131,1),
-(131,4),
 (132,1),
-(132,4),
 (133,1),
-(133,4),
 (134,1),
-(134,4),
 (135,1),
-(135,4),
 (136,1),
-(136,4),
 (137,1),
-(137,4),
 (138,1),
-(138,4),
-(139,4);
+(139,1),
+(140,1),
+(141,1),
+(142,1),
+(143,1),
+(144,1),
+(145,1),
+(146,1),
+(147,1),
+(148,1),
+(149,1),
+(150,1),
+(151,1),
+(152,1),
+(153,1),
+(154,1),
+(155,1),
+(156,1),
+(157,1),
+(158,1),
+(159,1),
+(160,1),
+(161,1),
+(162,1);
 /*!40000 ALTER TABLE `role_has_permissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1463,7 +1966,7 @@ CREATE TABLE `roles` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `roles_name_guard_name_unique` (`name`,`guard_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1473,9 +1976,8 @@ CREATE TABLE `roles` (
 LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
 INSERT INTO `roles` VALUES
-(1,'super_admin','web','2024-01-26 20:31:44','2024-01-26 20:31:44'),
-(3,'panel_user','web','2024-01-26 21:19:52','2024-01-26 21:19:52'),
-(4,'Project Manager','web','2024-01-26 21:21:50','2024-01-26 21:21:50');
+(1,'super_admin','web','2024-01-29 00:08:17','2024-01-29 00:08:17'),
+(2,'panel_user','web','2024-01-29 00:08:18','2024-01-29 00:08:18');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1495,7 +1997,7 @@ CREATE TABLE `task_companies` (
   PRIMARY KEY (`id`),
   KEY `task_companies_task_id_foreign` (`task_id`),
   CONSTRAINT `task_companies_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1504,6 +2006,9 @@ CREATE TABLE `task_companies` (
 
 LOCK TABLES `task_companies` WRITE;
 /*!40000 ALTER TABLE `task_companies` DISABLE KEYS */;
+INSERT INTO `task_companies` VALUES
+(1,1,3,NULL,NULL),
+(2,2,3,NULL,NULL);
 /*!40000 ALTER TABLE `task_companies` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1525,7 +2030,7 @@ CREATE TABLE `task_contacts` (
   KEY `task_contacts_contact_id_foreign` (`contact_id`),
   CONSTRAINT `task_contacts_contact_id_foreign` FOREIGN KEY (`contact_id`) REFERENCES `contacts` (`id`) ON DELETE CASCADE,
   CONSTRAINT `task_contacts_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1534,6 +2039,9 @@ CREATE TABLE `task_contacts` (
 
 LOCK TABLES `task_contacts` WRITE;
 /*!40000 ALTER TABLE `task_contacts` DISABLE KEYS */;
+INSERT INTO `task_contacts` VALUES
+(1,1,3,NULL,NULL),
+(2,2,3,NULL,NULL);
 /*!40000 ALTER TABLE `task_contacts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1555,7 +2063,7 @@ CREATE TABLE `task_projects` (
   KEY `task_projects_project_id_foreign` (`project_id`),
   CONSTRAINT `task_projects_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE,
   CONSTRAINT `task_projects_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1564,7 +2072,42 @@ CREATE TABLE `task_projects` (
 
 LOCK TABLES `task_projects` WRITE;
 /*!40000 ALTER TABLE `task_projects` DISABLE KEYS */;
+INSERT INTO `task_projects` VALUES
+(1,1,1,NULL,NULL),
+(2,2,1,NULL,NULL);
 /*!40000 ALTER TABLE `task_projects` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `task_users`
+--
+
+DROP TABLE IF EXISTS `task_users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `task_users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `task_id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `task_users_task_id_foreign` (`task_id`),
+  KEY `task_users_user_id_foreign` (`user_id`),
+  CONSTRAINT `task_users_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `task_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `task_users`
+--
+
+LOCK TABLES `task_users` WRITE;
+/*!40000 ALTER TABLE `task_users` DISABLE KEYS */;
+INSERT INTO `task_users` VALUES
+(1,2,1,NULL,NULL);
+/*!40000 ALTER TABLE `task_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1583,7 +2126,7 @@ CREATE TABLE `tasks` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1592,6 +2135,9 @@ CREATE TABLE `tasks` (
 
 LOCK TABLES `tasks` WRITE;
 /*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
+INSERT INTO `tasks` VALUES
+(1,'Testovaci ukol','1','2024-01-30','2024-01-30','2024-01-30 08:35:35','2024-01-30 08:35:35'),
+(2,'testovani relace','1','2024-01-30','2024-01-30','2024-01-30 09:34:21','2024-01-30 09:34:42');
 /*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1637,7 +2183,7 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1647,12 +2193,8 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES
-(1,'Ondrej Zelina','ondrej.web@gmail.com',NULL,'$2y$12$X9vB93kEFrrrvef23dfLFOApzB4PPPoQd09FHGYksNh9Ps1BIp1xq',NULL,'2024-01-26 20:32:06','2024-01-26 20:32:06'),
-(2,'Pavel Burda','root@example.com',NULL,'$2y$12$mX9LOnDZlRvbEu45QaVU8.Pfh3vXJXyYPVPoSXtgVAcfvYj9FCd8a',NULL,'2024-01-26 20:47:44','2024-01-26 22:06:51'),
-(3,'Josef Tkadlec','tkadlec@example.com',NULL,'$2y$12$OkI51Uea6/9NBEHkERpMnOjvoe6RxPYRVhv.QKB/QiXsUV.V/R49G',NULL,'2024-01-26 22:07:18','2024-01-26 22:07:18'),
-(4,'Vlasta Zelinova','zelinova@example.com',NULL,'$2y$12$hLpKXeb6tO/q80JT.SPo.uModR1RlVdzAu8dMdDP.Dx.cvCcFvbuG',NULL,'2024-01-26 22:07:56','2024-01-26 22:07:56'),
-(5,'Vlasta Tkadlecova','tkadlecova@example.com',NULL,'$2y$12$a2fVUsLgE4HDj5UBwagF7.nwJ4eIl1Hz0On3XjRQ0eP5f3SXQf4gm',NULL,'2024-01-26 22:08:29','2024-01-26 22:08:29'),
-(6,'Antonin Kyselak','kyselak@example.com',NULL,'$2y$12$upl8RUwtFpuZBopFNKjS9.CTHAtBem/X7Se.fi9Es3T6o/d7ta2tu',NULL,'2024-01-26 22:09:01','2024-01-26 22:09:01');
+(1,'Ondrej Zelina','ondrej.web@gmail.com',NULL,'$2y$12$8wqPNCSjYcGtG8tie/KlLOgxVdmq/fe.74fiLUomJhXij587KT4/i',NULL,'2024-01-28 23:58:42','2024-01-28 23:58:42'),
+(3,'Pavel Burda','paul.burda@email.cz',NULL,'$2y$12$j2Fx/h4E.1UfyNI7zWlB6u5LcmeTaJ7.PPoupzAZNyhvsVUAFOlLK',NULL,'2024-01-31 10:15:00','2024-01-31 10:15:00');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1665,4 +2207,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-27  0:09:44
+-- Dump completed on 2024-01-31 13:19:37

@@ -144,6 +144,7 @@ class ComingWorkResource extends Resource
             RelationManagers\EmployeesRelationManager::class,
             RelationManagers\ProjectsRelationManager::class,
             RelationManagers\FilesRelationManager::class,
+            RelationManagers\CategoriesRelationManager::class,
             UsersRelationManager::class
         ];
     }

@@ -54,4 +54,9 @@ class File extends Model
     {
         return $this->belongsToMany(User::class,'file_users');
     }
+
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Category::class,'file_categories');
+    }
 }

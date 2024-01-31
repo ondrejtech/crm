@@ -269,6 +269,7 @@ class CompanyResource extends Resource
             RelationManagers\TasksRelationManager::class,
             RelationManagers\FilesRelationManager::class,
             RelationManagers\AttendancesRelationManager::class,
+            RelationManagers\CategoriesRelationManager::class,
             RelationManagers\UsersRelationManager::class,
         ];
     }

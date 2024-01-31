@@ -41,4 +41,9 @@ class Absence extends Model
     {
         return $this->belongsToMany(User::class,'absence_users');
     }
+
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Category::class,'absence_categories');
+    }
 }

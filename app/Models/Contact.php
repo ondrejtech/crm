@@ -62,4 +62,9 @@ class Contact extends Model
     {
         return $this->belongsToMany(User::class,'contact_users');
     }
+
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Category::class,'contact_categories');
+    }
 }

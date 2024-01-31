@@ -120,6 +120,7 @@ class TaskResource extends Resource
             RelationManagers\ContactsRelationManager::class,
             RelationManagers\EmployeesRelationManager::class,
             RelationManagers\FilesRelationManager::class,
+            RelationManagers\CategoriesRelationManager::class,
             RelationManagers\UsersRelationManager::class,
         ];
     }

@@ -54,4 +54,9 @@ class ComingWork extends Model
     {
         return $this->belongsToMany(User::class, 'attendance_users');
     }
+
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Category::class,'attendance_categories');
+    }
 }

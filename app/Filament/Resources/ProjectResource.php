@@ -211,6 +211,7 @@ class ProjectResource extends Resource
             RelationManagers\TasksRelationManager::class,
             RelationManagers\ComingWorksRelationManager::class,
             RelationManagers\FilesRelationManager::class,
+            RelationManagers\CategoriesRelationManager::class,
             RelationManagers\UsersRelationManager::class,
         ];
     }

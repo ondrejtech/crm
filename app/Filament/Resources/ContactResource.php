@@ -260,6 +260,7 @@ class ContactResource extends Resource
             RelationManagers\ProjectRelationManager::class,
             TasksRelationManager::class,
             RelationManagers\FilesRelationManager::class,
+            RelationManagers\CategoriesRelationManager::class,
             RelationManagers\UsersRelationManager::class,
         ];
     }
