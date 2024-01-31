@@ -57,4 +57,9 @@ class Contact extends Model
     {
         return $this->belongsToMany(File::class,'file_contacts');
     }
+
+    public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class,'contact_users');
+    }
 }

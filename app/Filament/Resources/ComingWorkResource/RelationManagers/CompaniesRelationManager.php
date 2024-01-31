@@ -1,33 +1,20 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\ComingWorkResource\RelationManagers;
 
-use App\Filament\Resources\ComapanyResource\RelationManagers\ContactsRelationManager;
-use App\Filament\Resources\CompanyResource\Pages;
-use App\Filament\Resources\CompanyResource\RelationManagers;
-use App\Filament\Resources\CompanyResource\RelationManagers\ProjectRelationManager;
-use App\Filament\Resources\CompanyResource\RelationManagers\ProjectsRelationManager;
-use App\Models\Company;
 use Filament\Forms;
-use Filament\Forms\Components\Actions\Action;
-use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
+use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
-use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
-use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use function Laravel\Prompts\search;
 
-class CompanyResource extends Resource
+class CompaniesRelationManager extends RelationManager
 {
-    protected static ?string $model = Company::class;
+    protected static string $relationship = 'companies';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    public static function form(Form $form): Form
+    public function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -150,10 +137,15 @@ class CompanyResource extends Resource
             ]);
     }
 
-    public static function table(Table $table): Table
+    public function table(Table $table): Table
     {
         return $table
+            ->recordTitleAttribute('name')
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->toggleable()
@@ -229,25 +221,12 @@ class CompanyResource extends Resource
                     ->sortable(),
             ])
             ->filters([
-                Filter::make('created_at')
-                    ->form([
-                        DatePicker::make('created_from'),
-                        DatePicker::make('created_until'),
-                    ])
-                    ->query(function (Builder $query, array $data): Builder {
-                        return $query
-                            ->when(
-                                $data['created_from'],
-                                fn (Builder $query, $date): Builder => $query->whereDate('created_at', '>=', $date),
-                            )
-                            ->when(
-                                $data['created_until'],
-                                fn (Builder $query, $date): Builder => $query->whereDate('created_at', '<=', $date),
-                            );
-                    })->columnSpan(2)->columns(2)
+                //
+            ])
+            ->headerActions([
+                Tables\Actions\CreateAction::make(),
             ])
             ->actions([
-//                Tables\Actions\EditAction::make(),
                 Tables\Actions\ActionGroup::make([
                     Tables\Actions\ViewAction::make(),
                     Tables\Actions\EditAction::make(),
@@ -259,26 +238,5 @@ class CompanyResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            RelationManagers\ContactRelationManager::class,
-            ProjectRelationManager::class,
-            RelationManagers\TasksRelationManager::class,
-            RelationManagers\FilesRelationManager::class,
-            RelationManagers\AttendancesRelationManager::class,
-            RelationManagers\UsersRelationManager::class,
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListCompanies::route('/'),
-//            'create' => Pages\CreateCompany::route('/create'),
-            'edit' => Pages\EditCompany::route('/{record}/edit'),
-        ];
     }
 }

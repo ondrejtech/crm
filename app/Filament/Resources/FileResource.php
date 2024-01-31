@@ -133,6 +133,7 @@ class FileResource extends Resource
             RelationManagers\TasksRelationManager::class,
             RelationManagers\AttendancesRelationManager::class,
             RelationManagers\AbsencesRelationManager::class,
+            RelationManagers\UsersRelationManager::class,
         ];
     }
 

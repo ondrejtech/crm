@@ -1,17 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\ProjectResource\RelationManagers;
+namespace App\Filament\Resources\ComingWorkResoureResource\RelationManagers;
 
-use App\Filament\Resources\UserResource\Pages\CreateUser;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Pages\Page;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Illuminate\Support\Facades\Hash;
 
 class UsersRelationManager extends RelationManager
 {
@@ -21,24 +18,9 @@ class UsersRelationManager extends RelationManager
     {
         return $form
             ->schema([
-                Forms\Components\Section::make('User  settings')
-                    ->schema([
-                        Forms\Components\TextInput::make('name')
-                            ->required()
-                            ->maxLength(255),
-                        Forms\Components\TextInput::make('email')
-                            ->email()
-                            ->required()
-                            ->maxLength(255),
-                        Forms\Components\DateTimePicker::make('email_verified_at'),
-                        Forms\Components\TextInput::make('password')
-                            ->password()
-                            ->minLength(4)
-                            ->dehydrateStateUsing(fn ($state) => Hash::make($state))
-                            ->dehydrated(fn ($state) => filled($state))
-                            ->required(fn (Page $livewire) => ($livewire instanceof CreateUser))
-                            ->maxLength(255),
-                    ])->columns(2)
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 
@@ -50,7 +32,7 @@ class UsersRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('id')
                     ->searchable()
                     ->sortable()
-                    ->toggleable(),
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->sortable()
@@ -64,10 +46,10 @@ class UsersRelationManager extends RelationManager
                 //
             ])
             ->headerActions([
-                    Tables\Actions\AttachAction::make()
+                Tables\Actions\AttachAction::make(),
             ])
             ->actions([
-                    Tables\Actions\DetachAction::make()
+                Tables\Actions\DetachAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

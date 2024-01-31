@@ -210,8 +210,8 @@ class ProjectResource extends Resource
             RelationManagers\ContactRelationManager::class,
             RelationManagers\TasksRelationManager::class,
             RelationManagers\ComingWorksRelationManager::class,
-            RelationManagers\UsersRelationManager::class,
             RelationManagers\FilesRelationManager::class,
+            RelationManagers\UsersRelationManager::class,
         ];
     }
 

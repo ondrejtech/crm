@@ -60,4 +60,19 @@ class Company extends Model
     {
         return $this->belongsToMany(File::class,'file_companies');
     }
+
+    public function attendances(): BelongsToMany
+    {
+        return $this->belongsToMany(ComingWork::class,'company_attendances');
+    }
+
+    public function comingWorks(): BelongsTo
+    {
+        return $this->belongsTo(Company::class, 'id','id');
+    }
+
+    public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class,'company_users');
+    }
 }

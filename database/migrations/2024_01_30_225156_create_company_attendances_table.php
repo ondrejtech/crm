@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('coming_works', function (Blueprint $table) {
+        Schema::create('company_attendances', function (Blueprint $table) {
             $table->id();
-            $table->string('subject');
-            $table->date('date');
-            $table->time('from');
-            $table->time('to');
-            $table->foreignId('user_id')->nullable()->constrained()->cascadeOnDelete();
-            $table->mediumText('note')->nullable();
+            $table->foreignId('company_id')->constrained('companies', 'id')->cascadeOnDelete();
+            $table->foreignId('coming_work_id')->constrained('coming_works','id')->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -29,6 +25,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('coming_works');
+        Schema::dropIfExists('company_attendances');
     }
 };

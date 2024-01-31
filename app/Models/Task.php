@@ -46,4 +46,9 @@ class Task extends Model
     {
         return $this->belongsToMany(File::class,'file_tasks');
     }
+
+    public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class,'task_users');
+    }
 }

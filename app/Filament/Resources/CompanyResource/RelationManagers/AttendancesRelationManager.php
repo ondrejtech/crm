@@ -1,29 +1,20 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\CompanyResource\RelationManagers;
 
-use App\Filament\Resources\ComingWorkResource\Pages;
-use App\Filament\Resources\ComingWorkResource\RelationManagers;
-use App\Filament\Resources\ComingWorkResoureResource\RelationManagers\UsersRelationManager;
-use App\Models\ComingWork;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
+use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ComingWorkResource extends Resource
+class AttendancesRelationManager extends RelationManager
 {
-    protected static ?string $model = ComingWork::class;
+    protected static string $relationship = 'attendances';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationLabel = 'Attendance';
-    protected static ?int $navigationSort = 6;
-    protected static ?string $modelLabel = 'Attendance';
-
-    public static function form(Form $form): Form
+    public function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -31,28 +22,14 @@ class ComingWorkResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('subject')
                             ->required()
-                            ->maxLength(255)
-                            ->columnSpan(2),
-                        Forms\Components\Select::make('coming_work_type.name')
-                            ->label('Type')
-                            ->relationship('types','name')
-                            ->searchable()
-                            ->preload()
-                            ->required(),
+                            ->maxLength(255),
                         Forms\Components\Select::make('project.id')
                             ->label('Parent project')
                             ->relationship('projects', 'name')
                             ->required(),
-                        Forms\Components\Select::make('company.id')
-                            ->label('Parent Company')
-                            ->relationship('companies','name')
-                            ->searchable()
-                            ->preload(),
                         Forms\Components\Select::make('task.id')
                             ->label('Parent task')
-                            ->relationship('tasks', 'subject')
-                            ->searchable()
-                            ->preload(),
+                            ->relationship('tasks', 'subject'),
                         Forms\Components\DatePicker::make('date')
                             ->required(),
                         Forms\Components\TimePicker::make('from')
@@ -62,10 +39,10 @@ class ComingWorkResource extends Resource
                             ->seconds(false)
                             ->required(),
                     ])->columns(3),
-                Forms\Components\Section::make('Employee')
+                Forms\Components\Section::make('Solver')
                     ->schema([
                         Forms\Components\Select::make('employee.id')
-                            ->label('Employee')
+                            ->label('Solver')
                             ->relationship('employees', 'full_name')
                             ->required(),
                     ]),
@@ -78,10 +55,15 @@ class ComingWorkResource extends Resource
             ]);
     }
 
-    public static function table(Table $table): Table
+    public function table(Table $table): Table
     {
         return $table
+            ->recordTitleAttribute('id')
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('subject')
                     ->limit(20)
                     ->sortable()
@@ -123,37 +105,17 @@ class ComingWorkResource extends Resource
             ->filters([
                 //
             ])
+            ->headerActions([
+                Tables\Actions\CreateAction::make(),
+            ])
             ->actions([
-                Tables\Actions\ActionGroup::make([
-                    Tables\Actions\ViewAction::make(),
-                    Tables\Actions\EditAction::make(),
-                    Tables\Actions\DeleteAction::make(),
-                ])
+                Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            RelationManagers\CompaniesRelationManager::class,
-            RelationManagers\EmployeesRelationManager::class,
-            RelationManagers\ProjectsRelationManager::class,
-            RelationManagers\FilesRelationManager::class,
-            UsersRelationManager::class
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListComingWorks::route('/'),
-//            'create' => Pages\CreateComingWork::route('/create'),
-            'edit' => Pages\EditComingWork::route('/{record}/edit'),
-        ];
     }
 }

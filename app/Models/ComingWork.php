@@ -4,7 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class ComingWork extends Model
 {
@@ -16,6 +19,11 @@ class ComingWork extends Model
         'from',
         'to'
     ];
+
+    public function types(): BelongsToMany
+    {
+        return $this->belongsToMany(ComingWorkType::class,'attendance_attendance_types');
+    }
 
     public function projects(): BelongsToMany
     {
@@ -35,5 +43,15 @@ class ComingWork extends Model
     public function files(): BelongsToMany
     {
         return $this->belongsToMany(File::class,'file_attendances');
+    }
+
+    public function companies(): BelongsToMany
+    {
+        return $this->belongsToMany(Company::class,'company_attendances');
+    }
+
+    public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'attendance_users');
     }
 }
