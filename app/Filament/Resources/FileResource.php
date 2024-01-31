@@ -127,9 +127,9 @@ class FileResource extends Resource
     public static function getRelations(): array
     {
         return [
-            RelationManagers\ProjectsRelationManager::class,
             RelationManagers\CompaniesRelationManager::class,
             RelationManagers\ContactsRelationManager::class,
+            RelationManagers\ProjectsRelationManager::class,
             RelationManagers\TasksRelationManager::class,
             RelationManagers\AttendancesRelationManager::class,
             RelationManagers\AbsencesRelationManager::class,

@@ -115,9 +115,9 @@ class TaskResource extends Resource
     public static function getRelations(): array
     {
         return [
-            RelationManagers\ProjectsRelationManager::class,
             RelationManagers\CompaniesRelationManager::class,
             RelationManagers\ContactsRelationManager::class,
+            RelationManagers\ProjectsRelationManager::class,
             RelationManagers\EmployeesRelationManager::class,
             RelationManagers\FilesRelationManager::class,
             RelationManagers\CategoriesRelationManager::class,
