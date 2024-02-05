@@ -51,7 +51,7 @@ class Project extends Model
 
     public function coming_works(): BelongsToMany
     {
-        return $this->belongsToMany(ComingWork::class,'coming_work_projects');
+        return $this->belongsToMany(Attendance::class,'coming_work_projects');
     }
 
     public function users(): BelongsToMany

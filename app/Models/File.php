@@ -42,7 +42,7 @@ class File extends Model
 
     public function attendances(): BelongsToMany
     {
-        return $this->belongsToMany(ComingWork::class,'file_attendances');
+        return $this->belongsToMany(Attendance::class,'file_attendances');
     }
 
     public function absences(): BelongsToMany

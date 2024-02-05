@@ -39,7 +39,7 @@ class Employee extends Model
 
     public function coming_works(): BelongsToMany
     {
-        return $this->belongsToMany(ComingWork::class, 'coming_work_employees');
+        return $this->belongsToMany(Attendance::class, 'coming_work_employees');
     }
 
     public function absences(): BelongsToMany

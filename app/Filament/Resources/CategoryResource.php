@@ -10,6 +10,9 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Section;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -26,10 +29,13 @@ class CategoryResource extends Resource
             ->schema([
                 Forms\Components\Section::make("Category founding")
                     ->schema([
-                        Forms\Components\TextInput::make('name')
-                            ->minLength(2)
-                            ->maxLength(255)
-                            ->required(),
+                        Section::make('Categories info')
+                            ->schema([
+                                TextInput::make('name')
+                                    ->minLength(2)
+                                    ->maxLength(255)
+                                    ->required(),
+                            ])
                     ])
             ]);
     }
@@ -38,19 +44,19 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('id')
+                TextColumn::make('id')
                     ->searchable()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->searchable()
                     ->sortable()
                     ->toggleable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->searchable()
                     ->sortable()
                     ->toggleable(),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->searchable()
                     ->sortable()
                     ->toggleable(),
@@ -60,7 +66,6 @@ class CategoryResource extends Resource
             ])
             ->actions([
                 Tables\Actions\ActionGroup::make([
-                    Tables\Actions\ViewAction::make(),
                     Tables\Actions\EditAction::make(),
                     Tables\Actions\DeleteAction::make(),
                 ])
@@ -75,13 +80,7 @@ class CategoryResource extends Resource
     public static function getRelations(): array
     {
         return [
-//            RelationManagers\CompaniesRelationManager::class,
-//            RelationManagers\ContactsRelationManager::class,
-//            RelationManagers\ProjectsRelationManager::class,
-//            RelationManagers\TasksRelationManager::class,
-//            RelationManagers\ComingWorksRelationManager::class,
-//            RelationManagers\AbsencesRelationManager::class,
-//            RelationManagers\FilesRelationManager::class,
+
         ];
     }
 
@@ -89,7 +88,7 @@ class CategoryResource extends Resource
     {
         return [
             'index' => Pages\ListCategories::route('/'),
-            'create' => Pages\CreateCategory::route('/create'),
+//            'create' => Pages\CreateCategory::route('/create'),
             'edit' => Pages\EditCategory::route('/{record}/edit'),
         ];
     }

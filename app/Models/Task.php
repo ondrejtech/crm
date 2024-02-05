@@ -39,7 +39,7 @@ class Task extends Model
 
     public function coming_works(): BelongsToMany
     {
-        return $this->belongsToMany(ComingWork::class, 'coming_work_tasks');
+        return $this->belongsToMany(Attendance::class, 'coming_work_tasks');
     }
 
     public function files(): BelongsToMany

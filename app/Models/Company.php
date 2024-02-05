@@ -63,7 +63,7 @@ class Company extends Model
 
     public function attendances(): BelongsToMany
     {
-        return $this->belongsToMany(ComingWork::class,'company_attendances');
+        return $this->belongsToMany(Attendance::class,'company_attendances');
     }
 
     public function comingWorks(): BelongsTo

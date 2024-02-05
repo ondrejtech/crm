@@ -36,7 +36,7 @@ class Category extends Model
 
     public function comingWorks(): BelongsToMany
     {
-        return $this->belongsToMany(ComingWork::class,'attendance_categories');
+        return $this->belongsToMany(Attendance::class,'attendance_categories');
     }
 
     public function absences(): BelongsToMany

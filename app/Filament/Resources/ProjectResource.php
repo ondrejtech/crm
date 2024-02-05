@@ -20,7 +20,7 @@ class ProjectResource extends Resource
     protected static ?string $model = Project::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?int $navigationSort = 3;
     public static function form(Form $form): Form
     {
         return $form
@@ -209,7 +209,6 @@ class ProjectResource extends Resource
             CompanyRelationManager::class,
             RelationManagers\ContactRelationManager::class,
             RelationManagers\TasksRelationManager::class,
-            RelationManagers\ComingWorksRelationManager::class,
             RelationManagers\FilesRelationManager::class,
             RelationManagers\CategoriesRelationManager::class,
             RelationManagers\UsersRelationManager::class,

@@ -3,10 +3,10 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\Attendance;
+use App\Models\Category;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ComingWorkPolicy
+class CategoryPolicy
 {
     use HandlesAuthorization;
 
@@ -18,19 +18,19 @@ class ComingWorkPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('view_any_coming::work');
+        return $user->can('view_any_category');
     }
 
     /**
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\Category  $category
      * @return bool
      */
-    public function view(User $user, Attendance $comingWork): bool
+    public function view(User $user, Category $category): bool
     {
-        return $user->can('view_coming::work');
+        return $user->can('view_category');
     }
 
     /**
@@ -41,31 +41,31 @@ class ComingWorkPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('create_coming::work');
+        return $user->can('create_category');
     }
 
     /**
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\Category  $category
      * @return bool
      */
-    public function update(User $user, Attendance $comingWork): bool
+    public function update(User $user, Category $category): bool
     {
-        return $user->can('update_coming::work');
+        return $user->can('update_category');
     }
 
     /**
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\Category  $category
      * @return bool
      */
-    public function delete(User $user, Attendance $comingWork): bool
+    public function delete(User $user, Category $category): bool
     {
-        return $user->can('delete_coming::work');
+        return $user->can('delete_category');
     }
 
     /**
@@ -76,19 +76,19 @@ class ComingWorkPolicy
      */
     public function deleteAny(User $user): bool
     {
-        return $user->can('delete_any_coming::work');
+        return $user->can('delete_any_category');
     }
 
     /**
      * Determine whether the user can permanently delete.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\Category  $category
      * @return bool
      */
-    public function forceDelete(User $user, Attendance $comingWork): bool
+    public function forceDelete(User $user, Category $category): bool
     {
-        return $user->can('force_delete_coming::work');
+        return $user->can('force_delete_category');
     }
 
     /**
@@ -99,19 +99,19 @@ class ComingWorkPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_coming::work');
+        return $user->can('force_delete_any_category');
     }
 
     /**
      * Determine whether the user can restore.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\Category  $category
      * @return bool
      */
-    public function restore(User $user, Attendance $comingWork): bool
+    public function restore(User $user, Category $category): bool
     {
-        return $user->can('restore_coming::work');
+        return $user->can('restore_category');
     }
 
     /**
@@ -122,19 +122,19 @@ class ComingWorkPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_coming::work');
+        return $user->can('restore_any_category');
     }
 
     /**
      * Determine whether the user can replicate.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\Category  $category
      * @return bool
      */
-    public function replicate(User $user, Attendance $comingWork): bool
+    public function replicate(User $user, Category $category): bool
     {
-        return $user->can('replicate_coming::work');
+        return $user->can('replicate_category');
     }
 
     /**
@@ -145,7 +145,7 @@ class ComingWorkPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_coming::work');
+        return $user->can('reorder_category');
     }
 
 }

@@ -3,10 +3,10 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\Attendance;
+use App\Models\AttendanceType;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ComingWorkPolicy
+class AttendanceTypePolicy
 {
     use HandlesAuthorization;
 
@@ -18,19 +18,19 @@ class ComingWorkPolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->can('view_any_coming::work');
+        return $user->can('view_any_attendance::type');
     }
 
     /**
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\AttendanceType  $attendanceType
      * @return bool
      */
-    public function view(User $user, Attendance $comingWork): bool
+    public function view(User $user, AttendanceType $attendanceType): bool
     {
-        return $user->can('view_coming::work');
+        return $user->can('view_attendance::type');
     }
 
     /**
@@ -41,31 +41,31 @@ class ComingWorkPolicy
      */
     public function create(User $user): bool
     {
-        return $user->can('create_coming::work');
+        return $user->can('create_attendance::type');
     }
 
     /**
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\AttendanceType  $attendanceType
      * @return bool
      */
-    public function update(User $user, Attendance $comingWork): bool
+    public function update(User $user, AttendanceType $attendanceType): bool
     {
-        return $user->can('update_coming::work');
+        return $user->can('update_attendance::type');
     }
 
     /**
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\AttendanceType  $attendanceType
      * @return bool
      */
-    public function delete(User $user, Attendance $comingWork): bool
+    public function delete(User $user, AttendanceType $attendanceType): bool
     {
-        return $user->can('delete_coming::work');
+        return $user->can('delete_attendance::type');
     }
 
     /**
@@ -76,19 +76,19 @@ class ComingWorkPolicy
      */
     public function deleteAny(User $user): bool
     {
-        return $user->can('delete_any_coming::work');
+        return $user->can('delete_any_attendance::type');
     }
 
     /**
      * Determine whether the user can permanently delete.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\AttendanceType  $attendanceType
      * @return bool
      */
-    public function forceDelete(User $user, Attendance $comingWork): bool
+    public function forceDelete(User $user, AttendanceType $attendanceType): bool
     {
-        return $user->can('force_delete_coming::work');
+        return $user->can('force_delete_attendance::type');
     }
 
     /**
@@ -99,19 +99,19 @@ class ComingWorkPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_coming::work');
+        return $user->can('force_delete_any_attendance::type');
     }
 
     /**
      * Determine whether the user can restore.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\AttendanceType  $attendanceType
      * @return bool
      */
-    public function restore(User $user, Attendance $comingWork): bool
+    public function restore(User $user, AttendanceType $attendanceType): bool
     {
-        return $user->can('restore_coming::work');
+        return $user->can('restore_attendance::type');
     }
 
     /**
@@ -122,19 +122,19 @@ class ComingWorkPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_coming::work');
+        return $user->can('restore_any_attendance::type');
     }
 
     /**
      * Determine whether the user can replicate.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Attendance  $comingWork
+     * @param  \App\Models\AttendanceType  $attendanceType
      * @return bool
      */
-    public function replicate(User $user, Attendance $comingWork): bool
+    public function replicate(User $user, AttendanceType $attendanceType): bool
     {
-        return $user->can('replicate_coming::work');
+        return $user->can('replicate_attendance::type');
     }
 
     /**
@@ -145,7 +145,7 @@ class ComingWorkPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_coming::work');
+        return $user->can('reorder_attendance::type');
     }
 
 }

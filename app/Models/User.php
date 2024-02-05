@@ -54,7 +54,7 @@ class User extends Authenticatable
 
     public function comingWorks(): BelongsTo
     {
-        return $this->belongsTo(ComingWork::class, 'name');
+        return $this->belongsTo(Attendance::class, 'name');
     }
 
     public function companies(): BelongsToMany

@@ -181,7 +181,6 @@ class EmployeeResource extends Resource
     {
         return [
             RelationManagers\TasksRelationManager::class,
-            RelationManagers\ComingWorksRelationManager::class,
             RelationManagers\AbsencesRelationManager::class,
         ];
     }
