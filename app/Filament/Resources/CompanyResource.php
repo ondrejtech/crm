@@ -19,7 +19,11 @@ use Filament\Tables\Table;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportAction;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
+use pxlrbt\FilamentExcel\Exports\ExcelExport;
 use function Laravel\Prompts\search;
+use pxlrbt\FilamentExcel\Columns\Column;
 
 class CompanyResource extends Resource
 {
@@ -247,10 +251,18 @@ class CompanyResource extends Resource
                             );
                     })->columnSpan(2)->columns(2)
             ])
+            ->headerActions([
+                ExportAction::make()
+                    ->exports([
+                        ExcelExport::make()
+                            ->askForFilename()
+                            ->askForWriterType()
+                            ->fromModel()
+                    ])
+            ])
             ->actions([
 //                Tables\Actions\EditAction::make(),
                 Tables\Actions\ActionGroup::make([
-                    Tables\Actions\ViewAction::make(),
                     Tables\Actions\EditAction::make(),
                     Tables\Actions\DeleteAction::make(),
                 ])
@@ -258,6 +270,13 @@ class CompanyResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    ExportBulkAction::make()
+                        ->exports([
+                            ExcelExport::make()
+                                ->askForFilename()
+                                ->askForWriterType()
+                                ->fromModel()
+                    ])
                 ]),
             ]);
     }

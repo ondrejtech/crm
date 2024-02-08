@@ -12,6 +12,9 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportAction;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
+use pxlrbt\FilamentExcel\Exports\ExcelExport;
 
 class AbsenceResource extends Resource
 {
@@ -116,9 +119,18 @@ class AbsenceResource extends Resource
             ->filters([
                 //
             ])
+            ->headerActions([
+                ExportAction::make()
+                    ->exports([
+                        ExcelExport::make()
+                            ->askForFilename()
+                            ->askForWriterType()
+                            ->fromModel()
+                    ])
+            ])
             ->actions([
+//                Tables\Actions\EditAction::make(),
                 Tables\Actions\ActionGroup::make([
-                    Tables\Actions\ViewAction::make(),
                     Tables\Actions\EditAction::make(),
                     Tables\Actions\DeleteAction::make(),
                 ])
@@ -126,6 +138,13 @@ class AbsenceResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    ExportBulkAction::make()
+                        ->exports([
+                            ExcelExport::make()
+                                ->askForFilename()
+                                ->askForWriterType()
+                                ->fromModel()
+                        ])
                 ]),
             ]);
     }
