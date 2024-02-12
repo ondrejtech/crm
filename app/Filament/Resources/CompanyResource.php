@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Exports\CompanyExporter;
 use App\Filament\Resources\ComapanyResource\RelationManagers\ContactsRelationManager;
 use App\Filament\Resources\CompanyResource\Pages;
 use App\Filament\Resources\CompanyResource\RelationManagers;
@@ -9,7 +10,6 @@ use App\Filament\Resources\CompanyResource\RelationManagers\ProjectRelationManag
 use App\Filament\Resources\CompanyResource\RelationManagers\ProjectsRelationManager;
 use App\Models\Company;
 use Filament\Forms;
-use Filament\Forms\Components\Actions\Action;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -17,6 +17,11 @@ use Filament\Tables;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Actions\ExportAction;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use function Laravel\Prompts\search;
@@ -34,65 +39,65 @@ class CompanyResource extends Resource
             ->schema([
                 Forms\Components\Section::make('Founding information ')
                     ->schema([
-                        Forms\Components\TextInput::make('name')
+                        TextInput::make('name')
                             ->required()
                             ->maxLength(255),
-                        Forms\Components\TextInput::make('phone')
+                        TextInput::make('phone')
                             ->required()
                             ->prefix('420'),
-                        Forms\Components\TextInput::make('email')
+                        TextInput::make('email')
                             ->email()
                             ->required()
                             ->maxLength(255),
-                        Forms\Components\Select::make('projects_id')
+                        Select::make('projects_id')
                             ->label('project')
                             ->relationship('project', 'name')
                             ->preload(),
-                        Forms\Components\Select::make('contact_id')
+                        Select::make('contact_id')
                             ->label('Contact Name')
                             ->relationship('contact','full_name')
                             ->createOptionForm([
-                                Forms\Components\Section::make('Founding information')
+                                Section::make('Founding information')
                                     ->schema([
-                                        Forms\Components\TextInput::make('full_name')
+                                        TextInput::make('full_name')
                                             ->required()
                                             ->maxLength(255),
-                                        Forms\Components\TextInput::make('email')
+                                        TextInput::make('email')
                                             ->email()
                                             ->required()
                                             ->maxLength(255),
                                     ])->columns(2),
-                                Forms\Components\Section::make('Newsletter')
+                                Section::make('Newsletter')
                                     ->schema([
-                                        Forms\Components\Toggle::make('newsletter')
+                                        Toggle::make('newsletter')
                                             ->required(),
                                     ])->columnSpanFull(),
-                                Forms\Components\Section::make('Contact info')
+                                Section::make('Contact info')
                                     ->schema([
-                                        Forms\Components\TextInput::make('landline')
+                                        TextInput::make('landline')
                                             ->numeric(),
-                                        Forms\Components\TextInput::make('mobile')
+                                        TextInput::make('mobile')
                                             ->required()
                                             ->numeric(),
-                                        Forms\Components\TextInput::make('next_phone')
+                                        TextInput::make('next_phone')
                                             ->tel()
                                             ->numeric(),
                                     ])->columns(3),
-                                Forms\Components\Section::make('Contact address')
+                                Section::make('Contact address')
                                     ->schema([
-                                        Forms\Components\TextInput::make('address')
+                                        TextInput::make('address')
                                             ->required()
                                             ->maxLength(255),
-                                        Forms\Components\TextInput::make('city')
+                                        TextInput::make('city')
                                             ->required()
                                             ->maxLength(255),
-                                        Forms\Components\TextInput::make('zip_code')
+                                        TextInput::make('zip_code')
                                             ->required()
                                             ->maxLength(255),
-                                        Forms\Components\TextInput::make('state')
+                                        TextInput::make('state')
                                             ->required()
                                             ->maxLength(255),
-                                        Forms\Components\Select::make('country')
+                                        Select::make('country')
                                             ->options([
                                                 'Czech republic' => 'Czech republic',
                                                 'Slovakia' => 'Slovakia'
@@ -100,9 +105,9 @@ class CompanyResource extends Resource
                                             ->required()
                                             ->columnSpan(2),
                                     ])->columns(3),
-                                Forms\Components\Section::make('User note')
+                                Section::make('User note')
                                     ->schema([
-                                        Forms\Components\Textarea::make('note')
+                                        Textarea::make('note')
                                             ->maxLength(16777215)
                                             ->columnSpanFull(),
                                     ])
@@ -111,40 +116,40 @@ class CompanyResource extends Resource
                             ->multiple()
                             ->preload()
                             ->searchable(),
-                        Forms\Components\TextInput::make('www')
+                        TextInput::make('www')
                             ->label('www')
                             ->prefix('https://www.')
                             ->maxLength(255),
-                        Forms\Components\TextInput::make('IC')
+                        TextInput::make('IC')
                             ->required()
                             ->numeric(),
-                        Forms\Components\TextInput::make('DIC')
+                        TextInput::make('DIC')
                             ->maxLength(255),
                     ])->columns(3),
-                Forms\Components\Section::make('Address')
+                Section::make('Address')
                     ->schema([
-                        Forms\Components\TextInput::make('address')
+                        TextInput::make('address')
                             ->required()
                             ->maxLength(255),
-                        Forms\Components\TextInput::make('city')
+                        TextInput::make('city')
                             ->required()
                             ->maxLength(255),
-                        Forms\Components\TextInput::make('zip_code')
+                        TextInput::make('zip_code')
                             ->required()
                             ->maxLength(255),
-                        Forms\Components\TextInput::make('state')
+                        TextInput::make('state')
                             ->required()
                             ->maxLength(255),
-                        Forms\Components\Select::make('country')
+                        Select::make('country')
                             ->required()
                             ->options([
                                 'Czech Republic' => 'Czech republic',
                                 'Slovakia' => 'Slovakia'
                             ])->columnSpan(2),
                     ])->columns(3),
-                Forms\Components\Section::make('User note')
+                Section::make('User note')
                     ->schema([
-                        Forms\Components\Textarea::make('note')
+                        Textarea::make('note')
                             ->maxLength(16777215)
                     ])
                     ->columnSpanFull(),
@@ -155,74 +160,74 @@ class CompanyResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->searchable()
                     ->toggleable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('phone')
+                TextColumn::make('phone')
                     ->searchable()
                     ->toggleable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('email')
+                TextColumn::make('email')
                     ->searchable()
                     ->toggleable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('www')
+                TextColumn::make('www')
                     ->searchable()
                     ->prefix('www.')
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable(),
-                Tables\Columns\TextColumn::make('IC')
+                TextColumn::make('IC')
                     ->searchable()
                     ->toggleable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('DIC')
+                TextColumn::make('DIC')
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable(),
-                Tables\Columns\IconColumn::make('subscriber')
+                IconColumn::make('subscriber')
                     ->boolean()
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable(),
-                Tables\Columns\IconColumn::make('supplier')
+                IconColumn::make('supplier')
                     ->boolean()
                     ->toggleable()
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable(),
-                Tables\Columns\IconColumn::make('competition')
+                IconColumn::make('competition')
                     ->boolean()
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable(),
-                Tables\Columns\TextColumn::make('address')
+                TextColumn::make('address')
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable(),
-                Tables\Columns\TextColumn::make('city')
+                TextColumn::make('city')
                     ->searchable()
                     ->toggleable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('zip_code')
+                TextColumn::make('zip_code')
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable(),
-                Tables\Columns\TextColumn::make('state')
+                TextColumn::make('state')
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable(),
-                Tables\Columns\TextColumn::make('country')
+                TextColumn::make('country')
                     ->searchable()
                     ->toggleable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->searchable()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable(),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->searchable()
                     ->sortable()
@@ -247,6 +252,11 @@ class CompanyResource extends Resource
                             );
                     })->columnSpan(2)->columns(2)
             ])
+            ->headerActions([
+                ExportAction::make('Export')
+                    ->exporter(CompanyExporter::class)
+                    ->maxRows(10000)
+            ])
             ->actions([
 //                Tables\Actions\EditAction::make(),
                 Tables\Actions\ActionGroup::make([
@@ -258,6 +268,7 @@ class CompanyResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\ExportBulkAction::make('Export')->exporter(CompanyExporter::class)->maxRows(10000)
                 ]),
             ]);
     }
