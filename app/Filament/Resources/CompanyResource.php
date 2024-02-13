@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Exports\CompanyExporter;
+use App\Filament\Imports\CompanyImporter;
 use App\Filament\Resources\ComapanyResource\RelationManagers\ContactsRelationManager;
 use App\Filament\Resources\CompanyResource\Pages;
 use App\Filament\Resources\CompanyResource\RelationManagers;
@@ -11,6 +12,8 @@ use App\Filament\Resources\CompanyResource\RelationManagers\ProjectsRelationMana
 use App\Models\Company;
 use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -22,6 +25,7 @@ use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Actions\ExportAction;
+use Filament\Tables\Actions\ImportAction;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use function Laravel\Prompts\search;
@@ -253,9 +257,10 @@ class CompanyResource extends Resource
                     })->columnSpan(2)->columns(2)
             ])
             ->headerActions([
-                ExportAction::make('Export')
+                ExportAction::make('Export')->color('warning')
                     ->exporter(CompanyExporter::class)
-                    ->maxRows(10000)
+                    ->maxRows(10000),
+                ImportAction::make('Import')->importer(CompanyImporter::class)->color('success')
             ])
             ->actions([
 //                Tables\Actions\EditAction::make(),
@@ -268,7 +273,7 @@ class CompanyResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
-                    Tables\Actions\ExportBulkAction::make('Export')->exporter(CompanyExporter::class)->maxRows(10000)
+                    Tables\Actions\ExportBulkAction::make('Export')->exporter(CompanyExporter::class)->maxRows(10000),
                 ]),
             ]);
     }
