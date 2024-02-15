@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             ProducerSeeder::class,
             ProductCategorySeeder::class,
+            CommoditySeeder::class,
         ]);
     }
 }
