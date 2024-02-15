@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ProductCategoryList>
+    <ProductCategory>
+        <CategoryCode>30</CategoryCode>
+        <CategoryName>Počítačové skříně</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>31</CategoryCode>
+        <CategoryName>Zdroje</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>32</CategoryCode>
+        <CategoryName>Příslušenství ke skříním</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>33</CategoryCode>
+        <CategoryName>Základní desky</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>34</CategoryCode>
+        <CategoryName>Paměti RAM</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>35</CategoryCode>
+        <CategoryName>Procesory</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>36</CategoryCode>
+        <CategoryName>Chladiče</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>37</CategoryCode>
+        <CategoryName>Grafické karty</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>38</CategoryCode>
+        <CategoryName>Zvukové karty</CategoryName>
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>40</CategoryCode>
+        <CategoryName>TV tunery, Střihové karty</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>41</CategoryCode>
+        <CategoryName>Pevné disky</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>42</CategoryCode>
+        <CategoryName>Optické mechaniky</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>48</CategoryCode>
+        <CategoryName>Kabely a redukce (kromě LAN)</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+    <ProductCategory>
+        <CategoryCode>138</CategoryCode>
+        <CategoryName>Příslušenství pro pevné disky</CategoryName>
+        <ProductAttributeList />
+    </ProductCategory>
+</ProductCategoryList>
+

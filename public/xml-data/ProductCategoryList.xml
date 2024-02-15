@@ -1,0 +1,3721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProductSuperCategoryList>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>6</CategoryCode>
+          <CategoryName>Paměťové karty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>19</CategoryCode>
+          <CategoryName>Audio systémy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>20</CategoryCode>
+          <CategoryName>Bezdrátové reproduktory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>22</CategoryCode>
+          <CategoryName>Diktafony</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>26</CategoryCode>
+          <CategoryName>Sluchátka</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>27</CategoryCode>
+          <CategoryName>Mikrofony</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>29</CategoryCode>
+          <CategoryName>Přenosné audio</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>129</CategoryCode>
+          <CategoryName>Přepěťové ochrany</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>141</CategoryCode>
+          <CategoryName>Ostatní spotřební elektronika</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>151</CategoryCode>
+          <CategoryName>Příslušenství k hudebním přehrávačům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>160</CategoryCode>
+          <CategoryName>Kalkulátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      2
+      Spotřební elektronika
+      52
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>30</CategoryCode>
+          <CategoryName>Počítačové skříně</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>31</CategoryCode>
+          <CategoryName>Zdroje</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>32</CategoryCode>
+          <CategoryName>Příslušenství ke skříním</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>33</CategoryCode>
+          <CategoryName>Základní desky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>34</CategoryCode>
+          <CategoryName>Paměti RAM</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>35</CategoryCode>
+          <CategoryName>Procesory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>36</CategoryCode>
+          <CategoryName>Chladiče</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>37</CategoryCode>
+          <CategoryName>Grafické karty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>38</CategoryCode>
+          <CategoryName>Zvukové karty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>40</CategoryCode>
+          <CategoryName>TV tunery, Střihové karty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>41</CategoryCode>
+          <CategoryName>Pevné disky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>42</CategoryCode>
+          <CategoryName>Optické mechaniky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>48</CategoryCode>
+          <CategoryName>Kabely a redukce (kromě LAN)</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>138</CategoryCode>
+          <CategoryName>Příslušenství pro pevné disky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>39</CategoryCode>
+          <CategoryName>Modemy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>43</CategoryCode>
+          <CategoryName>Klávesnice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>45</CategoryCode>
+          <CategoryName>Reproduktory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>46</CategoryCode>
+          <CategoryName>WEB kamery</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>47</CategoryCode>
+          <CategoryName>IO karty/zařízení, huby a čtečky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>50</CategoryCode>
+          <CategoryName>Monitory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>51</CategoryCode>
+          <CategoryName>Příslušenství k monitorům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>135</CategoryCode>
+          <CategoryName>Myši</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>136</CategoryCode>
+          <CategoryName>Sety klávesnice + myš</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>147</CategoryCode>
+          <CategoryName>Grafické tablety</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>161</CategoryCode>
+          <CategoryName>Podložky pod myš</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>179</CategoryCode>
+          <CategoryName>USB Flash Disky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>383</CategoryCode>
+          <CategoryName>Média</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      6
+      Periferie
+      52
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>62</CategoryCode>
+          <CategoryName>Média Utrium</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>79</CategoryCode>
+          <CategoryName>Servery</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>80</CategoryCode>
+          <CategoryName>RAM k serverům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>81</CategoryCode>
+          <CategoryName>Pevné disky k serverům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>82</CategoryCode>
+          <CategoryName>Řadiče RAID / non-RAID</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>83</CategoryCode>
+          <CategoryName>Rackové skříně</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>84</CategoryCode>
+          <CategoryName>Příslušenství k Rackovým skříním</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>85</CategoryCode>
+          <CategoryName>Zálohovací systémy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>86</CategoryCode>
+          <CategoryName>Zálohovací mechaniky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>87</CategoryCode>
+          <CategoryName>Ostatní příslušenství k serverům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>88</CategoryCode>
+          <CategoryName>Rozšíření záruky k serverům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>128</CategoryCode>
+          <CategoryName>Záložní zdroje, EPS a příslušenství</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>140</CategoryCode>
+          <CategoryName>Příslušenství k řadičům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>144</CategoryCode>
+          <CategoryName>Síťové karty pro servery</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>145</CategoryCode>
+          <CategoryName>Příslušenství k zálohovacím systémům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>146</CategoryCode>
+          <CategoryName>Příslušenství k zálohovacím mechanikám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>148</CategoryCode>
+          <CategoryName>CPU k serverům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>162</CategoryCode>
+          <CategoryName>Servery - Intel Assembling</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      7
+      Servery a zálohování
+      52
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>89</CategoryCode>
+          <CategoryName>Síťové karty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>90</CategoryCode>
+          <CategoryName>Switche</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>91</CategoryCode>
+          <CategoryName>Wi-Fi antény</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>93</CategoryCode>
+          <CategoryName>Příslušenství k aktivním síťovým prvkům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>94</CategoryCode>
+          <CategoryName>Strukturovaná kabeláž</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>130</CategoryCode>
+          <CategoryName>Servisní služby</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>131</CategoryCode>
+          <CategoryName>PDU, ATS, KVM switche</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>132</CategoryCode>
+          <CategoryName>Příslušenství k PDU, ATS, KVM switchům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>153</CategoryCode>
+          <CategoryName>Rozšíření záruky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>170</CategoryCode>
+          <CategoryName>IP telefonie</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>171</CategoryCode>
+          <CategoryName>Konvertory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>172</CategoryCode>
+          <CategoryName>Tiskové servery</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>173</CategoryCode>
+          <CategoryName>Kamery</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>174</CategoryCode>
+          <CategoryName>RouterBOARD</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>175</CategoryCode>
+          <CategoryName>PoE, Powerline</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>176</CategoryCode>
+          <CategoryName>Příslušenství ke kamerám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>177</CategoryCode>
+          <CategoryName>Wi-Fi aktivní prvky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>180</CategoryCode>
+          <CategoryName>Datové rozvaděče</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>181</CategoryCode>
+          <CategoryName>Příslušenství k rozvaděčům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>182</CategoryCode>
+          <CategoryName>ADSL, xDSL</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>183</CategoryCode>
+          <CategoryName>Routery a firewally</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>230</CategoryCode>
+          <CategoryName>Wi-Fi příslušenství</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>249</CategoryCode>
+          <CategoryName>Optická kabeláž</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>252</CategoryCode>
+          <CategoryName>SFP Moduly</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      8
+      Síťové prvky
+      52
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>95</CategoryCode>
+          <CategoryName>OS - desktopové</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>96</CategoryCode>
+          <CategoryName>OS - serverové</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>97</CategoryCode>
+          <CategoryName>Kancelářský</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>98</CategoryCode>
+          <CategoryName>Antivirový</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>99</CategoryCode>
+          <CategoryName>Grafický</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>100</CategoryCode>
+          <CategoryName>Zálohovací</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>101</CategoryCode>
+          <CategoryName>Databázový</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>102</CategoryCode>
+          <CategoryName>Komunikační</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>103</CategoryCode>
+          <CategoryName>Správa, internet</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>104</CategoryCode>
+          <CategoryName>Vývojářský</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>105</CategoryCode>
+          <CategoryName>Hry, zábava, výuka</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>133</CategoryCode>
+          <CategoryName>Ostatní</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      9
+      Software
+      52
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>75</CategoryCode>
+          <CategoryName>Tisková média</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>111</CategoryCode>
+          <CategoryName>Stolní telefony</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>112</CategoryCode>
+          <CategoryName>VoIP telefony a adaptéry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>113</CategoryCode>
+          <CategoryName>Faxy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>149</CategoryCode>
+          <CategoryName>Ostatní příslušenství k faxům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>158</CategoryCode>
+          <CategoryName>Příslušenství ke stolním telefonům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>163</CategoryCode>
+          <CategoryName>Příslušenství k VoIP telefonům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>164</CategoryCode>
+          <CategoryName>Skartovače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>167</CategoryCode>
+          <CategoryName>Řezačky papíru</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>168</CategoryCode>
+          <CategoryName>Příslušenství k řezačkám papíru</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>244</CategoryCode>
+          <CategoryName>Děrovačky a sešívačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>245</CategoryCode>
+          <CategoryName>Příslušenství k děrovačkám  a sešívačkám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>246</CategoryCode>
+          <CategoryName>Laminátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>247</CategoryCode>
+          <CategoryName>Laminovací fólie a kapsy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>248</CategoryCode>
+          <CategoryName>Plánovací tabule a nástěnky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>276</CategoryCode>
+          <CategoryName>Komunikace</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>315</CategoryCode>
+          <CategoryName>Identifikace</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>316</CategoryCode>
+          <CategoryName>Ergonomie</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      10
+      Kancelářská technika
+      52
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>115</CategoryCode>
+          <CategoryName>Notebooky a Ultrabooky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>116</CategoryCode>
+          <CategoryName>Příslušenství k notebookům a ultrabookům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>121</CategoryCode>
+          <CategoryName>PC sestavy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>122</CategoryCode>
+          <CategoryName>Příslušenství k PC</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>123</CategoryCode>
+          <CategoryName>Elektronické čtečky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>127</CategoryCode>
+          <CategoryName>Rozšíření záruky k PC a NTB</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>384</CategoryCode>
+          <CategoryName>All-in-One</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>388</CategoryCode>
+          <CategoryName>Servisní díly k NTB a UB</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>405</CategoryCode>
+          <CategoryName>Tašky pro notebooky a ultrabooky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      11
+      PC a Notebooky
+      52
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>190</CategoryCode>
+          <CategoryName>Ruční čtečky kódů</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>191</CategoryCode>
+          <CategoryName>Fixní čtečky kódů</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>192</CategoryCode>
+          <CategoryName>Pokladní zásuvky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>193</CategoryCode>
+          <CategoryName>Zákaznické displeje</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>194</CategoryCode>
+          <CategoryName>Čtečky/Zapisovačky karet a čipů</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>195</CategoryCode>
+          <CategoryName>Pokladní tiskárny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>196</CategoryCode>
+          <CategoryName>Datové terminály</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>197</CategoryCode>
+          <CategoryName>Tiskárny čárových kódů a etiket</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>199</CategoryCode>
+          <CategoryName>Spotřební materiál a příslušenství</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>200</CategoryCode>
+          <CategoryName>Programovatelné klávesnice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>201</CategoryCode>
+          <CategoryName>Dotykové monitory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>260</CategoryCode>
+          <CategoryName>Pokladny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>378</CategoryCode>
+          <CategoryName>TTR pásky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>379</CategoryCode>
+          <CategoryName>Nálepky a RFID</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>380</CategoryCode>
+          <CategoryName>Počítačky mincí/bankovek</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      16
+      Pokladní systémy
+      52
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>107</CategoryCode>
+          <CategoryName>Mobilní telefony</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>189</CategoryCode>
+          <CategoryName>Tablety</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>262</CategoryCode>
+          <CategoryName>Příslušenství k Mobilům a Tabletům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>268</CategoryCode>
+          <CategoryName>Selfie tyče a stabilizátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      18
+      Mobilní telefony a tablety
+      52
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>66</CategoryCode>
+          <CategoryName>Tiskárny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>67</CategoryCode>
+          <CategoryName>Příslušenství k tiskárnám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>68</CategoryCode>
+          <CategoryName>Multifunkce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>69</CategoryCode>
+          <CategoryName>Příslušenství k multifunkcím</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>74</CategoryCode>
+          <CategoryName>Spotřební materiál k periferiím</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>76</CategoryCode>
+          <CategoryName>Skenery</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>77</CategoryCode>
+          <CategoryName>Příslušenství ke skenerům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>78</CategoryCode>
+          <CategoryName>Rozšíření záruky k periferiím</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>242</CategoryCode>
+          <CategoryName>3D tiskárny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>243</CategoryCode>
+          <CategoryName>Spotřební materiál k 3D tiskárnám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      121
+      Multifunkce a tiskárny
+      52
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>2</CategoryCode>
+          <CategoryName>Digitální fotoaparáty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>3</CategoryCode>
+          <CategoryName>Digitální kamery</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>6</CategoryCode>
+          <CategoryName>Paměťové karty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>52</CategoryCode>
+          <CategoryName>Projektory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>53</CategoryCode>
+          <CategoryName>Příslušenství k projektorům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>186</CategoryCode>
+          <CategoryName>Interaktivní tabule</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>219</CategoryCode>
+          <CategoryName>Digitální fotorámečky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>223</CategoryCode>
+          <CategoryName>Komerční panely</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>381</CategoryCode>
+          <CategoryName>Příslušenství k fotoaparátům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      1
+      Foto a video
+      53
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>24</CategoryCode>
+          <CategoryName>Herní konzole</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>25</CategoryCode>
+          <CategoryName>Herní příslušenství</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>203</CategoryCode>
+          <CategoryName>Hry pro herní konzole</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>375</CategoryCode>
+          <CategoryName>Virtuální realita</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>376</CategoryCode>
+          <CategoryName>PC hry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      17
+      Herní svět a příslušenství
+      53
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>253</CategoryCode>
+          <CategoryName>Elektronika pro zdraví</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>254</CategoryCode>
+          <CategoryName>Elektronika pro domácnost</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>255</CategoryCode>
+          <CategoryName>Výrobky pro hraní a zábavu</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>256</CategoryCode>
+          <CategoryName>Multikoptéry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>258</CategoryCode>
+          <CategoryName>Kamery</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>259</CategoryCode>
+          <CategoryName>Příslušenství</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>264</CategoryCode>
+          <CategoryName>Nositelná elektronika</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>278</CategoryCode>
+          <CategoryName>Elektrické zubní kartáčky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      25
+      Chytrá elektronika
+      53
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList />
+      59
+      Vychytávky
+      53
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>14</CategoryCode>
+          <CategoryName>Televize</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>15</CategoryCode>
+          <CategoryName>Příjem digitálního vysílání</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>16</CategoryCode>
+          <CategoryName>Příslušenství k televizím</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>241</CategoryCode>
+          <CategoryName>Hotelové televize</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>382</CategoryCode>
+          <CategoryName>Video přehrávače a rekordéry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      60
+      Televize, přehrávače a TV signál
+      53
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList />
+      61
+      Ostatní Elektronika
+      53
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>107</CategoryCode>
+          <CategoryName>Mobilní telefony</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>123</CategoryCode>
+          <CategoryName>Elektronické čtečky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>189</CategoryCode>
+          <CategoryName>Tablety</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>262</CategoryCode>
+          <CategoryName>Příslušenství k Mobilům a Tabletům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>268</CategoryCode>
+          <CategoryName>Selfie tyče a stabilizátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      62
+      Mobilní telefony a tablety
+      53
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>115</CategoryCode>
+          <CategoryName>Notebooky a Ultrabooky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>116</CategoryCode>
+          <CategoryName>Příslušenství k notebookům a ultrabookům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>129</CategoryCode>
+          <CategoryName>Přepěťové ochrany</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>405</CategoryCode>
+          <CategoryName>Tašky pro notebooky a ultrabooky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      63
+      Notebooky a Ultrabooky
+      53
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>19</CategoryCode>
+          <CategoryName>Audio systémy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>20</CategoryCode>
+          <CategoryName>Bezdrátové reproduktory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>22</CategoryCode>
+          <CategoryName>Diktafony</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>26</CategoryCode>
+          <CategoryName>Sluchátka</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>29</CategoryCode>
+          <CategoryName>Přenosné audio</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>151</CategoryCode>
+          <CategoryName>Příslušenství k hudebním přehrávačům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      120
+      Audio
+      53
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>450</CategoryCode>
+          <CategoryName>Elektrické grily</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>592</CategoryCode>
+          <CategoryName>Fritézy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>593</CategoryCode>
+          <CategoryName>Sušičky ovoce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>594</CategoryCode>
+          <CategoryName>Kuchyňské váhy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>595</CategoryCode>
+          <CategoryName>Mlýnky a kráječe</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>596</CategoryCode>
+          <CategoryName>Domácí pekárny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>597</CategoryCode>
+          <CategoryName>Topinkovače a sendvičovače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>598</CategoryCode>
+          <CategoryName>Vakuové baličky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>599</CategoryCode>
+          <CategoryName>Kuchyňské roboty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>600</CategoryCode>
+          <CategoryName>Vychytávky do kuchyně</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>704</CategoryCode>
+          <CategoryName>Pomocníci do kuchyně</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>713</CategoryCode>
+          <CategoryName>Kuchyňské náčiní</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      64
+      Vaření
+      54
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>570</CategoryCode>
+          <CategoryName>Kávovary</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>571</CategoryCode>
+          <CategoryName>Espressa</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>572</CategoryCode>
+          <CategoryName>Mlýnky na kávu</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>573</CategoryCode>
+          <CategoryName>Napěnovače mléka</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      65
+      Kávovary a Espresso
+      54
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>583</CategoryCode>
+          <CategoryName>Rychlovarné konvice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>584</CategoryCode>
+          <CategoryName>Výrobníky sody</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>585</CategoryCode>
+          <CategoryName>Výrobníky ledu</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>586</CategoryCode>
+          <CategoryName>Termosky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>765</CategoryCode>
+          <CategoryName>Filtrační konvice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      66
+      Příprava nápojů
+      54
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>574</CategoryCode>
+          <CategoryName>Smoothie</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>575</CategoryCode>
+          <CategoryName>Tyčové mixéry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>576</CategoryCode>
+          <CategoryName>Stolní mixéry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>577</CategoryCode>
+          <CategoryName>Ruční šlehače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>578</CategoryCode>
+          <CategoryName>Sekáčky potravin</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      67
+      Mixéry a šlehače
+      54
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>564</CategoryCode>
+          <CategoryName>Rýžovary</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>565</CategoryCode>
+          <CategoryName>Multifunkční hrnce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>566</CategoryCode>
+          <CategoryName>Parní hrnce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>567</CategoryCode>
+          <CategoryName>Elektrické pánve</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>568</CategoryCode>
+          <CategoryName>Remosky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>569</CategoryCode>
+          <CategoryName>Zavařovací hrnce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      68
+      Elektrické hrnce
+      54
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>579</CategoryCode>
+          <CategoryName>Šnekové odšťavňovače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>580</CategoryCode>
+          <CategoryName>Odstředivé odšťavňovače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>581</CategoryCode>
+          <CategoryName>Odšťavňovací hrnce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>582</CategoryCode>
+          <CategoryName>Citrusovače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      69
+      Odšťavňovače a Lisy
+      54
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>560</CategoryCode>
+          <CategoryName>Čističky vzduchu</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>561</CategoryCode>
+          <CategoryName>Odvlhčovače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>562</CategoryCode>
+          <CategoryName>Zvlhčovače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>563</CategoryCode>
+          <CategoryName>Aroma difuzéry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      70
+      Čističky a Zvlhčovače
+      54
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>601</CategoryCode>
+          <CategoryName>Klimatizace</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>602</CategoryCode>
+          <CategoryName>Stolní ventilátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>603</CategoryCode>
+          <CategoryName>Stojanové ventilátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>604</CategoryCode>
+          <CategoryName>Ostatní ventilátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>605</CategoryCode>
+          <CategoryName>Ochlazovače vzduchu</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      71
+      Ventilátory a Klimatizace
+      54
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>618</CategoryCode>
+          <CategoryName>Napařovací žehličky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>619</CategoryCode>
+          <CategoryName>Žehličky s parním generátorem</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>621</CategoryCode>
+          <CategoryName>Cestovní žehličky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>622</CategoryCode>
+          <CategoryName>Žehlící prkna</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>623</CategoryCode>
+          <CategoryName>Příslušenství k žehličkám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>624</CategoryCode>
+          <CategoryName>Šicí stroje</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      72
+      Žehličky a Šicí stroje
+      54
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>407</CategoryCode>
+          <CategoryName>Robotické vysavače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>606</CategoryCode>
+          <CategoryName>Akumulátorové vysavače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>607</CategoryCode>
+          <CategoryName>Tyčové vysavače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>608</CategoryCode>
+          <CategoryName>Příslušenství k robot. vysavačům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>609</CategoryCode>
+          <CategoryName>Sáčkové vysavače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>610</CategoryCode>
+          <CategoryName>Bezsáčkové vysavače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>611</CategoryCode>
+          <CategoryName>Průmyslové vysavače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>612</CategoryCode>
+          <CategoryName>Víceúčelové vysavače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>613</CategoryCode>
+          <CategoryName>Vysavače do auta</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>614</CategoryCode>
+          <CategoryName>Vysavače na okna</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>615</CategoryCode>
+          <CategoryName>Příslušenství k vysavačům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>616</CategoryCode>
+          <CategoryName>Tepovače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>617</CategoryCode>
+          <CategoryName>Zametače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      73
+      Vysavače
+      54
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>587</CategoryCode>
+          <CategoryName>Odstrňovače žmolků</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>588</CategoryCode>
+          <CategoryName>Sušáky na prádlo</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>589</CategoryCode>
+          <CategoryName>Mopy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>590</CategoryCode>
+          <CategoryName>Parní čističe</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>591</CategoryCode>
+          <CategoryName>Odpadkové koše</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>707</CategoryCode>
+          <CategoryName>Čistící prostředky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      74
+      Úklid
+      54
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>508</CategoryCode>
+          <CategoryName>Kombinované lednice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>509</CategoryCode>
+          <CategoryName>Lednice bez mrazáku</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>510</CategoryCode>
+          <CategoryName>Americké lednice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>511</CategoryCode>
+          <CategoryName>Jednodvéřové lednice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>512</CategoryCode>
+          <CategoryName>Lednice na nápoje</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>514</CategoryCode>
+          <CategoryName>Malé lednice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>515</CategoryCode>
+          <CategoryName>Vestavné lednice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>516</CategoryCode>
+          <CategoryName>Autochladničky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>517</CategoryCode>
+          <CategoryName>Příslušenství k lednicím</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      75
+      Lednice
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>521</CategoryCode>
+          <CategoryName>Truhlicové mrazáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>522</CategoryCode>
+          <CategoryName>Šuplíkové mrazáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>523</CategoryCode>
+          <CategoryName>Vestavné mrazáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>524</CategoryCode>
+          <CategoryName>Příslušenství k mrazákům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      76
+      Mrazáky
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>529</CategoryCode>
+          <CategoryName>Pračky s předním plněním</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>530</CategoryCode>
+          <CategoryName>Pračky s horním plněním</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>531</CategoryCode>
+          <CategoryName>Pračky se sušičkou</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>532</CategoryCode>
+          <CategoryName>Parní pračky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>533</CategoryCode>
+          <CategoryName>Vestavné pračky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>534</CategoryCode>
+          <CategoryName>Set Pračka a Sušička</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>535</CategoryCode>
+          <CategoryName>Minipračky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>536</CategoryCode>
+          <CategoryName>Příslušenství k pračkám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      77
+      Pračky
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>534</CategoryCode>
+          <CategoryName>Set Pračka a Sušička</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>543</CategoryCode>
+          <CategoryName>Kondenzační sušičky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>544</CategoryCode>
+          <CategoryName>Sušičky s tepelným čerpadlem</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>545</CategoryCode>
+          <CategoryName>Vestavné sušičky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>546</CategoryCode>
+          <CategoryName>Příslušenství k sušičkám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      78
+      Sušičky
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>554</CategoryCode>
+          <CategoryName>Horkovzdušné vestavné trouby</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>555</CategoryCode>
+          <CategoryName>Multifunkční vestavné trouby</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>556</CategoryCode>
+          <CategoryName>Příslušenství k troubám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>701</CategoryCode>
+          <CategoryName>Mini trouby</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      79
+      Trouby
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>518</CategoryCode>
+          <CategoryName>Volně stojící mikrovlnné trouby</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>519</CategoryCode>
+          <CategoryName>Vestavné mikrovlnné trouby</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>520</CategoryCode>
+          <CategoryName>Příslušenství k mikrovlnným troubám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      80
+      Mikrovlnné trouby
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>547</CategoryCode>
+          <CategoryName>Indukční varné desky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>548</CategoryCode>
+          <CategoryName>Sklokeramické varné desky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>549</CategoryCode>
+          <CategoryName>Plynové desky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>550</CategoryCode>
+          <CategoryName>Elektrické desky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>551</CategoryCode>
+          <CategoryName>Kombinované desky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>552</CategoryCode>
+          <CategoryName>Vařiče</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>553</CategoryCode>
+          <CategoryName>Příslušenství k varným deskám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      81
+      Varné desky
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>537</CategoryCode>
+          <CategoryName>Elektrické sporáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>538</CategoryCode>
+          <CategoryName>Indukční sporáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>539</CategoryCode>
+          <CategoryName>Plynové sporáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>540</CategoryCode>
+          <CategoryName>Kombinované sporáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>541</CategoryCode>
+          <CategoryName>Sklokeramické sporáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>542</CategoryCode>
+          <CategoryName>Příslušenství ke sporákům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      82
+      Sporáky
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>497</CategoryCode>
+          <CategoryName>Podstavné digestoře</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>498</CategoryCode>
+          <CategoryName>Výsuvné digestoře</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>499</CategoryCode>
+          <CategoryName>Komínové digestoře</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>500</CategoryCode>
+          <CategoryName>Ostrůvkové digestoře</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>501</CategoryCode>
+          <CategoryName>Vestavné digestoře</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>502</CategoryCode>
+          <CategoryName>Příslušenství pro digestoře</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      83
+      Digestoře
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>557</CategoryCode>
+          <CategoryName>Volně stojící vinotéky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>558</CategoryCode>
+          <CategoryName>Vestavné vinotéky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>559</CategoryCode>
+          <CategoryName>Příslušenství k vinotékám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      84
+      Vinotéky
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>503</CategoryCode>
+          <CategoryName>Chladící skříně</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>504</CategoryCode>
+          <CategoryName>Chladící vitríny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>505</CategoryCode>
+          <CategoryName>Truhlicové mrazničky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>506</CategoryCode>
+          <CategoryName>Výčepní zařízení</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>507</CategoryCode>
+          <CategoryName>Ostatní Gastro spotřebiče</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      85
+      Gastro spotřebiče
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>525</CategoryCode>
+          <CategoryName>Volně stojící myčky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>526</CategoryCode>
+          <CategoryName>Vestavné myčky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>527</CategoryCode>
+          <CategoryName>Stolní myčky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>528</CategoryCode>
+          <CategoryName>Příslušenství k myčkám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      117
+      Myčky nádobí
+      55
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>270</CategoryCode>
+          <CategoryName>Cyklonavigace</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>271</CategoryCode>
+          <CategoryName>Wattmetry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>275</CategoryCode>
+          <CategoryName>Cyklocomputery</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>625</CategoryCode>
+          <CategoryName>Pánské kola</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>627</CategoryCode>
+          <CategoryName>Dětské kola</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>628</CategoryCode>
+          <CategoryName>Koloběžky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>629</CategoryCode>
+          <CategoryName>Helmy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>630</CategoryCode>
+          <CategoryName>Cyklodoplňky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>631</CategoryCode>
+          <CategoryName>Komponenty na kolo</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      87
+      Cyklistika
+      56
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>639</CategoryCode>
+          <CategoryName>Elektrokola</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>640</CategoryCode>
+          <CategoryName>Příslušenství k elektrokolům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>641</CategoryCode>
+          <CategoryName>Elektrokoloběžky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>642</CategoryCode>
+          <CategoryName>Příslušenství k elektrokoloběžkám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>643</CategoryCode>
+          <CategoryName>Hoverboardy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>644</CategoryCode>
+          <CategoryName>Příslušenství k hoverboardům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      88
+      Elektromobilita
+      56
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>12</CategoryCode>
+          <CategoryName>Dalekohledy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>272</CategoryCode>
+          <CategoryName>Vysílačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>274</CategoryCode>
+          <CategoryName>Kompasy a buzoly</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>645</CategoryCode>
+          <CategoryName>Turistické navigace</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>646</CategoryCode>
+          <CategoryName>Stany</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>647</CategoryCode>
+          <CategoryName>Spacáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>648</CategoryCode>
+          <CategoryName>Kempingový nábytek</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>649</CategoryCode>
+          <CategoryName>Doplňky ke kempování</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>650</CategoryCode>
+          <CategoryName>Trekové hole</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>651</CategoryCode>
+          <CategoryName>Karimatky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>652</CategoryCode>
+          <CategoryName>Batohy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>759</CategoryCode>
+          <CategoryName>Láhve a kelímky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>760</CategoryCode>
+          <CategoryName>Vaření</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>761</CategoryCode>
+          <CategoryName>Světla</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>762</CategoryCode>
+          <CategoryName>Bezpečnost</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      89
+      Outdoor
+      56
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList />
+      90
+      Sporttestery
+      56
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>632</CategoryCode>
+          <CategoryName>Zahradní tampolíny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>633</CategoryCode>
+          <CategoryName>Zahradní houpačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>634</CategoryCode>
+          <CategoryName>Dětské hřiště</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>635</CategoryCode>
+          <CategoryName>Nafukovací hrady</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>636</CategoryCode>
+          <CategoryName>Skluzavky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>637</CategoryCode>
+          <CategoryName>Doplňky do vody</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>638</CategoryCode>
+          <CategoryName>Doplňky na sníh</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      91
+      Dětské hřiště
+      56
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>386</CategoryCode>
+          <CategoryName>Hračky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>742</CategoryCode>
+          <CategoryName>Puzzle</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>743</CategoryCode>
+          <CategoryName>Dřevěné modely</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>744</CategoryCode>
+          <CategoryName>Společenské a deskové hry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>745</CategoryCode>
+          <CategoryName>Šlapadla a odstrkovadla</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>746</CategoryCode>
+          <CategoryName>RC modely</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>747</CategoryCode>
+          <CategoryName>Zvířátka</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>748</CategoryCode>
+          <CategoryName>Figurky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>749</CategoryCode>
+          <CategoryName>Panenky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>750</CategoryCode>
+          <CategoryName>Ostatní hračky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>751</CategoryCode>
+          <CategoryName>Kuchyňky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>752</CategoryCode>
+          <CategoryName>Plyšové hračky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>753</CategoryCode>
+          <CategoryName>Stavebnice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>754</CategoryCode>
+          <CategoryName>Hudební nástroje</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      92
+      Hračky
+      56
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>652</CategoryCode>
+          <CategoryName>Batohy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>653</CategoryCode>
+          <CategoryName>Tašky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>654</CategoryCode>
+          <CategoryName>Kabinová zavazadla</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>655</CategoryCode>
+          <CategoryName>Kufry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>656</CategoryCode>
+          <CategoryName>Peněženky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>657</CategoryCode>
+          <CategoryName>Školní batohy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>658</CategoryCode>
+          <CategoryName>Kufry na kolečkách</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>659</CategoryCode>
+          <CategoryName>Doplňky ke kufrům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      93
+      Zavazadla a Batohy
+      56
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>160</CategoryCode>
+          <CategoryName>Kalkulátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>657</CategoryCode>
+          <CategoryName>Školní batohy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>734</CategoryCode>
+          <CategoryName>Notesy a bloky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>735</CategoryCode>
+          <CategoryName>Psací potřeby</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      94
+      Škola
+      56
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>714</CategoryCode>
+          <CategoryName>Trička</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>715</CategoryCode>
+          <CategoryName>Sportovní dresy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>716</CategoryCode>
+          <CategoryName>Kraťasy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>717</CategoryCode>
+          <CategoryName>Kalhoty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>718</CategoryCode>
+          <CategoryName>Mikiny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>719</CategoryCode>
+          <CategoryName>Svetry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>720</CategoryCode>
+          <CategoryName>Nátělníky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>721</CategoryCode>
+          <CategoryName>Čepice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>722</CategoryCode>
+          <CategoryName>Bundy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>723</CategoryCode>
+          <CategoryName>Kabáty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>724</CategoryCode>
+          <CategoryName>Spodní prádlo</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>725</CategoryCode>
+          <CategoryName>Ponožky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>726</CategoryCode>
+          <CategoryName>Rukavice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>727</CategoryCode>
+          <CategoryName>Obuv</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>728</CategoryCode>
+          <CategoryName>Doplňky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>729</CategoryCode>
+          <CategoryName>Košile</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>730</CategoryCode>
+          <CategoryName>Halenky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>731</CategoryCode>
+          <CategoryName>Sukně</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>732</CategoryCode>
+          <CategoryName>Ostatní oblečení</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>739</CategoryCode>
+          <CategoryName>Plavky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>740</CategoryCode>
+          <CategoryName>Dětské soupravy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>741</CategoryCode>
+          <CategoryName>Tepláky a soupravy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      118
+      Oblečení
+      56
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>273</CategoryCode>
+          <CategoryName>Příslušenství k výrobkům pro sport</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>736</CategoryCode>
+          <CategoryName>Halové sporty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>737</CategoryCode>
+          <CategoryName>Venkovní sporty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>738</CategoryCode>
+          <CategoryName>Fitness</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      119
+      Sport
+      56
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>294</CategoryCode>
+          <CategoryName>Dílna</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>295</CategoryCode>
+          <CategoryName>Zahrada</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>296</CategoryCode>
+          <CategoryName>Kuchyně</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>297</CategoryCode>
+          <CategoryName>Koupelna</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>298</CategoryCode>
+          <CategoryName>Topení</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>299</CategoryCode>
+          <CategoryName>Doplňky pro domácnost</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>301</CategoryCode>
+          <CategoryName>Zabezpečení</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>320</CategoryCode>
+          <CategoryName>Garáž</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>410</CategoryCode>
+          <CategoryName>Bytový textil</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      29
+      Dům a zahrada
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>21</CategoryCode>
+          <CategoryName>Autorádia</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>126</CategoryCode>
+          <CategoryName>Navigace</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>263</CategoryCode>
+          <CategoryName>Příslušenství k Navigacím</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>408</CategoryCode>
+          <CategoryName>Autožárovky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>411</CategoryCode>
+          <CategoryName>Alkohotestery</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>412</CategoryCode>
+          <CategoryName>Nabíječky autobaterií</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>413</CategoryCode>
+          <CategoryName>Startovací kabely</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>414</CategoryCode>
+          <CategoryName>Chladničky do auta</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>415</CategoryCode>
+          <CategoryName>Doplňky do auta</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>416</CategoryCode>
+          <CategoryName>Smart doplňky do auta</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>417</CategoryCode>
+          <CategoryName>Pneumatiky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>418</CategoryCode>
+          <CategoryName>Zimní výbava</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>419</CategoryCode>
+          <CategoryName>Interiér</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>420</CategoryCode>
+          <CategoryName>Střešní boxy a nosiče</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>422</CategoryCode>
+          <CategoryName>Autokosmetika</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      95
+      Auto-Moto
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>456</CategoryCode>
+          <CategoryName>Bazény s konstrukcí</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>457</CategoryCode>
+          <CategoryName>Nafukovací bazény</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>458</CategoryCode>
+          <CategoryName>Vířivky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>459</CategoryCode>
+          <CategoryName>Příslušenství k bazénům a vířivkám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>460</CategoryCode>
+          <CategoryName>Solární sprchy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>461</CategoryCode>
+          <CategoryName>Filtrace</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>462</CategoryCode>
+          <CategoryName>Infrasauny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>463</CategoryCode>
+          <CategoryName>Příslušenství pro sauny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>464</CategoryCode>
+          <CategoryName>Nafukovací lehátka a matrace</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      96
+      Bazény, Viřivky a Sauny
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>433</CategoryCode>
+          <CategoryName>Vrtačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>434</CategoryCode>
+          <CategoryName>Brusky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>435</CategoryCode>
+          <CategoryName>Frézy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>436</CategoryCode>
+          <CategoryName>Hoblíky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>437</CategoryCode>
+          <CategoryName>Pily</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>438</CategoryCode>
+          <CategoryName>Elektrické šroubováky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>439</CategoryCode>
+          <CategoryName>Kompresory a Svářečky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>440</CategoryCode>
+          <CategoryName>Akuvrtačky a Šroubováky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>441</CategoryCode>
+          <CategoryName>Horkovzdušné pistole</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>442</CategoryCode>
+          <CategoryName>Vrtací kladiva</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>443</CategoryCode>
+          <CategoryName>Sety nářadí</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>444</CategoryCode>
+          <CategoryName>Ostatní elektrické nářadí</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>445</CategoryCode>
+          <CategoryName>Příslušenství k el. nářadí</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>446</CategoryCode>
+          <CategoryName>Ruční nářadí</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>447</CategoryCode>
+          <CategoryName>Dílenské vybavení</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>448</CategoryCode>
+          <CategoryName>Stavební stroje</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>710</CategoryCode>
+          <CategoryName>Elektrocentrály</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>711</CategoryCode>
+          <CategoryName>Prodlužovací přívody</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>712</CategoryCode>
+          <CategoryName>Měřící přístroje</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      97
+      Dílna a Stavba
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>465</CategoryCode>
+          <CategoryName>Benzínové rotační sekačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>466</CategoryCode>
+          <CategoryName>Elektrické rotační sekačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>467</CategoryCode>
+          <CategoryName>Akumulátorové rotační sekačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>468</CategoryCode>
+          <CategoryName>Robotické sekačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>469</CategoryCode>
+          <CategoryName>Vřetenové sekačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>470</CategoryCode>
+          <CategoryName>Rotační sekačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>471</CategoryCode>
+          <CategoryName>Bubnové sekačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>472</CategoryCode>
+          <CategoryName>Zahradní traktory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>473</CategoryCode>
+          <CategoryName>Příslušenství pro sekačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>474</CategoryCode>
+          <CategoryName>Křovinořezy a Vyžínače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>475</CategoryCode>
+          <CategoryName>Příslušenství pro Křovinořezy a Vyžínače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      98
+      Sekačky na trávu
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>480</CategoryCode>
+          <CategoryName>Elektrické radiátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>481</CategoryCode>
+          <CategoryName>Průtokové ohřívače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>482</CategoryCode>
+          <CategoryName>Bojlery</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>483</CategoryCode>
+          <CategoryName>Plynové kamna</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>484</CategoryCode>
+          <CategoryName>Elektrická topidla</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>709</CategoryCode>
+          <CategoryName>Termostaty</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      99
+      Tepelná technika
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList />
+      100
+      Ruční nářadí
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>224</CategoryCode>
+          <CategoryName>Světelné zdroje</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>302</CategoryCode>
+          <CategoryName>Světla a svítilny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>409</CategoryCode>
+          <CategoryName>Chytré osvětlení</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      101
+      Svitidla a žárovky
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>449</CategoryCode>
+          <CategoryName>Plynové grily</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>450</CategoryCode>
+          <CategoryName>Elektrické grily</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>451</CategoryCode>
+          <CategoryName>Grily na uhlí a dřevo</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>452</CategoryCode>
+          <CategoryName>Přenosné grily</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>453</CategoryCode>
+          <CategoryName>Jednorázové grily</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>454</CategoryCode>
+          <CategoryName>Udírny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>455</CategoryCode>
+          <CategoryName>Příslušenství ke grilům a udírnám</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      102
+      Grily a Udírny
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>491</CategoryCode>
+          <CategoryName>Sety zahradního nábytku</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>492</CategoryCode>
+          <CategoryName>Stoly</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>493</CategoryCode>
+          <CategoryName>Křesla a Židle</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>494</CategoryCode>
+          <CategoryName>Lehátka</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>495</CategoryCode>
+          <CategoryName>Houpačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>496</CategoryCode>
+          <CategoryName>Párty stany</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>703</CategoryCode>
+          <CategoryName>Lapače hmyzu</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>755</CategoryCode>
+          <CategoryName>Příslušenství</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      103
+      Zahradní nábytek
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>423</CategoryCode>
+          <CategoryName>Vysokotlaké čističe</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>424</CategoryCode>
+          <CategoryName>Čerpadla a vodárny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>425</CategoryCode>
+          <CategoryName>Drtiče a štěpkovače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>426</CategoryCode>
+          <CategoryName>Řetězové pily</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>427</CategoryCode>
+          <CategoryName>Kultivátory a provzdušňovače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>428</CategoryCode>
+          <CategoryName>Zahradní vysavače a fukary</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>429</CategoryCode>
+          <CategoryName>Nůžky na trávu a živý plot</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>430</CategoryCode>
+          <CategoryName>Příslušenství k zahradnímu nářadí</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>431</CategoryCode>
+          <CategoryName>Štípače</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>432</CategoryCode>
+          <CategoryName>Ostatní zahradní technika</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>700</CategoryCode>
+          <CategoryName>Žebříky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      104
+      Zahradní technika
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList />
+      105
+      Zavlažování
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>485</CategoryCode>
+          <CategoryName>Detektory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>486</CategoryCode>
+          <CategoryName>Zámky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>487</CategoryCode>
+          <CategoryName>Trezory a Bezpečnostní schránky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>488</CategoryCode>
+          <CategoryName>Domovní alarmy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>489</CategoryCode>
+          <CategoryName>Fotopasti</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>490</CategoryCode>
+          <CategoryName>Ostatní Bezpečnostní technika</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>708</CategoryCode>
+          <CategoryName>Videotelefony a kukátka</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      106
+      Zabezpečovací technika
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>28</CategoryCode>
+          <CategoryName>Budíky a hodiny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>277</CategoryCode>
+          <CategoryName>Meteostanice a teploměry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>476</CategoryCode>
+          <CategoryName>Doplňky pro mazlíčky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>477</CategoryCode>
+          <CategoryName>Věšáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>478</CategoryCode>
+          <CategoryName>Ostatní interiérové doplňky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>479</CategoryCode>
+          <CategoryName>Fotorámečky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      107
+      Interiérové doplňky
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>763</CategoryCode>
+          <CategoryName>Nábytek do interiéru</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>764</CategoryCode>
+          <CategoryName>Nábytek do exteriéru</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      122
+      Nábytek
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>768</CategoryCode>
+          <CategoryName>Obojky, vodítka, postroje a náhubky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>774</CategoryCode>
+          <CategoryName>Adresáře a známky pro psy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>775</CategoryCode>
+          <CategoryName>Ostatní doplňky pro psy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>776</CategoryCode>
+          <CategoryName>Pamlsky pro psy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>777</CategoryCode>
+          <CategoryName>Boudy, pelíšky a přepravky pro psy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>778</CategoryCode>
+          <CategoryName>Granule pro psy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>779</CategoryCode>
+          <CategoryName>Hračky pro psy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>780</CategoryCode>
+          <CategoryName>Kosmetika a hygiena pro psy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>781</CategoryCode>
+          <CategoryName>Misky a barely pro psy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>782</CategoryCode>
+          <CategoryName>Mokrá krmiva a mléka pro psy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>783</CategoryCode>
+          <CategoryName>Oblečky pro psy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      123
+      Psi
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>769</CategoryCode>
+          <CategoryName>Podestýlky pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>784</CategoryCode>
+          <CategoryName>Pamlsky a tráva pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>785</CategoryCode>
+          <CategoryName>Pasty pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>786</CategoryCode>
+          <CategoryName>Boudy, pelíšky a přepravky pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>787</CategoryCode>
+          <CategoryName>Granule pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>788</CategoryCode>
+          <CategoryName>Škrabadla a odpočívadla pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>789</CategoryCode>
+          <CategoryName>Hračky pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>790</CategoryCode>
+          <CategoryName>Toalety a lopatky pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>791</CategoryCode>
+          <CategoryName>Kosmetika a hygiena pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>792</CategoryCode>
+          <CategoryName>Misky a barely pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>793</CategoryCode>
+          <CategoryName>Mokrá krmiva a mléka pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>794</CategoryCode>
+          <CategoryName>Obojky, vodítka, postroje pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>795</CategoryCode>
+          <CategoryName>Ostatní doplňky pro kočky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      124
+      Kočky
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>770</CategoryCode>
+          <CategoryName>Doplňky pro hlodavce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>797</CategoryCode>
+          <CategoryName>Hračky pro hlodavce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>798</CategoryCode>
+          <CategoryName>Klece, přepravky pro hlodavce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>799</CategoryCode>
+          <CategoryName>Kosmetika, čistící písky pro hlodavce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>800</CategoryCode>
+          <CategoryName>Krmiva pro hlodavce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>801</CategoryCode>
+          <CategoryName>Pamlsky pro hlodavce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>802</CategoryCode>
+          <CategoryName>Pítka a misky pro hlodavce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>803</CategoryCode>
+          <CategoryName>Podestýlky, hobliny pro hlodavce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>804</CategoryCode>
+          <CategoryName>Postroje pro hlodavce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      125
+      Hlodavci
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>772</CategoryCode>
+          <CategoryName>Krmiva pro akvarijní rybičky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>810</CategoryCode>
+          <CategoryName>Technika do akvárií</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>811</CategoryCode>
+          <CategoryName>Akvária a akvarijní sety</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>812</CategoryCode>
+          <CategoryName>Dekorace do akvária</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>813</CategoryCode>
+          <CategoryName>Chemie a úprava vody v akváriích</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>814</CategoryCode>
+          <CategoryName>Jezírka a příslušenství</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>816</CategoryCode>
+          <CategoryName>Písky, štěrky, břidlice, rašeliny</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>817</CategoryCode>
+          <CategoryName>Příslušenství do akvária</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>818</CategoryCode>
+          <CategoryName>Rostliny do akvárií</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      126
+      Akvaristika
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>805</CategoryCode>
+          <CategoryName>Hračky pro ptáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>806</CategoryCode>
+          <CategoryName>Klece, krmítka pro ptáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>807</CategoryCode>
+          <CategoryName>Kosmetika, hygiena pro ptáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>808</CategoryCode>
+          <CategoryName>Krmiva pro ptáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>809</CategoryCode>
+          <CategoryName>Pochoutky pro ptáky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      127
+      Ptáci
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>819</CategoryCode>
+          <CategoryName>Dekorace do terária</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>820</CategoryCode>
+          <CategoryName>Krmiva pro plazy a želvy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>821</CategoryCode>
+          <CategoryName>Ostatní doplňky do terária</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>822</CategoryCode>
+          <CategoryName>Podestýlky do terária</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>823</CategoryCode>
+          <CategoryName>Příslušenství do terária</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>824</CategoryCode>
+          <CategoryName>Technika do terária</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>825</CategoryCode>
+          <CategoryName>Terária, želvária</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>826</CategoryCode>
+          <CategoryName>Vybavení terárií</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      128
+      Teraristika
+      57
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>278</CategoryCode>
+          <CategoryName>Elektrické zubní kartáčky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>660</CategoryCode>
+          <CategoryName>Dětské elektrické kartáčky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>661</CategoryCode>
+          <CategoryName>Náhradní hlavice</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>662</CategoryCode>
+          <CategoryName>Ústní sprchy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>663</CategoryCode>
+          <CategoryName>Příslušenství ke kartáčkům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>664</CategoryCode>
+          <CategoryName>Zubní centra</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>665</CategoryCode>
+          <CategoryName>Ostatní</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      108
+      Zubní kartáčky a sprchy
+      58
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>666</CategoryCode>
+          <CategoryName>IPL epilátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>667</CategoryCode>
+          <CategoryName>Epilátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      109
+      Epilátory a Depilátory
+      58
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>668</CategoryCode>
+          <CategoryName>Planžetové holící strojky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>669</CategoryCode>
+          <CategoryName>Frézkové holící strojky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>670</CategoryCode>
+          <CategoryName>Příslušenství k holícím strojkům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>671</CategoryCode>
+          <CategoryName>Zastřihávače vousů</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>672</CategoryCode>
+          <CategoryName>Zastřihávače vlasů</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>673</CategoryCode>
+          <CategoryName>Zastřihávače chloupků</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>674</CategoryCode>
+          <CategoryName>Příslušenství k zastřihovačům</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      110
+      Holící strojky a Zastřihávače
+      58
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>675</CategoryCode>
+          <CategoryName>Digitální váhy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>676</CategoryCode>
+          <CategoryName>Diagnostické váhy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>677</CategoryCode>
+          <CategoryName>Chytré váhy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      111
+      Osobní váhy
+      58
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>678</CategoryCode>
+          <CategoryName>Dětské chůvičky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>679</CategoryCode>
+          <CategoryName>Potřeby pro kojení</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>680</CategoryCode>
+          <CategoryName>Ostatní kojenecé potřeby</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      112
+      Péče o dítě
+      58
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>392</CategoryCode>
+          <CategoryName>Péče o pleť</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>402</CategoryCode>
+          <CategoryName>Péče o zuby</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>681</CategoryCode>
+          <CategoryName>Kosmetické přístroje</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>682</CategoryCode>
+          <CategoryName>Masážní přístroje</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>683</CategoryCode>
+          <CategoryName>Manikůra a pedikůra</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>684</CategoryCode>
+          <CategoryName>Ostatní péče o tělo</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>706</CategoryCode>
+          <CategoryName>Vyhřívané dečky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      113
+      Péče o tělo
+      58
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>685</CategoryCode>
+          <CategoryName>Žehličky na vlasy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>686</CategoryCode>
+          <CategoryName>Kulmofény</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>687</CategoryCode>
+          <CategoryName>Kulmy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>688</CategoryCode>
+          <CategoryName>Žehlící kartáče</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>689</CategoryCode>
+          <CategoryName>Krepovačky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>690</CategoryCode>
+          <CategoryName>Natáčky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>702</CategoryCode>
+          <CategoryName>Fény</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      114
+      Péče o vlasy
+      58
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>691</CategoryCode>
+          <CategoryName>Pažní tlakoměry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>692</CategoryCode>
+          <CategoryName>Zápěstní tlakoměry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>693</CategoryCode>
+          <CategoryName>Digitální teploměry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>694</CategoryCode>
+          <CategoryName>Bezkontaktní teploměry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      115
+      Tlakoměry a Teploměry
+      58
+    </ProductSuperCategory>
+    <ProductSuperCategory>
+      <ProductCategoryList>
+        <ProductCategory>
+          <CategoryCode>695</CategoryCode>
+          <CategoryName>Diagnostické testy</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>696</CategoryCode>
+          <CategoryName>Glukometry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>697</CategoryCode>
+          <CategoryName>Oxymetry</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>698</CategoryCode>
+          <CategoryName>Inhalátory</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>699</CategoryCode>
+          <CategoryName>Dioptrické pomůcky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>705</CategoryCode>
+          <CategoryName>Ostatní zdravotnické pomůcky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>756</CategoryCode>
+          <CategoryName>Ochranné pomůcky</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+        <ProductCategory>
+          <CategoryCode>757</CategoryCode>
+          <CategoryName>Dezinfekce</CategoryName>
+          <ProductAttributeList />
+        </ProductCategory>
+      </ProductCategoryList>
+      116
+      Zdravotnické pomůcky
+      58
+    </ProductSuperCategory>
+</ProductSuperCategoryList>
