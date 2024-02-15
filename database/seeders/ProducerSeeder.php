@@ -25,8 +25,9 @@ class ProducerSeeder extends Seeder
 
                 foreach($data as $index => $producer){
                     $dataArray[] = [
+                        'id' => $producer['ProducerCode'],
                         'ProducerId' => $producer['ProducerId'],
-                        'ProducerCode' => $producer['ProducerCode'],
+                        'producer_code' => $producer['ProducerCode'],
                         'ProducerName' => $producer['ProducerName']
                     ];
                 }

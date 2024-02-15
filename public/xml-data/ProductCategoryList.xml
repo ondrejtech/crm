@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ProductSuperCategoryList>
-    <ProductSuperCategory>
+    <Data>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>6</CategoryCode>
@@ -58,11 +57,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      2
-      Spotřební elektronika
-      52
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>30</CategoryCode>
@@ -135,8 +129,8 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>39</CategoryCode>
@@ -204,11 +198,8 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      6
-      Periferie
-      52
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>62</CategoryCode>
@@ -301,11 +292,8 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      7
-      Servery a zálohování
-      52
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>89</CategoryCode>
@@ -428,11 +416,8 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      8
-      Síťové prvky
-      52
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>95</CategoryCode>
@@ -495,11 +480,8 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      9
-      Software
-      52
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>75</CategoryCode>
@@ -592,20 +574,12 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      10
-      Kancelářská technika
-      52
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>115</CategoryCode>
           <CategoryName>Notebooky a Ultrabooky</CategoryName>
-          <ProductAttributeList />
-        </ProductCategory>
-        <ProductCategory>
-          <CategoryCode>116</CategoryCode>
-          <CategoryName>Příslušenství k notebookům a ultrabookům</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
@@ -644,11 +618,8 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      11
-      PC a Notebooky
-      52
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>190</CategoryCode>
@@ -726,11 +697,8 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      16
-      Pokladní systémy
-      52
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>107</CategoryCode>
@@ -743,21 +711,13 @@
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>262</CategoryCode>
-          <CategoryName>Příslušenství k Mobilům a Tabletům</CategoryName>
-          <ProductAttributeList />
-        </ProductCategory>
-        <ProductCategory>
           <CategoryCode>268</CategoryCode>
           <CategoryName>Selfie tyče a stabilizátory</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      18
-      Mobilní telefony a tablety
-      52
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>66</CategoryCode>
@@ -810,11 +770,8 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      121
-      Multifunkce a tiskárny
-      52
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>2</CategoryCode>
@@ -827,7 +784,7 @@
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>6</CategoryCode>
+          <CategoryCode>600</CategoryCode>
           <CategoryName>Paměťové karty</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
@@ -862,11 +819,8 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      1
-      Foto a video
-      53
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>24</CategoryCode>
@@ -894,11 +848,8 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      17
-      Herní svět a příslušenství
-      53
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>253</CategoryCode>
@@ -941,17 +892,11 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      25
-      Chytrá elektronika
-      53
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList />
-      59
-      Vychytávky
-      53
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>14</CategoryCode>
@@ -979,31 +924,15 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      60
-      Televize, přehrávače a TV signál
-      53
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList />
-      61
-      Ostatní Elektronika
-      53
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
-          <CategoryCode>107</CategoryCode>
+          <CategoryCode>1070</CategoryCode>
           <CategoryName>Mobilní telefony</CategoryName>
-          <ProductAttributeList />
-        </ProductCategory>
-        <ProductCategory>
-          <CategoryCode>123</CategoryCode>
-          <CategoryName>Elektronické čtečky</CategoryName>
-          <ProductAttributeList />
-        </ProductCategory>
-        <ProductCategory>
-          <CategoryCode>189</CategoryCode>
-          <CategoryName>Tablety</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
@@ -1011,44 +940,18 @@
           <CategoryName>Příslušenství k Mobilům a Tabletům</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
-        <ProductCategory>
-          <CategoryCode>268</CategoryCode>
-          <CategoryName>Selfie tyče a stabilizátory</CategoryName>
-          <ProductAttributeList />
-        </ProductCategory>
       </ProductCategoryList>
-      62
-      Mobilní telefony a tablety
-      53
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
-        <ProductCategory>
-          <CategoryCode>115</CategoryCode>
-          <CategoryName>Notebooky a Ultrabooky</CategoryName>
-          <ProductAttributeList />
-        </ProductCategory>
         <ProductCategory>
           <CategoryCode>116</CategoryCode>
           <CategoryName>Příslušenství k notebookům a ultrabookům</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
-        <ProductCategory>
-          <CategoryCode>129</CategoryCode>
-          <CategoryName>Přepěťové ochrany</CategoryName>
-          <ProductAttributeList />
-        </ProductCategory>
-        <ProductCategory>
-          <CategoryCode>405</CategoryCode>
-          <CategoryName>Tašky pro notebooky a ultrabooky</CategoryName>
-          <ProductAttributeList />
-        </ProductCategory>
       </ProductCategoryList>
-      63
-      Notebooky a Ultrabooky
-      53
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>19</CategoryCode>
@@ -1084,8 +987,8 @@
       120
       Audio
       53
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>450</CategoryCode>
@@ -1151,8 +1054,8 @@
       64
       Vaření
       54
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>570</CategoryCode>
@@ -1178,8 +1081,8 @@
       65
       Kávovary a Espresso
       54
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>583</CategoryCode>
@@ -1210,8 +1113,8 @@
       66
       Příprava nápojů
       54
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>574</CategoryCode>
@@ -1242,8 +1145,8 @@
       67
       Mixéry a šlehače
       54
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>564</CategoryCode>
@@ -1279,8 +1182,8 @@
       68
       Elektrické hrnce
       54
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>579</CategoryCode>
@@ -1306,8 +1209,8 @@
       69
       Odšťavňovače a Lisy
       54
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>560</CategoryCode>
@@ -1330,11 +1233,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      70
-      Čističky a Zvlhčovače
-      54
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>601</CategoryCode>
@@ -1362,11 +1260,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      71
-      Ventilátory a Klimatizace
-      54
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>618</CategoryCode>
@@ -1399,11 +1292,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      72
-      Žehličky a Šicí stroje
-      54
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>407</CategoryCode>
@@ -1471,11 +1359,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      73
-      Vysavače
-      54
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>587</CategoryCode>
@@ -1508,11 +1391,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      74
-      Úklid
-      54
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>508</CategoryCode>
@@ -1560,11 +1438,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      75
-      Lednice
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>521</CategoryCode>
@@ -1587,11 +1460,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      76
-      Mrazáky
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>529</CategoryCode>
@@ -1634,11 +1502,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      77
-      Pračky
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>534</CategoryCode>
@@ -1666,11 +1529,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      78
-      Sušičky
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>554</CategoryCode>
@@ -1693,11 +1551,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      79
-      Trouby
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>518</CategoryCode>
@@ -1715,11 +1568,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      80
-      Mikrovlnné trouby
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>547</CategoryCode>
@@ -1757,11 +1605,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      81
-      Varné desky
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>537</CategoryCode>
@@ -1794,11 +1637,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      82
-      Sporáky
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>497</CategoryCode>
@@ -1831,11 +1669,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      83
-      Digestoře
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>557</CategoryCode>
@@ -1853,11 +1686,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      84
-      Vinotéky
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>503</CategoryCode>
@@ -1885,11 +1713,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      85
-      Gastro spotřebiče
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>525</CategoryCode>
@@ -1912,11 +1735,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      117
-      Myčky nádobí
-      55
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>270</CategoryCode>
@@ -1964,11 +1782,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      87
-      Cyklistika
-      56
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>639</CategoryCode>
@@ -2001,11 +1814,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      88
-      Elektromobilita
-      56
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>12</CategoryCode>
@@ -2083,17 +1891,7 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      89
-      Outdoor
-      56
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList />
-      90
-      Sporttestery
-      56
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>632</CategoryCode>
@@ -2131,11 +1929,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      91
-      Dětské hřiště
-      56
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>386</CategoryCode>
@@ -2208,11 +2001,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      92
-      Hračky
-      56
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>652</CategoryCode>
@@ -2258,8 +2046,8 @@
       93
       Zavazadla a Batohy
       56
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>160</CategoryCode>
@@ -2285,8 +2073,8 @@
       94
       Škola
       56
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>714</CategoryCode>
@@ -2402,8 +2190,8 @@
       118
       Oblečení
       56
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>273</CategoryCode>
@@ -2429,8 +2217,8 @@
       119
       Sport
       56
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>294</CategoryCode>
@@ -2481,8 +2269,8 @@
       29
       Dům a zahrada
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>21</CategoryCode>
@@ -2563,8 +2351,8 @@
       95
       Auto-Moto
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>456</CategoryCode>
@@ -2615,8 +2403,8 @@
       96
       Bazény, Viřivky a Sauny
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>433</CategoryCode>
@@ -2717,8 +2505,8 @@
       97
       Dílna a Stavba
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>465</CategoryCode>
@@ -2779,8 +2567,8 @@
       98
       Sekačky na trávu
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>480</CategoryCode>
@@ -2816,14 +2604,14 @@
       99
       Tepelná technika
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList />
       100
       Ruční nářadí
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>224</CategoryCode>
@@ -2844,8 +2632,8 @@
       101
       Svitidla a žárovky
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>449</CategoryCode>
@@ -2886,8 +2674,8 @@
       102
       Grily a Udírny
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>491</CategoryCode>
@@ -2933,8 +2721,8 @@
       103
       Zahradní nábytek
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>423</CategoryCode>
@@ -2995,14 +2783,14 @@
       104
       Zahradní technika
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList />
       105
       Zavlažování
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>485</CategoryCode>
@@ -3043,8 +2831,8 @@
       106
       Zabezpečovací technika
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>28</CategoryCode>
@@ -3080,8 +2868,8 @@
       107
       Interiérové doplňky
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>763</CategoryCode>
@@ -3097,8 +2885,8 @@
       122
       Nábytek
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>768</CategoryCode>
@@ -3159,8 +2947,8 @@
       123
       Psi
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>769</CategoryCode>
@@ -3231,8 +3019,8 @@
       124
       Kočky
       57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
+
+
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>770</CategoryCode>
@@ -3280,11 +3068,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      125
-      Hlodavci
-      57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>772</CategoryCode>
@@ -3332,11 +3115,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      126
-      Akvaristika
-      57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>805</CategoryCode>
@@ -3364,11 +3142,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      127
-      Ptáci
-      57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>819</CategoryCode>
@@ -3411,11 +3184,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      128
-      Teraristika
-      57
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>278</CategoryCode>
@@ -3453,11 +3221,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      108
-      Zubní kartáčky a sprchy
-      58
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>666</CategoryCode>
@@ -3470,11 +3233,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      109
-      Epilátory a Depilátory
-      58
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>668</CategoryCode>
@@ -3512,11 +3270,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      110
-      Holící strojky a Zastřihávače
-      58
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>675</CategoryCode>
@@ -3534,11 +3287,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      111
-      Osobní váhy
-      58
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>678</CategoryCode>
@@ -3556,11 +3304,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      112
-      Péče o dítě
-      58
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>392</CategoryCode>
@@ -3598,11 +3341,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      113
-      Péče o tělo
-      58
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>685</CategoryCode>
@@ -3640,11 +3378,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      114
-      Péče o vlasy
-      58
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>691</CategoryCode>
@@ -3667,11 +3400,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      115
-      Tlakoměry a Teploměry
-      58
-    </ProductSuperCategory>
-    <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>695</CategoryCode>
@@ -3714,8 +3442,4 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      116
-      Zdravotnické pomůcky
-      58
-    </ProductSuperCategory>
-</ProductSuperCategoryList>
+</Data>

@@ -55,7 +55,7 @@ class ProducerResource extends Resource
                 TextColumn::make('ProducerId')
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('ProducerCode')
+                TextColumn::make('producer_code')
                     ->searchable()
                     ->sortable(),
                 TextColumn::make('ProducerName')

@@ -22,6 +22,7 @@ class CommoditySeeder extends Seeder
         if(count($xml['ProductComplete']) > 0){
             foreach($xml['ProductComplete'] as $index => $data){
                 $dataArray[] = [
+                    'id' => $data['CommodityCode'],
                     'CommodityCode' => $data['CommodityCode'],
                     'CommodityName' => $data['CommodityName'],
                 ];

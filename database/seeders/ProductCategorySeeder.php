@@ -20,22 +20,32 @@ class ProductCategorySeeder extends Seeder
         $xml = json_decode($json, true);
         $inc = 0;
 
-        if (count($xml['ProductSuperCategory']) > 0) {
-            foreach ($xml['ProductSuperCategory'] as $index => $data){
+        if (count($xml['ProductCategoryList']) > 0) {
+            foreach ($xml['ProductCategoryList'] as $index => $data){
                 foreach($data as $index => $item){
                     foreach ($item as $index => $category){
-                        foreach ($category as $subData){
-                            $dataArray[] = [
-                                'CategoryCode' => $subData['CategoryCode'],
-                                'CategoryName' => $subData['CategoryName'],
-                            ];
+                        if(isset($category['ProductAttributeList'])){
+                            $category['ProductAttributeList'] = '';
                         }
+                        $dataArray[] = $category;
+//                        foreach ($category as $subData){
+//                            if(isset($subData['ProductAttributeList'])){
+//                                $subData['ProductAttributeList'] = '';
+//                            }
+//                            $dataArray[] = $subData;
+//                        }
                     }
                 }
             }
-            $chunk = array_chunk($dataArray, 100);
+            $chunk = array_chunk($dataArray,100);
             foreach($chunk as $result){
-                ProductCategory::insert($result);
+                for($i = 0; $i < count($result) - 1; $i++);
+                ProductCategory::insert([
+                    'id' => $result[$i]['CategoryCode'],
+                    'category_code' => $result[$i]['CategoryCode'],
+                    'CategoryName' => $result[$i]['CategoryName'],
+                    'ProductAttributeList' => $result[$i]['ProductAttributeList'],
+                ]);
             }
         }
     }

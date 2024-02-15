@@ -11,7 +11,7 @@ class Producer extends Model
 
     protected $fillable = [
         'ProducerId',
-        'ProducerCode',
+        'producer_code',
         'ProducerName'
     ];
 }
