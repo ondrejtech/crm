@@ -27,9 +27,6 @@ return new class extends Migration
             $table->string('Unit');
             $table->string('Status')->nullable();
             $table->string('EANCode')->nullable();
-            $table->foreignId('producer_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('product_category_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('commodity_id')->constrained()->cascadeOnDelete();
             $table->string('IsPremium')->nullable();
             $table->timestamps();
         });
