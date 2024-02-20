@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             AttendanceSeeder::class,
             FileTypeSeeder::class,
             CategorySeeder::class,
+            ProductCategorySeeder::class,
         ]);
     }
 }
