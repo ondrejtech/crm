@@ -873,7 +873,7 @@
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>6</CategoryCode>
+          <CategoryCode>60</CategoryCode>
           <CategoryName>Paměťové karty</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
@@ -1038,27 +1038,27 @@
     <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
-          <CategoryCode>107</CategoryCode>
+          <CategoryCode>1070</CategoryCode>
           <CategoryName>Mobilní telefony</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>123</CategoryCode>
+          <CategoryCode>1230</CategoryCode>
           <CategoryName>Elektronické čtečky</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>189</CategoryCode>
+          <CategoryCode>1890</CategoryCode>
           <CategoryName>Tablety</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>262</CategoryCode>
+          <CategoryCode>2620</CategoryCode>
           <CategoryName>Příslušenství k Mobilům a Tabletům</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>268</CategoryCode>
+          <CategoryCode>2680</CategoryCode>
           <CategoryName>Selfie tyče a stabilizátory</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
@@ -1070,22 +1070,22 @@
     <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
-          <CategoryCode>115</CategoryCode>
+          <CategoryCode>1150</CategoryCode>
           <CategoryName>Notebooky a Ultrabooky</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>116</CategoryCode>
+          <CategoryCode>1160</CategoryCode>
           <CategoryName>Příslušenství k notebookům a ultrabookům</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>129</CategoryCode>
+          <CategoryCode>1290</CategoryCode>
           <CategoryName>Přepěťové ochrany</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>405</CategoryCode>
+          <CategoryCode>4050</CategoryCode>
           <CategoryName>Tašky pro notebooky a ultrabooky</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
@@ -1097,32 +1097,32 @@
     <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
-          <CategoryCode>19</CategoryCode>
+          <CategoryCode>1900</CategoryCode>
           <CategoryName>Audio systémy</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>20</CategoryCode>
+          <CategoryCode>2000</CategoryCode>
           <CategoryName>Bezdrátové reproduktory</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>22</CategoryCode>
+          <CategoryCode>2200</CategoryCode>
           <CategoryName>Diktafony</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>26</CategoryCode>
+          <CategoryCode>2600</CategoryCode>
           <CategoryName>Sluchátka</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>29</CategoryCode>
+          <CategoryCode>2900</CategoryCode>
           <CategoryName>Přenosné audio</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>151</CategoryCode>
+          <CategoryCode>1510</CategoryCode>
           <CategoryName>Příslušenství k hudebním přehrávačům</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
@@ -1687,7 +1687,7 @@
     <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
-          <CategoryCode>534</CategoryCode>
+          <CategoryCode>5340</CategoryCode>
           <CategoryName>Set Pračka a Sušička</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
@@ -2261,7 +2261,7 @@
     <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
-          <CategoryCode>652</CategoryCode>
+          <CategoryCode>6520</CategoryCode>
           <CategoryName>Batohy</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
@@ -2308,12 +2308,12 @@
     <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
-          <CategoryCode>160</CategoryCode>
+          <CategoryCode>1600</CategoryCode>
           <CategoryName>Kalkulátory</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>657</CategoryCode>
+          <CategoryCode>6570</CategoryCode>
           <CategoryName>Školní batohy</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
@@ -2899,7 +2899,7 @@
           <ProductAttributeList />
         </ProductCategory>
         <ProductCategory>
-          <CategoryCode>450</CategoryCode>
+          <CategoryCode>4500</CategoryCode>
           <CategoryName>Elektrické grily</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
@@ -3464,7 +3464,7 @@
     <ProductSuperCategory>
       <ProductCategoryList>
         <ProductCategory>
-          <CategoryCode>278</CategoryCode>
+          <CategoryCode>2780</CategoryCode>
           <CategoryName>Elektrické zubní kartáčky</CategoryName>
           <ProductAttributeList />
         </ProductCategory>
