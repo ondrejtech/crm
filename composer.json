@@ -16,7 +16,8 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "miguilim/filament-auto-panel": "^1.4",
-        "pxlrbt/filament-excel": "^2.3"
+        "pxlrbt/filament-excel": "^2.3",
+      "ext-simplexml": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

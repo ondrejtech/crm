@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
   <ProductSuperCategoryList>
-    <ProductCategoryList>
+    <data>
+      <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>6</CategoryCode>
           <CategoryName>Paměťové karty</CategoryName>
@@ -57,11 +58,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>2</SuperCategoryCode>
-      <SuperCategoryName>Spotřební elektronika</SuperCategoryName>
-      <ParentSuperCategoryCode>52</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>30</CategoryCode>
@@ -134,11 +130,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>3</SuperCategoryCode>
-      <SuperCategoryName>Komponenty</SuperCategoryName>
-      <ParentSuperCategoryCode>52</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>39</CategoryCode>
@@ -206,11 +197,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>6</SuperCategoryCode>
-      <SuperCategoryName>Periferie</SuperCategoryName>
-      <ParentSuperCategoryCode>52</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>62</CategoryCode>
@@ -303,11 +289,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>7</SuperCategoryCode>
-      <SuperCategoryName>Servery a zálohování</SuperCategoryName>
-      <ParentSuperCategoryCode>52</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>89</CategoryCode>
@@ -430,11 +411,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>8</SuperCategoryCode>
-      <SuperCategoryName>Síťové prvky</SuperCategoryName>
-      <ParentSuperCategoryCode>52</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>95</CategoryCode>
@@ -497,11 +473,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>9</SuperCategoryCode>
-      <SuperCategoryName>Software</SuperCategoryName>
-      <ParentSuperCategoryCode>52</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>75</CategoryCode>
@@ -594,11 +565,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>10</SuperCategoryCode>
-      <SuperCategoryName>Kancelářská technika</SuperCategoryName>
-      <ParentSuperCategoryCode>52</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>115</CategoryCode>
@@ -646,11 +612,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>11</SuperCategoryCode>
-      <SuperCategoryName>PC a Notebooky</SuperCategoryName>
-      <ParentSuperCategoryCode>52</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>190</CategoryCode>
@@ -728,11 +689,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>16</SuperCategoryCode>
-      <SuperCategoryName>Pokladní systémy</SuperCategoryName>
-      <ParentSuperCategoryCode>52</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>107</CategoryCode>
@@ -755,11 +711,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>18</SuperCategoryCode>
-      <SuperCategoryName>Mobilní telefony a tablety</SuperCategoryName>
-      <ParentSuperCategoryCode>52</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>66</CategoryCode>
@@ -812,11 +763,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>121</SuperCategoryCode>
-      <SuperCategoryName>Multifunkce a tiskárny</SuperCategoryName>
-      <ParentSuperCategoryCode>52</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>2</CategoryCode>
@@ -864,11 +810,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>1</SuperCategoryCode>
-      <SuperCategoryName>Foto a video</SuperCategoryName>
-      <ParentSuperCategoryCode>53</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>24</CategoryCode>
@@ -896,11 +837,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>17</SuperCategoryCode>
-      <SuperCategoryName>Herní svět a příslušenství</SuperCategoryName>
-      <ParentSuperCategoryCode>53</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>253</CategoryCode>
@@ -943,17 +879,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>25</SuperCategoryCode>
-      <SuperCategoryName>Chytrá elektronika</SuperCategoryName>
-      <ParentSuperCategoryCode>53</ParentSuperCategoryCode>
-
-
-      <ProductCategoryList />
-      <SuperCategoryCode>59</SuperCategoryCode>
-      <SuperCategoryName>Vychytávky</SuperCategoryName>
-      <ParentSuperCategoryCode>53</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>14</CategoryCode>
@@ -981,17 +906,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>60</SuperCategoryCode>
-      <SuperCategoryName>Televize, přehrávače a TV signál</SuperCategoryName>
-      <ParentSuperCategoryCode>53</ParentSuperCategoryCode>
-
-
-      <ProductCategoryList />
-      <SuperCategoryCode>61</SuperCategoryCode>
-      <SuperCategoryName>Ostatní Elektronika</SuperCategoryName>
-      <ParentSuperCategoryCode>53</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>107</CategoryCode>
@@ -1019,11 +933,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>62</SuperCategoryCode>
-      <SuperCategoryName>Mobilní telefony a tablety</SuperCategoryName>
-      <ParentSuperCategoryCode>53</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>115</CategoryCode>
@@ -1046,11 +955,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>63</SuperCategoryCode>
-      <SuperCategoryName>Notebooky a Ultrabooky</SuperCategoryName>
-      <ParentSuperCategoryCode>53</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>19</CategoryCode>
@@ -1083,11 +987,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>120</SuperCategoryCode>
-      <SuperCategoryName>Audio</SuperCategoryName>
-      <ParentSuperCategoryCode>53</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>450</CategoryCode>
@@ -1150,11 +1049,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>64</SuperCategoryCode>
-      <SuperCategoryName>Vaření</SuperCategoryName>
-      <ParentSuperCategoryCode>54</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>570</CategoryCode>
@@ -1177,11 +1071,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>65</SuperCategoryCode>
-      <SuperCategoryName>Kávovary a Espresso</SuperCategoryName>
-      <ParentSuperCategoryCode>54</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>583</CategoryCode>
@@ -1209,11 +1098,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>66</SuperCategoryCode>
-      <SuperCategoryName>Příprava nápojů</SuperCategoryName>
-      <ParentSuperCategoryCode>54</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>574</CategoryCode>
@@ -1241,11 +1125,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>67</SuperCategoryCode>
-      <SuperCategoryName>Mixéry a šlehače</SuperCategoryName>
-      <ParentSuperCategoryCode>54</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>564</CategoryCode>
@@ -1278,11 +1157,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>68</SuperCategoryCode>
-      <SuperCategoryName>Elektrické hrnce</SuperCategoryName>
-      <ParentSuperCategoryCode>54</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>579</CategoryCode>
@@ -1305,11 +1179,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>69</SuperCategoryCode>
-      <SuperCategoryName>Odšťavňovače a Lisy</SuperCategoryName>
-      <ParentSuperCategoryCode>54</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>560</CategoryCode>
@@ -1332,11 +1201,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>70</SuperCategoryCode>
-      <SuperCategoryName>Čističky a Zvlhčovače</SuperCategoryName>
-      <ParentSuperCategoryCode>54</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>601</CategoryCode>
@@ -1364,11 +1228,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>71</SuperCategoryCode>
-      <SuperCategoryName>Ventilátory a Klimatizace</SuperCategoryName>
-      <ParentSuperCategoryCode>54</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>618</CategoryCode>
@@ -1401,11 +1260,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>72</SuperCategoryCode>
-      <SuperCategoryName>Žehličky a Šicí stroje</SuperCategoryName>
-      <ParentSuperCategoryCode>54</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>407</CategoryCode>
@@ -1473,11 +1327,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>73</SuperCategoryCode>
-      <SuperCategoryName>Vysavače</SuperCategoryName>
-      <ParentSuperCategoryCode>54</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>587</CategoryCode>
@@ -1510,11 +1359,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>74</SuperCategoryCode>
-      <SuperCategoryName>Úklid</SuperCategoryName>
-      <ParentSuperCategoryCode>54</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>508</CategoryCode>
@@ -1562,11 +1406,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>75</SuperCategoryCode>
-      <SuperCategoryName>Lednice</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>521</CategoryCode>
@@ -1589,11 +1428,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>76</SuperCategoryCode>
-      <SuperCategoryName>Mrazáky</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>529</CategoryCode>
@@ -1636,11 +1470,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>77</SuperCategoryCode>
-      <SuperCategoryName>Pračky</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>534</CategoryCode>
@@ -1668,11 +1497,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>78</SuperCategoryCode>
-      <SuperCategoryName>Sušičky</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>554</CategoryCode>
@@ -1695,11 +1519,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>79</SuperCategoryCode>
-      <SuperCategoryName>Trouby</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>518</CategoryCode>
@@ -1717,11 +1536,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>80</SuperCategoryCode>
-      <SuperCategoryName>Mikrovlnné trouby</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>547</CategoryCode>
@@ -1759,11 +1573,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>81</SuperCategoryCode>
-      <SuperCategoryName>Varné desky</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>537</CategoryCode>
@@ -1796,11 +1605,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>82</SuperCategoryCode>
-      <SuperCategoryName>Sporáky</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>497</CategoryCode>
@@ -1833,11 +1637,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>83</SuperCategoryCode>
-      <SuperCategoryName>Digestoře</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>557</CategoryCode>
@@ -1855,11 +1654,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>84</SuperCategoryCode>
-      <SuperCategoryName>Vinotéky</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>503</CategoryCode>
@@ -1887,11 +1681,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>85</SuperCategoryCode>
-      <SuperCategoryName>Gastro spotřebiče</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>525</CategoryCode>
@@ -1914,11 +1703,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>117</SuperCategoryCode>
-      <SuperCategoryName>Myčky nádobí</SuperCategoryName>
-      <ParentSuperCategoryCode>55</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>270</CategoryCode>
@@ -1966,11 +1750,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>87</SuperCategoryCode>
-      <SuperCategoryName>Cyklistika</SuperCategoryName>
-      <ParentSuperCategoryCode>56</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>639</CategoryCode>
@@ -2003,11 +1782,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>88</SuperCategoryCode>
-      <SuperCategoryName>Elektromobilita</SuperCategoryName>
-      <ParentSuperCategoryCode>56</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>12</CategoryCode>
@@ -2085,17 +1859,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>89</SuperCategoryCode>
-      <SuperCategoryName>Outdoor</SuperCategoryName>
-      <ParentSuperCategoryCode>56</ParentSuperCategoryCode>
-
-
-      <ProductCategoryList />
-      <SuperCategoryCode>90</SuperCategoryCode>
-      <SuperCategoryName>Sporttestery</SuperCategoryName>
-      <ParentSuperCategoryCode>56</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>632</CategoryCode>
@@ -2133,11 +1896,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>91</SuperCategoryCode>
-      <SuperCategoryName>Dětské hřiště</SuperCategoryName>
-      <ParentSuperCategoryCode>56</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>386</CategoryCode>
@@ -2210,11 +1968,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>92</SuperCategoryCode>
-      <SuperCategoryName>Hračky</SuperCategoryName>
-      <ParentSuperCategoryCode>56</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>652</CategoryCode>
@@ -2257,11 +2010,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>93</SuperCategoryCode>
-      <SuperCategoryName>Zavazadla a Batohy</SuperCategoryName>
-      <ParentSuperCategoryCode>56</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>160</CategoryCode>
@@ -2284,11 +2032,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>94</SuperCategoryCode>
-      <SuperCategoryName>Škola</SuperCategoryName>
-      <ParentSuperCategoryCode>56</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>714</CategoryCode>
@@ -2401,11 +2144,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>118</SuperCategoryCode>
-      <SuperCategoryName>Oblečení</SuperCategoryName>
-      <ParentSuperCategoryCode>56</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>273</CategoryCode>
@@ -2428,11 +2166,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>119</SuperCategoryCode>
-      <SuperCategoryName>Sport</SuperCategoryName>
-      <ParentSuperCategoryCode>56</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>294</CategoryCode>
@@ -2480,11 +2213,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>29</SuperCategoryCode>
-      <SuperCategoryName>Dům a zahrada</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>21</CategoryCode>
@@ -2562,11 +2290,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>95</SuperCategoryCode>
-      <SuperCategoryName>Auto-Moto</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>456</CategoryCode>
@@ -2614,11 +2337,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>96</SuperCategoryCode>
-      <SuperCategoryName>Bazény, Viřivky a Sauny</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>433</CategoryCode>
@@ -2716,11 +2434,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>97</SuperCategoryCode>
-      <SuperCategoryName>Dílna a Stavba</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>465</CategoryCode>
@@ -2778,11 +2491,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>98</SuperCategoryCode>
-      <SuperCategoryName>Sekačky na trávu</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>480</CategoryCode>
@@ -2815,17 +2523,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>99</SuperCategoryCode>
-      <SuperCategoryName>Tepelná technika</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
-      <ProductCategoryList />
-      <SuperCategoryCode>100</SuperCategoryCode>
-      <SuperCategoryName>Ruční nářadí</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>224</CategoryCode>
@@ -2843,11 +2540,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>101</SuperCategoryCode>
-      <SuperCategoryName>Svitidla a žárovky</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>449</CategoryCode>
@@ -2885,11 +2577,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>102</SuperCategoryCode>
-      <SuperCategoryName>Grily a Udírny</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>491</CategoryCode>
@@ -2932,11 +2619,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>103</SuperCategoryCode>
-      <SuperCategoryName>Zahradní nábytek</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>423</CategoryCode>
@@ -2994,17 +2676,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>104</SuperCategoryCode>
-      <SuperCategoryName>Zahradní technika</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
-      <ProductCategoryList />
-      <SuperCategoryCode>105</SuperCategoryCode>
-      <SuperCategoryName>Zavlažování</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>485</CategoryCode>
@@ -3042,11 +2713,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>106</SuperCategoryCode>
-      <SuperCategoryName>Zabezpečovací technika</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>28</CategoryCode>
@@ -3079,11 +2745,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>107</SuperCategoryCode>
-      <SuperCategoryName>Interiérové doplňky</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>763</CategoryCode>
@@ -3096,11 +2757,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>122</SuperCategoryCode>
-      <SuperCategoryName>Nábytek</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>768</CategoryCode>
@@ -3158,11 +2814,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>123</SuperCategoryCode>
-      <SuperCategoryName>Psi</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>769</CategoryCode>
@@ -3230,11 +2881,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>124</SuperCategoryCode>
-      <SuperCategoryName>Kočky</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>770</CategoryCode>
@@ -3282,11 +2928,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>125</SuperCategoryCode>
-      <SuperCategoryName>Hlodavci</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>772</CategoryCode>
@@ -3334,11 +2975,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>126</SuperCategoryCode>
-      <SuperCategoryName>Akvaristika</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>805</CategoryCode>
@@ -3366,11 +3002,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>127</SuperCategoryCode>
-      <SuperCategoryName>Ptáci</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>819</CategoryCode>
@@ -3413,11 +3044,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>128</SuperCategoryCode>
-      <SuperCategoryName>Teraristika</SuperCategoryName>
-      <ParentSuperCategoryCode>57</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>278</CategoryCode>
@@ -3455,11 +3081,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>108</SuperCategoryCode>
-      <SuperCategoryName>Zubní kartáčky a sprchy</SuperCategoryName>
-      <ParentSuperCategoryCode>58</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>666</CategoryCode>
@@ -3472,11 +3093,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>109</SuperCategoryCode>
-      <SuperCategoryName>Epilátory a Depilátory</SuperCategoryName>
-      <ParentSuperCategoryCode>58</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>668</CategoryCode>
@@ -3514,11 +3130,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>110</SuperCategoryCode>
-      <SuperCategoryName>Holící strojky a Zastřihávače</SuperCategoryName>
-      <ParentSuperCategoryCode>58</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>675</CategoryCode>
@@ -3536,11 +3147,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>111</SuperCategoryCode>
-      <SuperCategoryName>Osobní váhy</SuperCategoryName>
-      <ParentSuperCategoryCode>58</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>678</CategoryCode>
@@ -3558,11 +3164,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>112</SuperCategoryCode>
-      <SuperCategoryName>Péče o dítě</SuperCategoryName>
-      <ParentSuperCategoryCode>58</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>392</CategoryCode>
@@ -3600,11 +3201,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>113</SuperCategoryCode>
-      <SuperCategoryName>Péče o tělo</SuperCategoryName>
-      <ParentSuperCategoryCode>58</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>685</CategoryCode>
@@ -3642,11 +3238,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>114</SuperCategoryCode>
-      <SuperCategoryName>Péče o vlasy</SuperCategoryName>
-      <ParentSuperCategoryCode>58</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>691</CategoryCode>
@@ -3669,11 +3260,6 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>115</SuperCategoryCode>
-      <SuperCategoryName>Tlakoměry a Teploměry</SuperCategoryName>
-      <ParentSuperCategoryCode>58</ParentSuperCategoryCode>
-
-
       <ProductCategoryList>
         <ProductCategory>
           <CategoryCode>695</CategoryCode>
@@ -3716,8 +3302,5 @@
           <ProductAttributeList />
         </ProductCategory>
       </ProductCategoryList>
-      <SuperCategoryCode>116</SuperCategoryCode>
-      <SuperCategoryName>Zdravotnické pomůcky</SuperCategoryName>
-      <ParentSuperCategoryCode>58</ParentSuperCategoryCode>
-
+    </data>
   </ProductSuperCategoryList>

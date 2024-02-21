@@ -14,28 +14,30 @@ class ProductCategorySeeder extends Seeder
      */
     public function run(): void
     {
-        $xmlFile = file_get_contents(public_path('category-data.xml'));
+        $xmlFile = file_get_contents(public_path('xml-data/category.xml'));
         $xmlObject = simplexml_load_string($xmlFile);
 
         $json = json_encode($xmlObject);
-        $xml = json_decode($json, true);
+        $xml = json_decode($json,true);
 
-        if(count($xml['ProductSuperCategoryList']) > 0){
-            foreach ($xml['ProductSuperCategoryList'] as $index => $item){
-                foreach ($item as $indesx => $data){
-                    print_r($data);
-                    $dataArray[] = [
-                        'SuperCategoryCode' => $data['SuperCategoryCode'],
-                        'SuperCategoryName' => $data['SuperCategoryName'],
-                        'ParentSuperCategoryCode' => $data['ParentSuperCategoryCode']
-                    ];
-                }
-
+        if(count($xml['data']) > 0){
+            foreach ($xml['data'] as $index => $data) {
+                $dataArray[] = $data;
             }
 
-            $chunkCategory = array_chunk($dataArray,100);
-            foreach($chunkCategory as $catetegory){
-                ParentCategory::insert($catetegory);
+            for($i = 0; $i < count($data); $i++){
+                foreach($dataArray[0][$i] as $item){
+                    for($a = 0; $a < count($item);$a++){
+                        $categoryArray[] = [
+                            'CategoryCode' => $item[$a]['CategoryCode'],
+                            'CategoryName' => $item[$a]['CategoryName'],
+                        ];
+                    }
+                }
+            }
+            $chunk = array_chunk($categoryArray,100);
+            foreach ($chunk as $result){
+                ProductCategory::insert($result);
             }
         }
     }
