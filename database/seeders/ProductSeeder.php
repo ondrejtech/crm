@@ -249,10 +249,10 @@ class ProductSeeder extends Seeder
                 $discount = $price - $subDiscount;
 
                 $dataArray[] = [
-                    'ProId' => $data['ProId'],
+                    'id' => $data['ProId'],
                     'Code' => $data['Code'],
                     'Name' => $data['Name'],
-                    'YourPrice' => number_format($data['YourPrice']),
+                    'YourPrice' => $data['YourPrice'],
                     'YourPriceWithFees' => $data['YourPriceWithFees'],
                     'CommodityCode' => $data['CommodityCode'],
                     'GarbageFee' => $data['GarbageFee'],
@@ -300,8 +300,8 @@ class ProductSeeder extends Seeder
                     'RCCode' => $data['RCCode'],
                     'IsPremium' => $data['IsPremium'],
                     'ExtInfoCodes' => $data['ExtInfoCodes'],
-                    'EndUserPriceDPH' => number_format($price),
-                    'PriceDiscount' => number_format($discount),
+                    'EndUserPriceDPH' => $price,
+                    'PriceDiscount' => $discount,
                     'DescriptionShort' =>$data['DescriptionShort'],
                     'Description' => $data['Description'],
                     'SmallImage' => $image,
