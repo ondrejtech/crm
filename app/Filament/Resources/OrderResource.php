@@ -2,8 +2,12 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\OrderStatus;
 use App\Filament\Resources\OrderResource\Pages;
 use App\Filament\Resources\OrderResource\RelationManagers;
+use App\Http\Controllers\TestController;
+use App\Models\Company;
+use App\Models\Contact;
 use App\Models\Order;
 use App\Models\Product;
 use Filament\Forms;
@@ -11,9 +15,9 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Filament\Support\Contracts\HasLabel;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use function Laravel\Prompts\search;
 
 class OrderResource extends Resource
 {
@@ -21,44 +25,64 @@ class OrderResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\Wizard::make([
-                    Forms\Components\Wizard\Step::make('Orders')->schema([
+                    Forms\Components\Wizard\Step::make('Order Detail')->schema([
                         Forms\Components\Section::make()->schema([
-                            Forms\Components\Select::make('contact_id')
-                                ->relationship('contact', 'full_name')
-                                ->required()
-                                ->searchable()
-                                ->preload(),
+                            Forms\Components\TextInput::make('number')
+                                ->label('Order number')
+                                ->default('OR-'.random_int(100000,999999))
+                                ->disabled(),
                             Forms\Components\Select::make('company_id')
-                                ->relationship('company', 'name')
+                                ->label('Company')
+                                ->options(Company::query()->pluck('name','id'))
                                 ->searchable()
                                 ->preload(),
+                            Forms\Components\Select::make('contact_id')
+                                ->label('Contact')
+                                ->options(Contact::query()->pluck('full_name','id'))
+                                ->searchable()
+                                ->preload()
+                                ->required(),
+                            Forms\Components\Select::make('status')
+                                ->options(OrderStatus::class)
+                                ->preload()
+                                ->required(),
                         ])->columns(),
-                    ])->columnSpanFull(),
-                    Forms\Components\Wizard\Step::make('Product item')->schema([
-                        Forms\Components\Repeater::make('Product')
-                            ->relationship()->schema([
-                            Forms\Components\Section::make()->schema([
-                                Forms\Components\Select::make('product_id')
-                                    ->label('Product name')
-                                    ->options(Product::query()->pluck('Name','id'))
-                                    ->searchable()
-                                    ->preload(),
-                                Forms\Components\TextInput::make('quantity')
-                                    ->required()
-                                    ->numeric()
-                                    ->default(1),
-                                Forms\Components\TextInput::make('total_price')
-                                    ->dehydrated()
-                                    ->disabled()
-                                    ->numeric()
-                            ])->columns(3)
+                        Forms\Components\RichEditor::make('note')
+                            ->columnSpanFull()
+                    ]),
+                    Forms\Components\Wizard\Step::make('Order items')->schema([
+                        Forms\Components\Section::make()->schema([
+                            Forms\Components\Repeater::make('items')
+                                ->relationship()
+                                ->schema([
+                                    Forms\Components\Select::make('product_id')
+                                        ->label('Product')
+                                        ->options(Product::query()->pluck('Name','id'))
+                                        ->searchable()
+                                        ->preload()
+                                        ->required()
+                                        ->reactive()
+                                        ->afterStateUpdated(fn($state, Forms\Set $set) =>
+                                        $set('unit_price', Product::find($state)?->EndUserPrice ?? 0)),
+                                    Forms\Components\TextInput::make('quantity')
+                                        ->numeric()
+                                        ->default(1)
+                                        ->required(),
+                                    Forms\Components\TextInput::make('unit_price')
+                                        ->label('Unit price')
+                                        ->disabled()
+                                        ->dehydrated()
+                                        ->numeric()
+                                ])->columns(3)
                         ])
-                    ])->columnSpanFull()
+                     ])->columnSpan(3)
                 ])->columnSpanFull()
             ]);
     }
@@ -67,33 +91,34 @@ class OrderResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('contact.id')
+                Tables\Columns\TextColumn::make('order.id'),
+                Tables\Columns\TextColumn::make('product.id'),
+                Tables\Columns\TextColumn::make('number')
                     ->numeric()
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(),
+                Tables\Columns\TextColumn::make('customer.name')
+                    ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('company.name')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('product.name')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('quantity')
-                    ->numeric()
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('Status')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(),
                 Tables\Columns\TextColumn::make('total_price')
+                    ->sortable()
                     ->searchable()
                     ->summarize([
                         Tables\Columns\Summarizers\Sum::make()->money()
-                    ])
-                    ->numeric()
-                    ->sortable(),
+                    ]),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->searchable()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->searchable()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable()
             ])
             ->filters([
                 //
