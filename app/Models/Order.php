@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Order extends Model
@@ -12,28 +12,32 @@ class Order extends Model
     use HasFactory;
 
     protected $fillable = [
-        'number',
-        'contact_id',
-        'company_id',
-        'product_id',
-        'quantity',
-        'status',
-        'note',
-        'unit_price'
+        'company_id','contact_id','status','note', 'finish_price',
     ];
 
-    public function contacts(): BelongsToMany
+    protected static function boot()
     {
-        return $this->belongsToMany(Contact::class);
+        parent::boot();
+
+        static::saving(function ($order) {
+            $order->finish_price = $order->orderItems->sum('finish_price');
+        });
     }
 
-    public function company(): BelongsToMany
+    public function company(): BelongsTo
     {
-        return $this->belongsToMany(Company::class, 'order_company_relations');
+        return $this->belongsTo(Company::class);
     }
 
-    public function items():BelongsToMany
+    public function contact(): BelongsTo
     {
-        return $this->belongsToMany(Product::class, 'order_product_relations');
+        return $this->belongsTo(Contact::class);
     }
+
+    public function orderItems(): HasMany
+    {
+        return $this->hasMany(OrderItem::class);
+    }
+
+
 }

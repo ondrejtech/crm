@@ -13,15 +13,21 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('number')->default('OR624591');
-            $table->foreignId('contact_id')->constrained()->cascadeOnDelete();
             $table->foreignId('company_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->foreignId('contact_id')->constrained()->cascadeOnDelete();
             $table->string('status');
             $table->mediumText('note')->nullable();
-            $table->string('product_id')->nullable();
-            $table->string('order_id')->nullable();
-            $table->integer('quantity')->default(1);
+            $table->integer('finish_price');
+            $table->timestamps();
+        });
+
+        Schema::create('order_item', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('order_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('product_id')->constrained()->cascadeOnDelete();
+            $table->integer('quantity');
             $table->integer('unit_price')->nullable();
+            $table->integer('total_price');
             $table->timestamps();
         });
     }
@@ -33,5 +39,6 @@ return new class extends Migration
     {
         Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('orders');
+        Schema::dropIfExists('order_item');
     }
 };
