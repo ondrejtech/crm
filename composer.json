@@ -9,15 +9,17 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "ext-curl": "*",
+        "ext-simplexml": "*",
         "bezhansalleh/filament-shield": "^3.1",
         "filament/filament": "^3.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
+        "league/csv": "^9.0",
         "miguilim/filament-auto-panel": "^1.4",
-        "pxlrbt/filament-excel": "^2.3",
-      "ext-simplexml": "*"
+        "pxlrbt/filament-excel": "^2.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
