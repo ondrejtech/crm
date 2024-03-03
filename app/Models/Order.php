@@ -12,7 +12,7 @@ class Order extends Model
     use HasFactory;
 
     protected $fillable = [
-        'company_id','contact_id','status','note',
+        'company_id','contact_id','status','delivery_address','delivery_city','delivery_psc','delivery_state','delivery_country','note',
     ];
 
     public function company(): BelongsTo

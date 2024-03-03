@@ -16,6 +16,11 @@ return new class extends Migration
             $table->foreignId('company_id')->nullable()->constrained();
             $table->foreignId('contact_id')->constrained();
             $table->string('status');
+            $table->string('delivery_address');
+            $table->string('delivery_city');
+            $table->string('delivery_psc');
+            $table->string('delivery_state');
+            $table->string('delivery_country');
             $table->mediumText('note')->nullable();
             $table->timestamps();
         });
@@ -25,8 +30,8 @@ return new class extends Migration
             $table->foreignId('order_id')->constrained();
             $table->foreignId('product_id')->constrained();
             $table->integer('quantity');
-            $table->integer('unit_price')->nullable();
-            $table->integer('total_price')->nullable();
+            $table->integer('unit_price');
+            $table->integer('total_price');
             $table->timestamps();
         });
     }
