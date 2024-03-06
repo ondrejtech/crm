@@ -12,8 +12,11 @@ class Order extends Model
     use HasFactory;
 
     protected $fillable = [
-        'company_id','contact_id','status','delivery_address','delivery_city','delivery_psc','delivery_state','delivery_country','note',
+        'company_id','contact_id','status','delivery_address','delivery_city','delivery_psc','delivery_state_id','delivery_country_id','note',
     ];
+
+
+
 
     public function company(): BelongsTo
     {
@@ -28,5 +31,15 @@ class Order extends Model
     public function orderItems(): HasMany
     {
         return $this->hasMany(OrderItem::class);
+    }
+
+    public function deliveryCountry(): BelongsTo
+    {
+        return $this->belongsTo(Country::class);
+    }
+
+    public function deliveryState(): BelongsTo
+    {
+        return $this->belongsTo(State::class);
     }
 }

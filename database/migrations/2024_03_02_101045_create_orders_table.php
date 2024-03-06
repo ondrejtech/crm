@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('delivery_address');
             $table->string('delivery_city');
             $table->string('delivery_psc');
-            $table->string('delivery_state');
-            $table->string('delivery_country');
+            $table->string('delivery_country_id');
+            $table->foreignId('delivery_state_id');
             $table->mediumText('note')->nullable();
             $table->timestamps();
         });
@@ -31,7 +31,7 @@ return new class extends Migration
             $table->foreignId('product_id')->constrained();
             $table->integer('quantity');
             $table->integer('unit_price');
-            $table->integer('total_price');
+            $table->integer('total_price')->nullable();
             $table->timestamps();
         });
     }

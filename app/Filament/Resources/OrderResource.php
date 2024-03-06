@@ -2,10 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use app\Enums\OrderStatus;
 use App\Filament\Resources\OrderResource\Pages;
 use App\Filament\Resources\OrderResource\RelationManagers;
-use App\Models\Contact;
+
 use App\Models\Country;
 use App\Models\Order;
 use App\Models\Product;
@@ -15,14 +14,14 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Database\Eloquent\Model;
 
 class OrderResource extends Resource
 {
     protected static ?string $model = Order::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
 
     public static function form(Form $form): Form
     {
@@ -59,15 +58,15 @@ class OrderResource extends Resource
                         Forms\Components\TextInput::make('delivery_psc')
                             ->label('Delivery PSC')
                             ->required(),
-                        Forms\Components\Select::make('delivery_country')
+                        Forms\Components\Select::make('delivery_country_id')
                             ->label('Delivery country')
-                            ->options(Country::query()->pluck('name','id'))
+                            ->relationship('deliveryCountry','name')
                             ->searchable()
                             ->preload()
                             ->required(),
-                        Forms\Components\Select::make('delivery_state')
+                        Forms\Components\Select::make('delivery_state_id')
                             ->label('Delivery State')
-                            ->options(State::query()->pluck('name','id'))
+                            ->relationship('deliveryState', 'name')
                             ->searchable()
                             ->preload()
                             ->required(),
@@ -82,6 +81,7 @@ class OrderResource extends Resource
                                     ->label('Product')
                                     ->options(Product::query()->pluck('Name','id'))
                                     ->searchable()
+                                    ->live()
                                     ->preload()
                                     ->reactive()
                                     ->required()
@@ -90,9 +90,9 @@ class OrderResource extends Resource
                                     ->columnSpan(4),
                                 Forms\Components\TextInput::make('quantity')
                                     ->default(1)
+                                    ->numeric()
                                     ->live()
                                     ->dehydrated()
-                                    ->numeric()
                                     ->suffix('ks')
                                     ->required(),
                                 Forms\Components\TextInput::make('unit_price')
@@ -103,23 +103,10 @@ class OrderResource extends Resource
                                     ->required()
                                     ->columnSpan(1),
                                 Forms\Components\Placeholder::make('total_price')
-                                    ->label('Total Price')
-                                    ->disabled()
-                                    ->reactive()
-                                    ->live()
+                                    ->label('Price for the product')
                                     ->dehydrated()
-                                    ->content(function ($get){
-                                        return $get('unit_price') * $get('quantity');
-                                    }),
-//                                Forms\Components\TextInput::make('total_price')
-//                                    ->label('Total price')
-//                                    ->disabled()
-//                                    ->dehydrated()
-//                                    ->reactive()
-//                                    ->live()
-//                                    ->default(function (Forms\Get $get): string{
-//                                        return $get('unit_price') * $get('quantity');
-//                                    })
+                                    ->content(fn ($get) => ($get('unit_price')) * ($get('quantity')))
+                                    ->columnSpan(1),
                             ])->columns(7)
                     ])
                 ])->columnSpanFull()
@@ -169,8 +156,9 @@ class OrderResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-//                Tables\Actions\Action::make('Create Invoice')
-//                ->url(fn (Order $record): string => route('admin.invoice.generate', $record))
+                Tables\Actions\Action::make('Invoice')
+                    ->action(fn (Order $record, $livewire) => $livewire->generateInvoice($record))
+                    ->modalContent(view('livewire.invoice-generator'))
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -194,4 +182,6 @@ class OrderResource extends Resource
             'edit' => Pages\EditOrder::route('/{record}/edit'),
         ];
     }
+
+
 }
