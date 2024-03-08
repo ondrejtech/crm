@@ -9,6 +9,7 @@ use App\Models\Order;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Model;
+use Filament\Notifications\Notification;
 
 class ListOrders extends ListRecords
 {
@@ -29,7 +30,9 @@ class ListOrders extends ListRecords
                 $data->save();
 
                 $invoiceData = [
+                    'number' => 'INV-'.random_int(1111,99999),
                     'company_id' => $data->company_id,
+                    'order_number' => $data->number,
                     'contact_id' => $data->contact_id,
                     'status' => 'PAYMENT',
                     'delivery_address' => $data->delivery_address,
@@ -47,20 +50,26 @@ class ListOrders extends ListRecords
                 $invoiceData['order_id'] = $order->id;
 
                 Invoice::create($invoiceData);
+                Notification::make()
+                    ->title('Invoice has been successfully created')
+                    ->success()
+                    ->send();
             });
         } elseif ($record instanceof \Illuminate\Database\Eloquent\Model) {
             $record->status = 'COMPLETED';
             $record->save();
 
             $invoiceData = [
+                'number' => 'INV-'.random_int(1111,99999),
+                'order_number' => $record->number,
                 'company_id' => $record->company_id,
                 'contact_id' => $record->contact_id,
                 'status' => 'PAYMENT',
                 'delivery_address' => $record->delivery_address,
                 'delivery_city' => $record->delivery_city,
                 'delivery_psc' => $record->delivery_psc,
-                'delivery_state' => $record->delivery_state,
-                'delivery_country' => $record->delivery_country,
+                'delivery_state_id' => $record->delivery_state_id,
+                'delivery_country_id' => $record->delivery_country_id,
                 'note' => $record->note,
             ];
 
@@ -71,6 +80,10 @@ class ListOrders extends ListRecords
             $invoiceData['order_id'] = $order->id;
 
             Invoice::create($invoiceData);
+            Notification::make()
+                ->title('Invoice has been successfully created')
+                ->success()
+                ->send();
         }
     }
 }

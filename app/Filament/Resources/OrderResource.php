@@ -29,6 +29,10 @@ class OrderResource extends Resource
             ->schema([
                 Forms\Components\Wizard::make([
                     Forms\Components\Wizard\Step::make('Order')->schema([
+                        Forms\Components\TextInput::make('number')
+                            ->label('Order number')
+                            ->default('OR-'.random_int(1111,99999))
+                            ->required(),
                         Forms\Components\Select::make('company_id')
                             ->label('Company')
                             ->relationship('company','name')
@@ -117,6 +121,13 @@ class OrderResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('id')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('number')
+                    ->searchable()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('company.name')
                     ->sortable()
                     ->searchable()
@@ -137,14 +148,14 @@ class OrderResource extends Resource
                     ->sortable()
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('delivery_state')
-                    ->sortable()
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('delivery_country')
+                Tables\Columns\TextColumn::make('deliveryCountry.name')
                     ->sortable()
                     ->searchable()
                     ->toggleable(),
+                Tables\Columns\TextColumn::make('deliveryState.name')
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('status')
                     ->sortable()
                     ->searchable()
@@ -155,10 +166,17 @@ class OrderResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\Action::make('Invoice')
-                    ->action(fn (Order $record, $livewire) => $livewire->generateInvoice($record))
-                    ->modalContent(view('livewire.invoice-generator'))
+                Tables\Actions\ActionGroup::make([
+                    Tables\Actions\EditAction::make(),
+                    Tables\Actions\Action::make('Generate invoice')
+                        ->icon('heroicon-o-document-plus')
+                        ->action(fn (Order $record, $livewire) => $livewire->generateInvoice($record))
+                        ->requiresConfirmation()
+                        ->modalIcon('heroicon-o-document-plus'),
+//                        ->modalContent(view('livewire.invoice-generator')),
+
+                    Tables\Actions\DeleteAction::make()
+                ])
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

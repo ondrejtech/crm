@@ -23,22 +23,36 @@ class InvoiceResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('order_id')
+                Forms\Components\TextInput::make('number')
                     ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('company_id')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('contact_id')
-                    ->required()
-                    ->numeric(),
+                    ->default('INV-'.random_int(1111,99999)),
+                Forms\Components\Select::make('order_id')
+                    ->label('Order number')
+                    ->relationship('order','id')
+                    ->searchable()
+                    ->preload()
+                    ->required(),
+                Forms\Components\Select::make('order_number')
+                    ->label('Order number')
+                    ->relationship('order','number')
+                    ->searchable()
+                    ->preload()
+                    ->required(),
+                Forms\Components\Select::make('company_id')
+                    ->label('Company')
+                    ->relationship('company','name')
+                    ->searchable()
+                    ->preload()
+                    ->required(),
+                Forms\Components\Select::make('contact_id')
+                    ->label('Contact')
+                    ->relationship('contact','full_name')
+                    ->searchable()
+                    ->preload()
+                    ->required(),
                 Forms\Components\TextInput::make('note')
                     ->required()
                     ->numeric(),
-                Forms\Components\TextInput::make('number')
-                    ->required()
-                    ->maxLength(255)
-                    ->default('INVOICE'),
                 Forms\Components\TextInput::make('status')
                     ->required()
                     ->maxLength(255),
@@ -51,12 +65,19 @@ class InvoiceResource extends Resource
                 Forms\Components\TextInput::make('delivery_psc')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('delivery_state')
+                Forms\Components\Select::make('delivery_state_id')
+                    ->label('Delivery state')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('delivery_country')
-                    ->required()
-                    ->maxLength(255),
+                    ->label('Delivery state')
+                    ->relationship('deliveryState','name')
+                    ->searchable()
+                    ->preload(),
+                Forms\Components\Select::make('delivery_country_id')
+                    ->label('Delivery country')
+                    ->relationship('deliveryCountry','name')
+                    ->searchable()
+                    ->preload()
+                    ->required(),
             ]);
     }
 
@@ -64,31 +85,34 @@ class InvoiceResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('order_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('company_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('contact_id')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('note')
-                    ->numeric()
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('id')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('number')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('status')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('order_number')
+                    ->numeric()
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('company.name')
+                    ->numeric()
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(),
+                Tables\Columns\TextColumn::make('contact.full_name')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('delivery_address')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('delivery_city')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('delivery_psc')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('delivery_state')
+                Tables\Columns\TextColumn::make('deliveryCountry.name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('delivery_country')
+                Tables\Columns\TextColumn::make('deliveryState.name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -98,6 +122,8 @@ class InvoiceResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('status')
+                    ->searchable(),
             ])
             ->filters([
                 //

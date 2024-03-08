@@ -13,16 +13,18 @@ return new class extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('order_id')->constrained();
+            $table->string('number');
+            $table->foreignId('order_id')->constrained()->cascadeOnDelete();
+            $table->string('order_number');
             $table->foreignId('company_id')->constrained();
             $table->foreignId('contact_id')->constrained();
             $table->string('status')->default('PAYMENT');
             $table->string('delivery_address');
             $table->string('delivery_city');
             $table->string('delivery_psc');
-            $table->string('delivery_state');
-            $table->string('delivery_country');
-            $table->foreignId('note')->nullable()->constrained();
+            $table->foreignId('delivery_country_id')->constrained('countries','id')->cascadeOnDelete();
+            $table->foreignId('delivery_state_id')->constrained('states','id')->cascadeOnDelete();
+            $table->foreignId('note')->nullable();
             $table->timestamps();
         });
     }
