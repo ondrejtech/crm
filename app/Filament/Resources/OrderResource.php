@@ -168,6 +168,11 @@ class OrderResource extends Resource
             ->actions([
                 Tables\Actions\ActionGroup::make([
                     Tables\Actions\EditAction::make(),
+                    Tables\Actions\Action::make('Download Order')
+                        ->icon('heroicon-o-document-arrow-down')
+                        ->action(fn (Order $record, $livewire) => $livewire->generatePDF($record))
+                        ->requiresConfirmation()
+                        ->modalIcon('heroicon-o-document-plus'),
                     Tables\Actions\Action::make('Generate invoice')
                         ->icon('heroicon-o-document-plus')
                         ->action(fn (Order $record, $livewire) => $livewire->generateInvoice($record))

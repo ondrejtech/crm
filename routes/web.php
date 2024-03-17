@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GeneratePDF;
 use App\Livewire\InvoiceGenerator;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InvoiceGenerate;
@@ -21,5 +22,6 @@ Route::get('/', function () {
 
 // Route::get('/test',[TestController::class,'index']);
 
-Route::get('admin/invoice/generate/{record}',[InvoiceGenerate::class,'generate'])->name('admin.invoice.generate');
-Route::get('/invoice-generator/{order_id}', InvoiceGenerator::class)->name('invoice.generator');
+//Route::get('admin/invoice/generate/{record}',[InvoiceGenerate::class,'generate'])->name('admin.invoice.generate');
+//Route::get('/invoice-generator/{order_id}', InvoiceGenerator::class)->name('invoice.generator');
+Route::get('admin/order.pdf}', [GeneratePDF::class,'orderPDF']);
